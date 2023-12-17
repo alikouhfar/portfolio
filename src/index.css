@@ -96,7 +96,7 @@ img {
 
 @layer components {
   .menu-item {
-    @apply relative p-4 no-underline cursor-pointer hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:bg-purple-600;
+    @apply relative py-4 md:p-4 block no-underline cursor-pointer border-b-zinc-300 border-b md:border-none hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:bg-purple-600;
   }
 
   .social-icon {

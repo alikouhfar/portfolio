@@ -13,13 +13,17 @@ import Tag from "../Shared/Tag";
 
 export default function () {
   return (
-    <section className="flex flex-col justify-between h-screen py-10 px-44 max-w-screen-2xl mx-auto">
+    <section className="flex flex-col gap-5 lg:gap-8 xl:gap-0 justify-between 2xl:h-screen py-6 px-5 md:py-10 md:px-16 2xl:px-44 max-w-screen-2xl mx-auto">
       <header>
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col xl:flex-row items-center justify-between gap-7 md:gap-4 xl:gap-0">
           <a>
-            <img src="/logo.png" alt="Ali Kouhfar Logo" className="h-9" />
+            <img
+              src="/logo.png"
+              alt="Ali Kouhfar Logo"
+              className="w-full max-w-xs md:h-9 mx-auto md:mx-0"
+            />
           </a>
-          <ul className="flex list-none text-sm gap-3">
+          <ul className="flex flex-col md:flex-row list-none text-sm justify-between md:gap-3 gap-0 w-full md:max-w-lg xl:w-fit">
             <li>
               <a className="menu-item animation" href="#service">
                 Service
@@ -46,11 +50,11 @@ export default function () {
               </a>
             </li>
           </ul>
-          <div className="relative">
+          <div className="relative w-full md:max-w-lg xl:w-fit">
             <input
               type="text"
               placeholder="Search"
-              className="text-sm border border-zinc-300 rounded-xl p-4 text-zinc-800"
+              className="text-sm border border-zinc-300 rounded-xl p-4 text-zinc-800 w-full md:max-w-lg xl:w-fit"
             />
             <div className="absolute right-4 top-1/3">
               <IconSearch size={20} color="var(--icon-not-focused)" />
@@ -60,10 +64,10 @@ export default function () {
       </header>
       <div className="relative">
         <Tag>Hello!</Tag>
-        <div className="flex items-center justify-center gap-72">
-          <div>
+        <div className="flex flex-col xl:flex-row items-center justify-center gap-10 xl:gap-72">
+          <div className="w-full xl:w-fit">
             <div className="flex justify-between flex-col gap-8">
-              <h2 className="text-7xl font-semibold">
+              <h2 className="text-5xl md:text-7xl font-semibold">
                 We have Development Experience
               </h2>
               <div className="flex gap-5 items-start">
@@ -73,14 +77,14 @@ export default function () {
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
               </div>
-              <div className="flex gap-1">
-                <button className="flex items-center justify-center leading-none bg-purple-600 py-4 px-5 text-white border-none gap-1 rounded-2xl mr-3 bg-none text-base hover:bg-purple-700 transition-all">
+              <div className="flex flex-col sm:flex-row gap-4 xl:gap-1">
+                <button className="w-full xl:w-1/3 flex items-center justify-center leading-none bg-purple-600 py-4 px-5 text-white border-none gap-1 rounded-2xl bg-none text-base hover:bg-purple-700 transition-all">
                   Let&apos;s Talk
                   <span>
                     <IconArrowBadgeRight stroke={1.5} />
                   </span>
                 </button>
-                <button className="flex items-center justify-center leading-none py-4 px-5 border-none gap-1 rounded-2xl mr-3 bg-none text-base hover:bg-zinc-50 transition-all">
+                <button className="w-full xl:w-1/3 flex items-center justify-center leading-none py-4 px-5 border-none gap-1 rounded-2xl bg-zinc-100 text-base hover:bg-zinc-200 transition-all">
                   Portfolio
                   <span>
                     <IconArrowUpRight stroke={1.5} />
@@ -88,9 +92,9 @@ export default function () {
                 </button>
               </div>
             </div>
-            <div className="flex items-center mt-14 gap-6">
+            <div className="flex flex-col sm:flex-row items-center justify-center xl:justify-start mt-14 gap-4 sm:gap-6">
               <p className="text-base">Check Out My</p>
-              <ul className="flex list-none gap-8 text-sm">
+              <ul className="flex list-none w-full max-w-[300px] sm:w-fit justify-between sm:gap-8 text-sm">
                 <li className="social-icon">
                   <a href="#">
                     <IconBrandInstagram size={30} stroke={1.5} />
@@ -111,16 +115,10 @@ export default function () {
           </div>
           <div className="flex items-center justify-center">
             <div className="relative">
-              <div
-                className="bg-purple-500 after:content-[''] after:absolute after:w-full after:h-full after:left-0 after:top-0 after:bg-purple-600/5"
-                style={{
-                  width: "375px",
-                  height: "500px",
-                }}
-              >
+              <div className="bg-purple-500 after:content-[''] after:absolute after:w-full after:h-full after:left-0 after:top-0 after:bg-purple-600/5 w-full sm:w-[375px] sm:h-[500px]">
                 <img className="h-full" src="hero.jpg" />
               </div>
-              <div className="absolute rounded-full right-3/4 top-1/2 backdrop-blur-2xl bg-zinc-900/10">
+              <div className="absolute rounded-full h-fit -bottom-14 right-1/2 translate-x-1/2 xl:right-full xl:top-1/2 backdrop-blur-2xl bg-zinc-900/10">
                 <ReactCurvedText
                   width={200}
                   height={198}

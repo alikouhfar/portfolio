@@ -14,7 +14,7 @@ export default ({ slides }) => {
       // install Swiper modules
       modules={[Navigation]}
       spaceBetween={0}
-      slidesPerView={1.1}
+      slidesPerView={1}
       navigation={{
         nextEl: "#swiper-button-next",
         prevEl: "#swiper-button-prev",

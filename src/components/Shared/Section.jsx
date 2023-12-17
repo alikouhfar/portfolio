@@ -2,7 +2,7 @@ export default function ({ children, isColored, id }) {
   return (
     <section
       id={id}
-      className={`flex flex-col justify-between h-screen py-16 px-44 max-w-screen-2xl mx-auto ${
+      className={`flex flex-col justify-between 2xl:h-screen py-4 px-5 md:py-20 md:px-16 lg:px-44 lg:py-16 max-w-screen-2xl mx-auto ${
         isColored && "bg-[#ffd670]"
       }`}
     >

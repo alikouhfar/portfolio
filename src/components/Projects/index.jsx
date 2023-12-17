@@ -11,47 +11,25 @@ export default function () {
       <div className="relative">
         <Tag>Project</Tag>
         <div
-          className="grid gap-x-5 w-full"
+          className="xl:grid gap-x-5 w-full"
           style={{
             gridTemplateColumns: "repeat(3,calc(calc(100% - 40px) / 3))",
             gridTemplateRows: "repeat(7,90px)",
           }}
         >
-          <h2
-            className="text-7xl font-semibold"
-            style={{ gridRowStart: "1", gridRowEnd: "3", gridColumnStart: "1" }}
-          >
+          <h2 className="text-5xl md:text-7xl font-semibold lg:row-start-1 lg:row-end-3 lg:col-start-1">
             Latest Projects
           </h2>
-          <div
-            style={{
-              gridRowStart: "2",
-              gridColumnStart: "2",
-            }}
-          >
+          <div className="mt-10 xl:mt-0 lg:row-start-2 lg:col-start-2">
             <ProjectCard project={projects?.at(2)} />
           </div>
-          <div
-            style={{
-              gridRowStart: "1",
-              gridColumnStart: "3",
-            }}
-          >
+          <div className="lg:row-start-1 lg:row-end-3">
             <ProjectCard project={projects?.at(1)} />
           </div>
-          <div
-            style={{ gridRowStart: "3", gridRowEnd: "5", gridColumnStart: "1" }}
-          >
+          <div className="row-start-3 lg:row-end-5 lg:col-start-1">
             <ProjectCard project={projects?.at(0)} />
           </div>
-          <div
-            className="relative mt-3.5 mb-4 ml-auto"
-            style={{
-              gridRowStart: "6",
-              gridRowEnd: "8",
-              gridColumnStart: "3",
-            }}
-          >
+          <div className="relative mt-3.5 mb-4 mx-auto md:mx-0 md:ml-auto w-fit h-fit lg:row-start-6 lg:row-end-[8] lg:col-start-3">
             <ReactCurvedText
               width={180}
               height={180}
@@ -86,7 +64,7 @@ export default function () {
               style={{
                 right: "50%",
                 top: "50%",
-                transform: "translate(50%, -36%)",
+                transform: "translate(50%, -50%)",
                 height: "110px",
                 width: "110px",
               }}
