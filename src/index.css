@@ -5,6 +5,7 @@
 :root {
   --color-purple-600: #9333ea;
   --color-zinc-200: #d4d4d8;
+  --color-zinc-800: #27272a;
   --icon-not-focused: rgb(161, 151, 170);
 }
 
@@ -96,10 +97,10 @@ img {
 
 @layer components {
   .menu-item {
-    @apply relative py-4 md:p-4 block no-underline cursor-pointer border-b-zinc-300 border-b md:border-none hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:bg-purple-600;
+    @apply relative py-4 md:p-4 block no-underline cursor-pointer border-b-zinc-300 dark:border-b-zinc-800 border-b md:border-none hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:bg-purple-600;
   }
 
   .social-icon {
-    @apply rounded-full p-6 border-none text-2xl bg-zinc-100 hover:bg-purple-600 hover:text-white cursor-pointer transition-all;
+    @apply rounded-full p-6 border-none text-2xl bg-zinc-100 dark:bg-zinc-950 dark:hover:bg-purple-600 hover:bg-purple-600 hover:text-white cursor-pointer transition-all;
   }
 }

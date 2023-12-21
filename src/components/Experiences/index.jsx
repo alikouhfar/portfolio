@@ -5,7 +5,7 @@ import SkillCard from "./SkillCard";
 import Tag from "../Shared/Tag";
 import Section from "../Shared/Section";
 
-export default function () {
+export default function Experiences() {
   return (
     <Section id="experience">
       <div className="relative h-full">
@@ -17,8 +17,8 @@ export default function () {
                 Skills & Experiences
               </h2>
               <div className="flex gap-5 items-start">
-                <span className="block w-8 border-t-zinc-700 border-t-2 mt-2"></span>
-                <p className="text-base w-full xl:w-3/5 text-zinc-800">
+                <span className="block w-8 border-t-zinc-700 dark:border-t-zinc-400 border-t-2 mt-2"></span>
+                <p className="text-base w-full xl:w-3/5 text-zinc-800 dark:text-zinc-400">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>

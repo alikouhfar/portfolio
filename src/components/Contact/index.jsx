@@ -4,7 +4,7 @@ import ContactCard from "./ContactCard";
 import Tag from "../Shared/Tag";
 import Section from "../Shared/Section";
 
-export default function () {
+export default function Contact() {
   return (
     <Section id="contact" isColored={true}>
       <div className="relative">

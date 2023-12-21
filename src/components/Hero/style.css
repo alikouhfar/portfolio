@@ -11,13 +11,3 @@
     width: 100%;
   }
 }
-
-.hero::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: red;
-  top: 0;
-  left: 0;
-}

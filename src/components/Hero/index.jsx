@@ -8,12 +8,13 @@ import {
   IconSearch,
 } from "@tabler/icons-react";
 import ReactCurvedText from "react-curved-text";
-import "./style.css";
 import Tag from "../Shared/Tag";
+import "./style.css";
+import DarkModeButton from "../Shared/DarkModeButton";
 
-export default function () {
+export default function Hero() {
   return (
-    <section className="flex flex-col gap-5 lg:gap-8 xl:gap-0 justify-between 2xl:h-screen py-6 px-5 md:py-10 md:px-16 2xl:px-44 max-w-screen-2xl mx-auto">
+    <section className="flex flex-col gap-5 lg:gap-8 xl:gap-0 justify-between 2xl:h-screen py-6 px-5 md:py-10 md:px-16 2xl:px-44 max-w-screen-2xl mx-auto dark:bg-zinc-900">
       <header>
         <div className="flex flex-col xl:flex-row items-center justify-between gap-7 md:gap-4 xl:gap-0">
           <a>
@@ -50,14 +51,17 @@ export default function () {
               </a>
             </li>
           </ul>
-          <div className="relative w-full md:max-w-lg xl:w-fit">
-            <input
-              type="text"
-              placeholder="Search"
-              className="text-sm border border-zinc-300 rounded-xl p-4 text-zinc-800 w-full md:max-w-lg xl:w-fit"
-            />
-            <div className="absolute right-4 top-1/3">
-              <IconSearch size={20} color="var(--icon-not-focused)" />
+          <div className="flex items-center gap-4 w-full md:max-w-lg xl:w-fit">
+            <DarkModeButton />
+            <div className="relative flex-1">
+              <input
+                type="text"
+                placeholder="Search"
+                className="text-sm border border-zinc-300 dark:border-zinc-800 rounded-xl p-4 text-zinc-800 w-full md:max-w-lg xl:w-fit dark:bg-zinc-950"
+              />
+              <div className="absolute right-4 top-1/3">
+                <IconSearch size={20} color="var(--icon-not-focused)" />
+              </div>
             </div>
           </div>
         </div>
@@ -71,20 +75,20 @@ export default function () {
                 We have Development Experience
               </h2>
               <div className="flex gap-5 items-start">
-                <span className="block w-8 border-t-zinc-700 border-t-2 mt-2"></span>
-                <p className="text-base w-full text-zinc-800">
+                <span className="block w-8 border-t-zinc-700 dark:border-t-zinc-400 border-t-2 mt-2"></span>
+                <p className="text-base w-full text-zinc-800 dark:text-zinc-400">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4 xl:gap-1">
+              <div className="flex flex-col sm:flex-row gap-4 xl:gap-2">
                 <button className="w-full xl:w-1/3 flex items-center justify-center leading-none bg-purple-600 py-4 px-5 text-white border-none gap-1 rounded-2xl bg-none text-base hover:bg-purple-700 transition-all">
                   Let&apos;s Talk
                   <span>
                     <IconArrowBadgeRight stroke={1.5} />
                   </span>
                 </button>
-                <button className="w-full xl:w-1/3 flex items-center justify-center leading-none py-4 px-5 border-none gap-1 rounded-2xl bg-zinc-100 text-base hover:bg-zinc-200 transition-all">
+                <button className="w-full xl:w-1/3 flex items-center justify-center leading-none py-4 px-5 border-none gap-1 rounded-2xl bg-zinc-100 dark:bg-zinc-950 text-base hover:bg-zinc-200 transition-all">
                   Portfolio
                   <span>
                     <IconArrowUpRight stroke={1.5} />
@@ -118,7 +122,7 @@ export default function () {
               <div className="bg-purple-500 after:content-[''] after:absolute after:w-full after:h-full after:left-0 after:top-0 after:bg-purple-600/5 w-full sm:w-[375px] sm:h-[500px]">
                 <img className="aspect-[3/4]" src="hero.jpg" />
               </div>
-              <div className="absolute rounded-full h-fit -bottom-14 right-1/2 translate-x-1/2 xl:right-full xl:top-1/2 backdrop-blur-2xl bg-zinc-900/10">
+              <div className="absolute rounded-full h-fit -bottom-14 right-1/2 translate-x-1/2 xl:right-full xl:top-1/2 backdrop-blur-2xl bg-zinc-900/10 dark:bg-zinc-200/10">
                 <ReactCurvedText
                   width={200}
                   height={198}
@@ -135,7 +139,7 @@ export default function () {
                   ellipseProps={{ style: "fill: #fff" }}
                 />
                 <button
-                  className="flex justify-center items-center absolute rounded-full border-none bg-white pl-1 text-2xl font-normal leading-none hover:bg-purple-600 hover:text-white cursor-pointer transition-all"
+                  className="flex justify-center items-center absolute rounded-full border-none bg-white pl-1 text-2xl font-normal leading-none hover:bg-purple-600 hover:text-white dark:text-zinc-800 dark:hover:text-white cursor-pointer transition-all"
                   style={{
                     right: "35.18%",
                     top: "35.5%",

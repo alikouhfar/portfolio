@@ -3,6 +3,17 @@
   color: var(--color-zinc-200) !important;
 }
 
+@media (prefers-color-scheme: dark) {
+  .swiper-button-disabled {
+    border: 2px solid var(--color-zinc-800) !important;
+    color: var(--color-zinc-800) !important;
+  }
+
+  .swiper-button-disabled #testimonial_count--border {
+    border-left: 2px solid var(--color-zinc-800) !important;
+  }
+}
+
 .swiper-button-disabled:hover {
   background: none !important;
 }
