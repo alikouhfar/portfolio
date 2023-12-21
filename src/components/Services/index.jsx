@@ -1,5 +1,5 @@
 import { IconArrowsMaximize } from "@tabler/icons-react";
-import { services } from "../../data/Services";
+import { services } from "../../data/services";
 import ServiceCard from "./ServiceCard";
 import ReactCurvedText from "react-curved-text";
 import Tag from "../Shared/Tag";
