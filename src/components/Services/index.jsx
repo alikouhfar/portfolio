@@ -1,11 +1,11 @@
 import { IconArrowsMaximize } from "@tabler/icons-react";
-import { services } from "../../data/services";
+import { services } from "../../data/Services";
 import ServiceCard from "./ServiceCard";
 import ReactCurvedText from "react-curved-text";
 import Tag from "../Shared/Tag";
 import Section from "../Shared/Section";
 
-export default function Services() {
+export default function () {
   return (
     <Section id="service" isColored={true}>
       <div className="relative">

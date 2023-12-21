@@ -1,6 +1,4 @@
-import PropTypes from "prop-types";
-
-export default function ExperienceCard({ experience }) {
+export default function ({ experience }) {
   return (
     <li className="flex flex-col md:flex-row border-t-2 border-zinc-700 py-6 md:gap-8">
       <p className="font-medium text-xs md:text-sm flex-[0.4]">
@@ -18,13 +16,3 @@ export default function ExperienceCard({ experience }) {
     </li>
   );
 }
-
-ExperienceCard.propTypes = {
-  experience: PropTypes.object,
-  duration: PropTypes.object,
-  start: PropTypes.number,
-  end: PropTypes.any,
-  title: PropTypes.string,
-  company: PropTypes.string,
-  country: PropTypes.element,
-};

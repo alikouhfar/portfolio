@@ -5,7 +5,7 @@ import "./style.css";
 import Tag from "../Shared/Tag";
 import Section from "../Shared/Section";
 
-export default function Testimonials() {
+export default function () {
   return (
     <Section id="testimonial">
       <div className="relative">

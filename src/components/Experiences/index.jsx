@@ -5,7 +5,7 @@ import SkillCard from "./SkillCard";
 import Tag from "../Shared/Tag";
 import Section from "../Shared/Section";
 
-export default function Experiences() {
+export default function () {
   return (
     <Section id="experience">
       <div className="relative h-full">

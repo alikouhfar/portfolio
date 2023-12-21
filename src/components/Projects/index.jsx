@@ -5,7 +5,7 @@ import { projects } from "../../data/projects";
 import Tag from "../Shared/Tag";
 import Section from "../Shared/Section";
 
-export default function Project() {
+export default function () {
   return (
     <Section id="project" isColored={true}>
       <div className="relative">

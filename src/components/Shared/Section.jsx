@@ -1,6 +1,4 @@
-import PropTypes from "prop-types";
-
-export default function Section({ children, isColored, id }) {
+export default function ({ children, isColored, id }) {
   return (
     <section
       id={id}
@@ -12,9 +10,3 @@ export default function Section({ children, isColored, id }) {
     </section>
   );
 }
-
-Section.propTypes = {
-  children: PropTypes.element,
-  isColored: PropTypes.bool,
-  id: PropTypes.number,
-};

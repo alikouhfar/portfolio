@@ -3,7 +3,7 @@ import { IR, ES, US } from "country-flag-icons/react/3x2";
 export const experiences = [
   {
     duration: {
-      start: 2030,
+      start: "2030",
       end: null,
     },
     title: "VP Software Engineer",
@@ -12,8 +12,8 @@ export const experiences = [
   },
   {
     duration: {
-      start: 2028,
-      end: 2030,
+      start: "2028",
+      end: "2030",
     },
     title: "Software Engineer",
     company: "Company",
@@ -21,8 +21,8 @@ export const experiences = [
   },
   {
     duration: {
-      start: 2024,
-      end: 2028,
+      start: "2024",
+      end: "2028",
     },
     title: "Front-End Developer",
     company: "Company",
