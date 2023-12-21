@@ -18,7 +18,7 @@ export default function () {
         <div className="flex flex-col xl:flex-row items-center justify-between gap-7 md:gap-4 xl:gap-0">
           <a>
             <img
-              src="/logo.png"
+              src="logo.png"
               alt="Ali Kouhfar Logo"
               className="w-full max-w-xs md:h-9 mx-auto md:mx-0"
             />
