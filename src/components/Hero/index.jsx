@@ -116,7 +116,7 @@ export default function () {
           <div className="flex items-center justify-center">
             <div className="relative">
               <div className="bg-purple-500 after:content-[''] after:absolute after:w-full after:h-full after:left-0 after:top-0 after:bg-purple-600/5 w-full sm:w-[375px] sm:h-[500px]">
-                <img className="h-full" src="hero.jpg" />
+                <img className="h-fit" src="hero.jpg" />
               </div>
               <div className="absolute rounded-full h-fit -bottom-14 right-1/2 translate-x-1/2 xl:right-full xl:top-1/2 backdrop-blur-2xl bg-zinc-900/10">
                 <ReactCurvedText

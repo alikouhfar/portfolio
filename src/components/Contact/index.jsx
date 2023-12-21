@@ -20,7 +20,7 @@ export default function () {
               ))}
             </div>
           </div>
-          <div className="flex items-center justify-between relative border-2 border-zinc-800 rounded-full self-center h-60 w-60 md:h-[480px] md:w-[480px] md:p-10">
+          <div className="flex items-center justify-between relative border-2 border-zinc-800 rounded-full self-center h-60 w-60 md:h-[480px] md:w-[480px] p-2 md:p-10">
             <div className="flex items-end">
               <p className="text-3xl md:text-5xl">👋</p>
               <p className="text-xl md:text-2xl font-semibold">Say Hi!</p>
