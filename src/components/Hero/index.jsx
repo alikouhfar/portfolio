@@ -11,7 +11,7 @@ import ReactCurvedText from "react-curved-text";
 import "./style.css";
 import Tag from "../Shared/Tag";
 
-export default function () {
+export default function Hero() {
   return (
     <section className="flex flex-col gap-5 lg:gap-8 xl:gap-0 justify-between 2xl:h-screen py-6 px-5 md:py-10 md:px-16 2xl:px-44 max-w-screen-2xl mx-auto">
       <header>

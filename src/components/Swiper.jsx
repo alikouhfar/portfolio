@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 // import Swiper core and required modules
 import { Navigation } from "swiper/modules";
 
@@ -8,7 +10,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import TestimonialCard from "./Testimonials/TestimonialCard";
 
-export default ({ slides }) => {
+export default function SwiperComponent({ slides }) {
   return (
     <Swiper
       // install Swiper modules
@@ -27,4 +29,8 @@ export default ({ slides }) => {
       ))}
     </Swiper>
   );
+}
+
+SwiperComponent.propTypes = {
+  slides: PropTypes.object,
 };

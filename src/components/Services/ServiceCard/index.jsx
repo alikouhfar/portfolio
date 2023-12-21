@@ -1,6 +1,7 @@
+import PropTypes from "prop-types";
 import { IconArrowUpRight } from "@tabler/icons-react";
 
-export default function ({ service, count }) {
+export default function ServiceCard({ service, count }) {
   return (
     <div className="flex flex-col sm:flex-row border-t-zinc-700 border-t-2 py-8 justify-between w-full">
       <div className="flex flex-col sm:flex-row">
@@ -20,3 +21,10 @@ export default function ({ service, count }) {
     </div>
   );
 }
+
+ServiceCard.propTypes = {
+  service: PropTypes.object,
+  count: PropTypes.number,
+  title: PropTypes.string,
+  description: PropTypes.string,
+};

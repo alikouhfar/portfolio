@@ -4,7 +4,7 @@ import ContactCard from "./ContactCard";
 import Tag from "../Shared/Tag";
 import Section from "../Shared/Section";
 
-export default function () {
+export default function Contact() {
   return (
     <Section id="contact" isColored={true}>
       <div className="relative">
@@ -12,7 +12,7 @@ export default function () {
         <div className="flex flex-col xl:flex-row justify-between gap-8">
           <div className="w-full xl:w-2/5">
             <h2 className="text-5xl md:text-7xl font-semibold">
-              Let's Discuss Your Project
+              Let&apos;s Discuss Your Project
             </h2>
             <div className="flex flex-col md:flex-row xl:flex-col mt-14 gap-4">
               {contacts.map((contact, index) => (

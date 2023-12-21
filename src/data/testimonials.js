@@ -1,20 +1,20 @@
 export const testimonials = [
   {
-    testimonial:
+    content:
       " sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus euismod quis viverra nibh cras. Nisl suscipit adipiscing bibendum ",
     name: "john doe",
     job: "ceo",
     company: "fapple",
   },
   {
-    testimonial:
+    content:
       " sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus euismod quis viverra nibh cras. Nisl suscipit adipiscing bibendum ",
     name: "peanut",
     job: "hr",
     company: "goofle",
   },
   {
-    testimonial:
+    content:
       " sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus euismod quis viverra nibh cras. Nisl suscipit adipiscing bibendum ",
     name: "ali kouhfar",
     job: "software engineer",

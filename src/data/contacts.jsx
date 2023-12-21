@@ -1,8 +1,4 @@
-import {
-  IconMailFilled,
-  IconMapPinFilled,
-  IconPhoneFilled,
-} from "@tabler/icons-react";
+import { IconMailFilled, IconMapPinFilled } from "@tabler/icons-react";
 
 export const contacts = [
   {

@@ -1,6 +1,7 @@
+import PropTypes from "prop-types";
 import { IconArrowUpRight } from "@tabler/icons-react";
 
-export default function ({ project }) {
+export default function ProjectCard({ project }) {
   return (
     <div className="flex flex-col sm:flex-row xl:flex-col gap-5 border-t-zinc-700 border-t-2 py-5">
       <div className="flex justify-between sm:justify-normal sm:flex-col sm:gap-4 sm:flex-1 xl:flex-row">
@@ -23,3 +24,10 @@ export default function ({ project }) {
     </div>
   );
 }
+
+ProjectCard.propTypes = {
+  project: PropTypes.object,
+  title: PropTypes.string,
+  type: PropTypes.string,
+  photo: PropTypes.string,
+};
