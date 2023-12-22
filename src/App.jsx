@@ -10,7 +10,10 @@ import { ColorModeContext } from "./context/ColorModeContext";
 function App() {
   const { colorMode } = useContext(ColorModeContext);
   return (
-    <div className={`${colorMode === "dark" ? "dark" : "light"}`}>
+    <div
+      id="app_cotainer"
+      className={`${colorMode === "dark" ? "dark" : "light"}`}
+    >
       <div className="text-zinc-800 dark:text-zinc-200 scroll-smooth">
         <Hero />
         <Services />

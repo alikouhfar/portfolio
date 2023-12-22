@@ -1,3 +1,4 @@
+/* Testimonial's Swiper Buttons Style for Ligth Mode */
 .swiper-button-disabled {
   border: 2px solid var(--color-zinc-200) !important;
   color: var(--color-zinc-200) !important;
@@ -11,13 +12,12 @@
   background: none !important;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  .swiper-button-disabled {
-    border: 2px solid var(--color-zinc-800) !important;
-    color: var(--color-zinc-800) !important;
-  }
+/* Testimonial's Swiper Buttons Style for Dark Mode */
+#app_cotainer.dark .swiper-button-disabled {
+  border: 2px solid var(--color-zinc-800) !important;
+  color: var(--color-zinc-800) !important;
+}
 
-  .swiper-button-disabled #testimonial_count--border {
-    border-left: 2px solid var(--color-zinc-800) !important;
-  }
-} */
+#app_cotainer.dark .swiper-button-disabled #testimonial_count--border {
+  border-left: 2px solid var(--color-zinc-800) !important;
+}
