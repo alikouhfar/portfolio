@@ -11,7 +11,7 @@ function TestimonialCard({ testimonial }) {
         </span>
         <div className="flex items-center gap-1.5 mx-auto md:mx-0">
           <span className="block w-6 border-t-2 border-t-purple-600 dark:border-t-zinc-600"></span>
-          <small className="text-xs dark:text-zinc-600">
+          <small className="text-xs dark:font-semibold dark:text-zinc-600">
             <span className="uppercase">{testimonial.job}</span>,
             <span className="capitalize">{testimonial.company}</span>
           </small>
