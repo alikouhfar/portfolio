@@ -1,15 +1,16 @@
 import { IconMoonFilled, IconSunFilled } from "@tabler/icons-react";
 import { useContext } from "react";
-import { DarkModeContext } from "../../context/DarkModeContext";
+import { ColorModeContext } from "../../context/ColorModeContext";
 
-function DarkModeButton() {
-  const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
+function ColorModeButton() {
+  const { colorMode, toggleColorMode } = useContext(ColorModeContext);
+
   return (
     <button
       className="w-6 h-6 flex items-center justify-center mx-auto"
-      onClick={toggleDarkMode}
+      onClick={toggleColorMode}
     >
-      {darkMode ? (
+      {colorMode === "dark" ? (
         <IconMoonFilled className="text-purple-600" size={22} />
       ) : (
         <IconSunFilled className="text-[#ffd670]" size={25} />
@@ -18,4 +19,4 @@ function DarkModeButton() {
   );
 }
 
-export default DarkModeButton;
+export default ColorModeButton;

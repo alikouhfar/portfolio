@@ -5,12 +5,12 @@ import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Services from "./components/Services";
 import Testimonials from "./components/Testimonials";
-import { DarkModeContext } from "./context/DarkModeContext";
+import { ColorModeContext } from "./context/ColorModeContext";
 
 function App() {
-  const { darkMode } = useContext(DarkModeContext);
+  const { colorMode } = useContext(ColorModeContext);
   return (
-    <div className={`${darkMode ? "dark" : "light"}`}>
+    <div className={`${colorMode === "dark" ? "dark" : "light"}`}>
       <div className="text-zinc-800 dark:text-zinc-200 scroll-smooth">
         <Hero />
         <Services />

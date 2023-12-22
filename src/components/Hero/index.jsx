@@ -10,7 +10,7 @@ import {
 import ReactCurvedText from "react-curved-text";
 import Tag from "../Shared/Tag";
 import "./style.css";
-import DarkModeButton from "../Shared/DarkModeButton";
+import DarkModeButton from "../Shared/ColorModeButton";
 
 export default function Hero() {
   return (
