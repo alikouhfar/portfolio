@@ -1,0 +1,9 @@
+.brand-logo {
+  opacity: 0.3;
+  filter: contrast(0) brightness(1.5);
+}
+
+.brand-logo:hover {
+  opacity: 1;
+  filter: contrast(0) brightness(2);
+}

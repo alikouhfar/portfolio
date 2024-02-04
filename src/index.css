@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .social-icon {
+    @apply flex h-[50px] w-[50px] items-center justify-center rounded-full border-2 border-zinc-600 text-center text-xl leading-[46px] text-zinc-500 transition-all hover:border-theme hover:text-theme;
+  }
+  .menu-icon-link {
+    @apply relative block w-[55px] cursor-pointer text-zinc-500 transition-all hover:border-theme hover:text-theme;
+  }
+
+  .menu-icon-text {
+    @apply invisible absolute right-full block rounded-md bg-zinc-800 p-[10px] px-2 py-1.5 text-xs text-white opacity-0 transition-all;
+  }
+}
+
+:root {
+  font-family: "Poppins", sans-serif;
+  --background-color: #1f1f1f;
+}
+
+html {
+  background: var(--background-color);
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #999;
+}
+
+img {
+  max-width: 100%;
+}
