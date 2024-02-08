@@ -1,5 +1,4 @@
 export default function ({ project }) {
-  console.log(project);
   return (
     <div
       className={`group/project ${project.span && "col-span-2"} ${!project.span && "mobile:col-span-2"}`}

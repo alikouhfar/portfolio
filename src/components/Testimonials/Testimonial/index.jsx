@@ -1,5 +1,4 @@
 export default function Testimonial({ testimonial }) {
-  console.log(testimonial);
   return (
     <>
       <div className="mb-11 flex items-center gap-4">

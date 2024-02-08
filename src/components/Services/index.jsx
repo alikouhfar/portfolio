@@ -1,5 +1,5 @@
 import { IconVip } from "@tabler/icons-react";
-import Card from "./Card";
+import Card from "./Service";
 import { useEffect, useState } from "react";
 import { supabase } from "../../data/supabase";
 

@@ -1,7 +1,7 @@
 import { IconCode } from "@tabler/icons-react";
 import { useEffect, useState } from "react";
 import { supabase } from "../../data/supabase";
-import Card from "./Card";
+import Card from "./Project";
 
 export default function Projects() {
   const [projects, setProjects] = useState([]);

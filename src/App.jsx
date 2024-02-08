@@ -10,12 +10,13 @@ import Services from "./components/Services";
 import Sidebar from "./components/Sidebar";
 import Skills from "./components/Skills";
 import Testimonials from "./components/Testimonials";
+import { scrollSpyTargets } from "./data/scrollSpyTargets";
 
 export default function App() {
   return (
     <div className="h-full">
       <Sidebar />
-      <Navbar />
+      <Navbar targetIds={scrollSpyTargets} />
       <Home />
       <About />
       <Resume />
