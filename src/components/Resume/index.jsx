@@ -20,7 +20,7 @@ export default function Resume() {
     fetchExperiences();
   }, []);
   return (
-    <section className="overflow-hidden py-[90px] tablet:pb-[50px]" id="resume">
+    <section className="overflow-hidden py-[60px] tablet:pb-[40px]" id="resume">
       <div className="m-auto max-w-[1130px] px-8 py-0 tablet:max-w-[650px]">
         <div className="ml-auto w-full max-w-[770px] tablet:max-w-full">
           <div>

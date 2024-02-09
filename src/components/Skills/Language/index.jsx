@@ -22,7 +22,7 @@ export default function ({ language }) {
   return (
     <div className="relative mb-3 rounded-3xl border border-zinc-600 px-12 pb-10 pt-11 transition-all hover:border-theme">
       <IconLanguage className="absolute right-12 top-11 text-theme" size={30} />
-      <div className="flex items-center gap-4 mobile:flex-col mobile:items-start mobile:gap-1">
+      <div className="flex items-center gap-4 tablet:flex-col tablet:items-start tablet:gap-1">
         <h2 className="text-2xl font-light text-white">{language.title}</h2>
         <div className="flex gap-2">
           {rating.slice(0, language.mastery).map((_, index) => (
@@ -33,7 +33,7 @@ export default function ({ language }) {
           ))}
         </div>
       </div>
-      <span className="inline-block text-xs uppercase text-theme mobile:mt-6">
+      <span className="inline-block text-xs uppercase text-theme tablet:mt-6">
         {mastery}
       </span>
     </div>

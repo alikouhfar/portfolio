@@ -36,9 +36,13 @@ export default function Home() {
               End and Web Developer
             </h1>
           </div>
-          <p className="mb-8 max-w-[480px]">
-            I design and code beautifully simple things and i love what i do.
-            Just simple like that!
+          <p className="mb-8 max-w-[650px] text-justify leading-8 tablet:max-w-full">
+            Hello, and welcome to my portfolio! I'm dedicated to creating
+            cutting-edge web experiences that blend creativity with seamless
+            functionality. With a strong foundation in React, I thrive on
+            tackling complex challenges and bringing visions to fruition.
+            Explore my work below and let's collaborate on your next digital
+            masterpiece!
           </p>
           <a
             href="#"
@@ -65,7 +69,7 @@ export default function Home() {
                 {projects.length}+
               </h1>
               <p className="text-sm uppercase leading-6">
-                Projects completed on <br /> 10 countries
+                Projects completed on <br /> 1 country
               </p>
             </div>
           </div>

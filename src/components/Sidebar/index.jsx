@@ -2,6 +2,7 @@ import {
   IconBrandDribbble,
   IconBrandGithub,
   IconBrandInstagram,
+  IconBrandLinkedin,
   IconBrandTwitterFilled,
   IconMail,
 } from "@tabler/icons-react";
@@ -37,23 +38,39 @@ export default function Sidebar() {
         </p>
         <ul className="mb-[118px] flex flex-wrap items-center justify-center gap-2 large:mb-[30px]">
           <li>
-            <a className="social-icon" href="">
-              <IconBrandTwitterFilled size={18} />
+            <a
+              className="social-icon"
+              href="https://github.com/alikouhfar"
+              target="_blank"
+            >
+              <IconBrandGithub size={20} />
             </a>
           </li>
           <li>
-            <a className="social-icon" href="">
-              <IconBrandDribbble size={20} />
+            <a
+              className="social-icon"
+              href="https://www.linkedin.com/in/alikouhfr"
+              target="_blank"
+            >
+              <IconBrandLinkedin size={20} />
             </a>
           </li>
           <li>
-            <a className="social-icon" href="">
+            <a
+              className="social-icon"
+              href="https://www.instagram.com/alikouhfr"
+              target="_blank"
+            >
               <IconBrandInstagram size={20} />
             </a>
           </li>
           <li>
-            <a className="social-icon" href="">
-              <IconBrandGithub size={20} />
+            <a
+              className="social-icon"
+              href="https://twitter.com/alikouhfr"
+              target="_blank"
+            >
+              <IconBrandTwitterFilled size={18} />
             </a>
           </li>
         </ul>

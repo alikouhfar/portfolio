@@ -3,7 +3,7 @@ export default function ({ project }) {
     <div
       className={`group/project ${project.span && "col-span-2"} ${!project.span && "mobile:col-span-2"}`}
     >
-      <div className="mb-16">
+      <div>
         <div className="relative mb-8 h-[410px] overflow-hidden rounded-[30px]">
           <a href="#">
             <img
@@ -17,7 +17,7 @@ export default function ({ project }) {
               <li key={index}>
                 <a
                   href="#"
-                  className="block rounded-[20px] bg-white px-5 py-2 text-sm text-zinc-900 transition-all group-hover/project:bg-zinc-900 group-hover/project:text-white"
+                  className="block rounded-[20px] bg-white px-5 py-2 text-sm text-zinc-900 shadow-inner drop-shadow-2xl transition-all group-hover/project:bg-zinc-900 group-hover/project:text-white"
                 >
                   {tag}
                 </a>

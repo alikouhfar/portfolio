@@ -5,7 +5,7 @@ import "./style.css";
 export default function Contact() {
   return (
     <section
-      className="overflow-hidden py-[90px] tablet:pb-[50px]"
+      className="overflow-hidden py-[60px] tablet:pb-[40px]"
       id="contact"
     >
       <div className="m-auto max-w-[1130px] px-8 py-0 tablet:max-w-[650px]">
@@ -79,10 +79,12 @@ export default function Contact() {
                     </label>
                     <select className="text-md -ml-1 mt-2 block w-full rounded-md border-none bg-zinc-800 p-3 font-light text-white transition-all placeholder:text-zinc-500">
                       <option defaultValue>Select a subject</option>
-                      <option>Subject 1</option>
-                      <option>Subject 2</option>
-                      <option>Subject 3</option>
-                      <option>Subject 4</option>
+                      <option>General Inquiry</option>
+                      <option>Project Collaboration</option>
+                      <option>Job Opportunity</option>
+                      <option>Feedback</option>
+                      <option>Support Request</option>
+                      <option>Other</option>
                     </select>
                   </div>
                 </div>

@@ -16,7 +16,7 @@ export default function Projects() {
   }, []);
   return (
     <section
-      className="overflow-hidden py-[90px] tablet:pb-[50px]"
+      className="overflow-hidden py-[60px] tablet:pb-[40px]"
       id="projects"
     >
       <div className="m-auto max-w-[1130px] px-8 py-0 tablet:max-w-[650px]">
@@ -30,7 +30,7 @@ export default function Projects() {
               Featured <span className="text-theme">Projects</span>
             </h1>
           </div>
-          <div className="grid grid-cols-2 gap-x-6">
+          <div className="grid grid-cols-2 gap-x-6 gap-y-16">
             {projects.map((project, index) => (
               <Card project={project} key={index} />
             ))}

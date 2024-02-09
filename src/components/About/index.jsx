@@ -3,7 +3,7 @@ import { IconUser } from "@tabler/icons-react";
 export default function About() {
   return (
     <section
-      className="overflow-hidden py-[90px] tablet:pb-[50px] small:pb-0"
+      className="overflow-hidden py-[60px] tablet:pb-[40px] small:pb-0"
       id="about"
     >
       <div className="m-auto max-w-[1130px] px-8 py-0 tablet:max-w-[650px]">
@@ -18,13 +18,12 @@ export default function About() {
               <span className="break-words text-theme"> better story</span>
             </h1>
           </div>
-          <p className="max-w-[610px] leading-8 tablet:max-w-full">
-            Since beginning my journey as a freelance designer nearly 8 years
-            ago, I've done remote work for agencies, consulted for startups, and
-            collaborated with talented people to create digital products for
-            both business and consumer use. I'm quietly confident, naturally
-            curious, and perpetually working on improving my chopsone design
-            problem at a time.
+          <p className="max-w-[650px] text-justify leading-8 tablet:max-w-full">
+            Passionate React developer with a focus on crafting seamless user
+            experiences. Skilled in front-end development and UI design, I
+            strive to create intuitive and engaging web applications. Let's
+            collaborate and bring your ideas to life with clean code and
+            creativity!
           </p>
         </div>
       </div>
