@@ -1,5 +1,4 @@
 import {
-  IconBrandDribbble,
   IconBrandGithub,
   IconBrandInstagram,
   IconBrandLinkedin,
