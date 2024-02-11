@@ -1,0 +1,12 @@
+html:lang(fa) {
+  font-family: "Vazir";
+}
+
+h1:lang(fa) {
+  font-family: "Shabnam";
+  font-weight: 800;
+}
+
+select:lang(fa) {
+  font-family: "Shabnam";
+}

@@ -1,5 +1,5 @@
 .my-projects {
-  animation: rotate 6.5s infinite linear;
+  animation: rotate 7s infinite linear;
 }
 
 @keyframes rotate {

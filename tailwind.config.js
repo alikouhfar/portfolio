@@ -19,6 +19,10 @@ export default {
       },
       fontFamily: {
         oswald: ["Oswald", "sans-serif"],
+        shabnam: "Shabnam",
+      },
+      listStyleType: {
+        square: "square",
       },
     },
   },

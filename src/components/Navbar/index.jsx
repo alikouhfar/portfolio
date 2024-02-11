@@ -1,9 +1,11 @@
-import { IconMenu2 } from "@tabler/icons-react";
-import React, { useState, useEffect, useRef } from "react";
+import { IconLanguage, IconMenu2 } from "@tabler/icons-react";
+import React, { useState, useEffect } from "react";
+import { useLanguage } from "../../context/LanguageContext";
 
 const ScrollSpy = ({ targetIds }) => {
   const [activeId, setActiveId] = useState("home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { language, toggleLanguage } = useLanguage();
 
   function handleOpenMenu() {
     setIsMenuOpen((isMenuOpen) => !isMenuOpen);
@@ -11,6 +13,10 @@ const ScrollSpy = ({ targetIds }) => {
 
   function handleCloseMenu() {
     setIsMenuOpen(false);
+  }
+
+  function handleLanguageChange() {
+    toggleLanguage();
   }
 
   useEffect(() => {
@@ -42,10 +48,19 @@ const ScrollSpy = ({ targetIds }) => {
   return (
     <div>
       <button
-        className={`invisible fixed right-[68px] top-[50px] z-10 flex h-[55px] w-[55px] items-center justify-center rounded-[30px] border border-zinc-600 bg-dark-color hover:text-theme ${isMenuOpen ? "invisible" : ""} tablet:visible`}
+        className={`invisible fixed right-[68px] top-[50px] z-10 flex h-[55px] w-[55px] items-center justify-center rounded-[30px] border border-zinc-600 bg-dark-color hover:text-theme mobile:right-8 ${isMenuOpen ? "invisible" : ""} tablet:visible`}
         onClick={handleOpenMenu}
       >
         <IconMenu2 className="mx-auto" strokeWidth="1.8" size={20} />
+      </button>
+      <button
+        className="fixed right-[68px] top-24 z-10 flex h-[55px] w-[55px] flex-col items-center justify-center rounded-[30px] border border-zinc-600 bg-dark-color hover:text-theme tablet:top-28 mobile:right-8"
+        onClick={handleLanguageChange}
+      >
+        <IconLanguage className="mx-auto" strokeWidth="1.8" size={20} />
+        <span className="text-[10px] font-semibold text-theme">
+          {language === "en" ? "English" : "فارسی"}
+        </span>
       </button>
       <ul
         className={`fixed right-[68px] top-[322px] z-10 flex w-[55px] -translate-y-1/2 flex-col gap-5 rounded-[30px] border border-zinc-600 bg-dark-color px-0 py-6 text-center large:top-1/2 tablet:hidden ${isMenuOpen ? "invisible" : ""}`}

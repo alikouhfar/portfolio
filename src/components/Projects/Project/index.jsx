@@ -1,4 +1,4 @@
-export default function ({ project }) {
+export default function ({ language, project }) {
   return (
     <div
       className={`group/project ${project.span && "col-span-2"} ${!project.span && "mobile:col-span-2"}`}
@@ -12,7 +12,9 @@ export default function ({ project }) {
                      object-cover"
             />
           </a>
-          <ul className="absolute bottom-5 left-5 flex flex-wrap items-center gap-3">
+          <ul
+            className={`absolute bottom-5 flex flex-wrap items-center gap-3 ${language === "en" ? "left-5" : "right-5"}`}
+          >
             {project.tags.map((tag, index) => (
               <li key={index}>
                 <a

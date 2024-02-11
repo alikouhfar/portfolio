@@ -7,7 +7,7 @@ import {
 import "./style.css";
 import Swiper from "../Shared/Swiper";
 import { useEffect, useState } from "react";
-import { supabase } from "../../data/supabase";
+import { supabase } from "../../utils/supabase";
 
 export default function Testimonials() {
   const [activeSlide, setActiveSlide] = useState(0);
