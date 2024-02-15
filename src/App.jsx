@@ -1,6 +1,6 @@
 import About from "./components/About";
+import Introduce from "./components/Introduce";
 import Contact from "./components/Contact";
-import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import Pricing from "./components/Pricing";
 import Projects from "./components/Projects";
@@ -21,13 +21,13 @@ export default function App() {
       <div className="h-full">
         <Sidebar />
         <Navbar targetIds={scrollSpyTargets} />
-        <Home />
+        <Introduce />
         <About />
         <Resume />
         <Services />
         <Skills />
         <Projects />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <Pricing />
         <Contact />
       </div>

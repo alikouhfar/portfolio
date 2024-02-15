@@ -19,7 +19,9 @@ export default {
       },
       fontFamily: {
         oswald: ["Oswald", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
         shabnam: "Shabnam",
+        vazir: "Vazir",
       },
       listStyleType: {
         square: "square",

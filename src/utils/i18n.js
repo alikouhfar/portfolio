@@ -8,7 +8,8 @@ const resources = {
       hire: "Hire Me!",
       basedIn: "Based in Nazarabad",
       copyRight: "Ali Kouhfar. All Rights Reserved",
-      hero: {
+      menu: "Menu",
+      introduce: {
         tag: "Introduce",
         titlePartOne: "Say Hi from ",
         name: "Ali,",
@@ -97,7 +98,8 @@ const resources = {
       hire: "برای همکاری پیام دهید!",
       basedIn: "ساکن نظرآباد",
       copyRight: "تمامی حقوق برای علی کوه‌فر محفوظ است",
-      hero: {
+      menu: "منو",
+      introduce: {
         tag: "معرفی",
         titlePartOne: "سلام من ",
         name: "علی",

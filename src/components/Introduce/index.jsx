@@ -5,7 +5,7 @@ import { supabase } from "../../utils/supabase";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../context/LanguageContext";
 
-export default function Home() {
+export default function Introduce() {
   const startYear = 2022;
   const thisYear = new Date().getFullYear();
   const workExperience = thisYear - startYear;
@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <section
       className="relative overflow-hidden px-0 py-[68px] small:pb-0"
-      id="home"
+      id="introduce"
     >
       <div className="m-auto max-w-[1130px] px-8 py-0 tablet:max-w-[650px] small:px-5">
         <div className="relative z-[3] ml-auto w-full max-w-[770px] tablet:max-w-full">
@@ -35,17 +35,17 @@ export default function Home() {
               className={`m-0 mb-14 inline-flex items-center rounded-[30px] border border-zinc-600 px-5 py-2 text-xs font-light uppercase text-white ${language === "en" ? "gap-1" : "gap-2"}`}
             >
               <IconHome className="mx-auto -ml-1" strokeWidth="1.8" size={16} />
-              <span>{t("hero.tag")}</span>
+              <span>{t("introduce.tag")}</span>
             </h4>
             <h1 className="mb-11 font-oswald text-[100px] font-normal leading-[100px] -tracking-[0.2px] text-white mobile:text-[70px] mobile:leading-[1] small:text-[60px]">
-              {t("hero.titlePartOne")}
-              <span className="text-theme">{t("hero.name")}</span>
+              {t("introduce.titlePartOne")}
+              <span className="text-theme">{t("introduce.name")}</span>
               <br />
-              {t("hero.titlePartTwo")}
+              {t("introduce.titlePartTwo")}
             </h1>
           </div>
           <p className="mb-8 max-w-[650px] text-justify leading-8 tablet:max-w-full">
-            {t("hero.body")}
+            {t("introduce.body")}
           </p>
           <a
             href="#projects"
@@ -64,7 +64,7 @@ export default function Home() {
                 {workExperience}+
               </h1>
               <p className="max-w-24 text-sm uppercase leading-6">
-                {t("hero.experience")}
+                {t("introduce.experience")}
               </p>
             </div>
             <div>
@@ -72,7 +72,7 @@ export default function Home() {
                 {projects.length}+
               </h1>
               <p className="max-w-44 text-sm uppercase leading-6">
-                {t("hero.projects")}
+                {t("introduce.projects")}
               </p>
             </div>
           </div>

@@ -12,7 +12,7 @@ import {
 
 export const scrollSpyTargets = [
   {
-    id: "home",
+    id: "introduce",
     icon: <IconHome className="mx-auto" strokeWidth="1.8" size={20} />,
   },
   {
@@ -42,10 +42,10 @@ export const scrollSpyTargets = [
     id: "projects",
     icon: <IconCode className="mx-auto" strokeWidth="1.8" size={20} />,
   },
-  {
-    id: "testimonials",
-    icon: <IconMessage className="mx-auto" strokeWidth="1.8" size={20} />,
-  },
+  // {
+  //   id: "testimonials",
+  //   icon: <IconMessage className="mx-auto" strokeWidth="1.8" size={20} />,
+  // },
   {
     id: "pricing",
     icon: (

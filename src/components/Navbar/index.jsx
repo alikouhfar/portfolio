@@ -1,11 +1,13 @@
 import { IconLanguage, IconMenu2 } from "@tabler/icons-react";
 import React, { useState, useEffect } from "react";
 import { useLanguage } from "../../context/LanguageContext";
+import { useTranslation } from "react-i18next";
 
 const ScrollSpy = ({ targetIds }) => {
-  const [activeId, setActiveId] = useState("home");
+  const [activeId, setActiveId] = useState("introduce");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { language, toggleLanguage } = useLanguage();
+  const { t } = useTranslation();
 
   function handleOpenMenu() {
     setIsMenuOpen((isMenuOpen) => !isMenuOpen);
@@ -58,8 +60,10 @@ const ScrollSpy = ({ targetIds }) => {
         onClick={handleLanguageChange}
       >
         <IconLanguage className="mx-auto" strokeWidth="1.8" size={20} />
-        <span className="text-[10px] font-semibold text-theme">
-          {language === "en" ? "English" : "فارسی"}
+        <span
+          className={`text-[10px] font-semibold text-theme ${language === "en" ? "font-vazir" : "font-poppins"}`}
+        >
+          {language === "en" ? "فارسی" : "English"}
         </span>
       </button>
       <ul
@@ -71,9 +75,6 @@ const ScrollSpy = ({ targetIds }) => {
               className={`menu-icon-link ${target.id === activeId ? "text-theme" : ""}`}
               href={`#${target.id}`}
             >
-              <span className="invisible absolute right-full block rounded-md bg-zinc-800 p-[10px] px-2 py-1.5 text-xs text-white opacity-0">
-                Home
-              </span>
               {target.icon}
             </a>
           </li>
@@ -87,7 +88,7 @@ const ScrollSpy = ({ targetIds }) => {
         className={`fixed top-0 z-20 ml-auto h-full w-11/12 max-w-[345px] overflow-x-hidden bg-zinc-900 pt-14 transition-all ${isMenuOpen ? "right-0" : "invisible -right-2"}`}
       >
         <div className="m-auto w-[46%]">
-          <p className="mb-5 text-xl">Menu</p>
+          <p className="mb-5 text-xl">{t("menu")}</p>
           <ul className="relative left-0 right-auto top-0 mb-8 flex translate-y-0 flex-col gap-5 rounded-none border-none bg-none px-0 py-6 text-center">
             {targetIds.map((target) => (
               <li key={target.id}>
@@ -97,9 +98,9 @@ const ScrollSpy = ({ targetIds }) => {
                 >
                   {target.icon}
                   <span
-                    className={`relative right-0 m-0 block flex-1 rounded-none bg-none p-0 text-left text-xs capitalize opacity-100 ${target.id === activeId ? "text-white" : "text-zinc-500"}`}
+                    className={`relative right-0 m-0 block flex-1 rounded-none bg-none p-0 text-xs capitalize opacity-100 ${target.id === activeId ? "text-white" : "text-zinc-500"} ${language === "en" ? "text-left" : "text-right"}`}
                   >
-                    {target.id}
+                    {t(`${target.id}.tag`)}
                   </span>
                 </a>
               </li>
