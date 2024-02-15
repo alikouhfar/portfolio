@@ -19,7 +19,7 @@ export default function Sidebar() {
 
   return (
     <div className="px-8 small:px-5">
-      <div className="w-100 fixed left-5 top-1/2 z-10 max-w-[485px] -translate-y-1/2 rounded-[30px] border border-zinc-600 large:max-w-[400px] laptop:max-w-[350px] laptop:p-[30px] tablet:relative tablet:left-0 tablet:top-0 tablet:m-auto tablet:mt-5 tablet:block tablet:max-w-[650px] tablet:translate-y-0">
+      <div className="w-100 fixed left-5 top-1/2 z-10 max-w-[485px] -translate-y-1/2 rounded-[30px] border border-zinc-600 p-[30px] large:max-w-[400px] laptop:max-w-[350px] tablet:relative tablet:left-0 tablet:top-0 tablet:m-auto tablet:mt-5 tablet:block tablet:max-w-[650px] tablet:translate-y-0">
         <div className="mb-[65px] flex items-center justify-between large:mb-[30px] small:flex-col small:items-start small:gap-1">
           <img
             className=" max-w-48"
@@ -28,7 +28,7 @@ export default function Sidebar() {
             alt="Logo"
           />
           <span
-            className={`max-w-[110px] text-sm font-normal text-white laptop:leading-[1.4] small:text-left ${language !== "en" ? "text-left" : "text-right"}`}
+            className={`max-w-[110px] text-sm font-normal text-white laptop:leading-[1.4] ${language !== "en" ? "text-left small:text-right" : "text-right small:text-left"}`}
           >
             {t("job")}
           </span>
