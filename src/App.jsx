@@ -26,7 +26,7 @@ export default function App() {
         <Resume />
         <Services />
         <Skills />
-        <Projects />
+        {/* <Projects /> */}
         {/* <Testimonials /> */}
         <Pricing />
         <Contact />

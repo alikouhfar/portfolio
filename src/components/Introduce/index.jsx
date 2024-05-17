@@ -67,14 +67,14 @@ export default function Introduce() {
                 {t("introduce.experience")}
               </p>
             </div>
-            <div>
+            {/* <div>
               <h1 className="mb-9 font-oswald text-7xl font-normal leading-[56px] -tracking-[0.2px] text-theme mobile:text-[52px] small:mb-6 small:text-5xl">
                 {projects.length}+
               </h1>
               <p className="max-w-44 text-sm uppercase leading-6">
                 {t("introduce.projects")}
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
