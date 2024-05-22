@@ -1,0 +1,9 @@
+.my-projects {
+  animation: rotate 7s infinite linear;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
