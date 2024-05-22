@@ -45,7 +45,7 @@ This repository contains a sleek and professional portfolio website built using 
 - **Version 1.1.0** (2024-05-22):
   - Changed the Persian font to Yekan Bakh.
   - Changed the project structure to use TypeScript.
-  - As it is not a good thing to use database to store static data, the neccessary information is now stored inside of project folders.
+  - As it is not a good thing to use database to store static data, the necessary information is now stored inside of project folders.
 
 ## Getting Started
 
