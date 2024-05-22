@@ -1,6 +1,12 @@
 import { IconBrush, IconCode } from "@tabler/icons-react";
+import { Service } from "../../../interfaces/service.interface";
 
-export default function Card({ language, service }) {
+interface Props {
+  language: string;
+  service: Service;
+}
+
+export default function Card({ language, service }: Props) {
   return (
     <div className="relative mb-3 rounded-3xl border border-zinc-600 px-12 pb-10 pt-11 transition-all hover:border-theme tablet:mb-0 tablet:p-6">
       {service.tag === "development" ? (

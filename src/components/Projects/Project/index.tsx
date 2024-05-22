@@ -1,4 +1,11 @@
-export default function ({ language, project }) {
+import { Project } from "../../../interfaces/project.interface";
+
+interface Props {
+  language: string;
+  project: Project;
+}
+
+export default function ({ language, project }: Props) {
   return (
     <div
       className={`group/project ${project.span && "col-span-2"} ${!project.span && "mobile:col-span-2"}`}
@@ -7,7 +14,7 @@ export default function ({ language, project }) {
         <div className="relative mb-8 h-[410px] overflow-hidden rounded-[30px]">
           <a href="#">
             <img
-              src={project.image}
+              src={`${project.title}.png`}
               className="block h-full w-full
                      object-cover"
             />

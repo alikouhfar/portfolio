@@ -1,15 +1,12 @@
 import { IconCurrencyDollar } from "@tabler/icons-react";
-import { useEffect, useState } from "react";
 import Card from "./Card";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../context/LanguageContext";
+import { pricings } from "../../data/pricings";
 
 export default function Pricing() {
-  const [pricings, setPricings] = useState([]);
   const { language } = useLanguage();
   const { t } = useTranslation();
-  useEffect(() => {
-  }, []);
   return (
     <section
       className="overflow-hidden py-[60px] tablet:pb-[40px]"

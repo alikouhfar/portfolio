@@ -1,17 +1,16 @@
 import { IconCode } from "@tabler/icons-react";
-import { useState } from "react";
-import Card from "./Project";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../context/LanguageContext";
+import Card from "./Project";
+import { projects } from "../../data/projects";
 
 export default function Projects() {
-  const [projects, setProjects] = useState([]);
   const { language } = useLanguage();
   const { t } = useTranslation();
 
   return (
     <section
-      className="overflow-hidden py-[60px] tablet:pb-[40px]"
+      className="overflow-hidden py-[60px] font-poppins tablet:pb-[40px]"
       id="projects"
     >
       <div className="m-auto max-w-[1130px] px-8 py-0 tablet:max-w-[650px]">

@@ -18,9 +18,9 @@ export default function Sidebar() {
   }).format(Date.now());
 
   return (
-    <div className="small:px-5 px-8">
-      <div className="w-100 large:max-w-[400px] laptop:max-w-[350px] tablet:relative tablet:left-0 tablet:top-0 tablet:m-auto tablet:mt-5 tablet:block tablet:max-w-[650px] tablet:translate-y-0 fixed left-5 top-1/2 z-10 max-w-[485px] -translate-y-1/2 rounded-[30px] border border-zinc-600 p-[30px]">
-        <div className="large:mb-[30px] small:flex-col small:items-start small:gap-1 mb-[65px] flex items-center justify-between">
+    <div className="px-8 small:px-5">
+      <div className="w-100 fixed left-5 top-1/2 z-10 max-w-[485px] -translate-y-1/2 rounded-[30px] border border-zinc-600 p-[30px] large:max-w-[400px] laptop:max-w-[350px] tablet:relative tablet:left-0 tablet:top-0 tablet:m-auto tablet:mt-5 tablet:block tablet:max-w-[650px] tablet:translate-y-0">
+        <div className="mb-[65px] flex items-center justify-between large:mb-[30px] small:flex-col small:items-start small:gap-1">
           <img
             className=" max-w-48"
             style={{ filter: "contrast(0) brightness(2)" }}
@@ -28,26 +28,30 @@ export default function Sidebar() {
             alt="Logo"
           />
           <span
-            className={`laptop:leading-[1.4] max-w-[110px] text-sm font-normal text-white ${language !== "en" ? "small:text-right text-left" : "small:text-left text-right"}`}
+            className={`max-w-[110px] text-sm font-normal text-white laptop:leading-[1.4] ${language !== "en" ? "text-left small:text-right" : "text-right small:text-left"}`}
           >
             {t("job")}
           </span>
         </div>
         <img
-          className="laptop:mx-auto laptop:mb-[46px] laptop:w-full laptop:max-w-[250px] mb-14 block rounded-[30px]"
+          className="mb-14 block rounded-[30px] laptop:mx-auto laptop:mb-[46px] laptop:w-full laptop:max-w-[250px]"
           src="/portrait.jpg"
           alt="Me"
         />
-        <h2 className="break-words text-center text-2xl font-light text-white">
+        <h2
+          className={`break-words text-center font-poppins font-light text-white ${language === "en" ? "text-2xl" : "text-lg"}`}
+        >
           alikouhfr@gmail.com
         </h2>
-        <h2 className="mb-[30px] text-center text-2xl font-light text-white">
+        <h2
+          className={`mb-[30px] text-center text-white ${language === "en" ? "text-2xl font-light" : "text-lg font-medium"}`}
+        >
           {t("basedIn")}
         </h2>
-        <p className="large:mb-[25px] mb-[45px] text-center text-sm text-zinc-500">
+        <p className="mb-[45px] text-center text-sm text-zinc-500 large:mb-[25px]">
           &copy; {currentYear} - {t("copyRight")}
         </p>
-        <ul className="large:mb-[30px] mb-[118px] flex flex-wrap items-center justify-center gap-2">
+        <ul className="mb-[118px] flex flex-wrap items-center justify-center gap-2 large:mb-[30px]">
           <li>
             <a
               className="social-icon"
@@ -87,10 +91,14 @@ export default function Sidebar() {
         </ul>
         <a
           href="block"
-          className="border-theme bg-theme hover:text-theme inline-flex w-full cursor-pointer items-center justify-center gap-1 rounded-[30px] border-2 px-[58px] py-[11px] text-center uppercase text-zinc-900 transition-all hover:bg-transparent"
+          className="inline-flex w-full cursor-pointer items-center justify-center gap-1 rounded-[30px] border-2 border-theme bg-theme px-[58px] py-[11px] text-center uppercase text-zinc-900 transition-all hover:bg-transparent hover:text-theme"
         >
           <IconMail strokeWidth="2px" />
-          <span className="text-nowrap font-medium">{t("hire")}</span>
+          <span
+            className={`text-nowrap ${language === "en" ? "font-medium" : "text-sm font-semibold"}`}
+          >
+            {t("hire")}
+          </span>
         </a>
       </div>
     </div>

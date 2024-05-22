@@ -1,7 +1,12 @@
 import { IconLanguage } from "@tabler/icons-react";
 import { useLanguage } from "../../../context/LanguageContext";
+import { Language } from "../../../interfaces/language.interface";
 
-export default function ({ data }) {
+interface Props {
+  data: Language;
+}
+
+export default function ({ data }: Props) {
   const { language } = useLanguage();
   const rating = new Array(5).fill(null);
   let mastery;
@@ -48,7 +53,9 @@ export default function ({ data }) {
         size={30}
       />
       <div className="flex items-center gap-4 tablet:flex-col tablet:items-start tablet:gap-1">
-        <h2 className="text-2xl font-light text-white">
+        <h2
+          className={`text-2xl text-white ${language === "en" ? "font-light" : "font-semibold"}`}
+        >
           {data.title[language]}
         </h2>
         <div className="flex gap-2">
