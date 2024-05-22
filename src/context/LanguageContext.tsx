@@ -16,7 +16,7 @@ const defaultValues: ContextType = {
 const LanguageContext = React.createContext<ContextType>(defaultValues);
 
 function LanguageProvider(props: PropsWithChildren) {
-  const [language, setLanguage] = useState("en");
+  const [language, setLanguage] = useState("fa");
   const { i18n } = useTranslation();
 
   const changeLanguage = (language: string) => {

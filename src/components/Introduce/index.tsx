@@ -1,9 +1,9 @@
 import { IconArrowDown, IconHome } from "@tabler/icons-react";
-import "./style.css";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../context/LanguageContext";
 import { projects } from "../../data/projects";
+import "./style.css";
 
 export default function Introduce() {
   const startYear = 2022;
