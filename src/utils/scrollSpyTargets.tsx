@@ -3,8 +3,6 @@ import {
   IconCode,
   IconCurrencyDollar,
   IconHome,
-  IconMessage,
-  IconPhoneCall,
   IconStarsFilled,
   IconUser,
   IconVip,
@@ -52,8 +50,8 @@ export const scrollSpyTargets = [
       <IconCurrencyDollar className="mx-auto" strokeWidth="1.8" size={20} />
     ),
   },
-  {
-    id: "contact",
-    icon: <IconPhoneCall className="mx-auto" strokeWidth="1.8" size={20} />,
-  },
+  // {
+  //   id: "contact",
+  //   icon: <IconPhoneCall className="mx-auto" strokeWidth="1.8" size={20} />,
+  // },
 ];

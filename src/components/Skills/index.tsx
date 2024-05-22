@@ -2,7 +2,7 @@ import { IconStarsFilled } from "@tabler/icons-react";
 import { useLanguage } from "../../context/LanguageContext";
 import { useTranslation } from "react-i18next";
 import Coding from "./Coding";
-import Language from "./Language";
+import LanguageCard from "./Language";
 import { skills } from "../../data/skills";
 import { languages } from "../../data/languages";
 
@@ -43,7 +43,7 @@ export default function Skills() {
             {/** Language Skill Cards **/}
             <div className="grid grid-cols-2 gap-5 small:grid-cols-1">
               {languages.map((language, index) => (
-                <Language data={language} key={index} />
+                <LanguageCard data={language} key={index} />
               ))}
             </div>
           </div>

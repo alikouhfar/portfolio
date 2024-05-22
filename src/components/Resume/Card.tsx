@@ -5,7 +5,7 @@ interface Props {
   record: Record;
 }
 
-export default function ({ record }: Props) {
+export default function Card({ record }: Props) {
   const { language } = useLanguage();
 
   const locale = language === "en" ? "en-US" : "fa-IR";

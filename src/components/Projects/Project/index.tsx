@@ -5,7 +5,7 @@ interface Props {
   project: Project;
 }
 
-export default function ({ language, project }: Props) {
+export default function Card({ language, project }: Props) {
   return (
     <div
       className={`group/project ${project.span && "col-span-2"} ${!project.span && "mobile:col-span-2"}`}

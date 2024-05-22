@@ -6,7 +6,7 @@ interface Props {
   data: Language;
 }
 
-export default function ({ data }: Props) {
+export default function LanguageCard({ data }: Props) {
   const { language } = useLanguage();
   const rating = new Array(5).fill(null);
   let mastery;

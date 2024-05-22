@@ -2,8 +2,13 @@ import { IconLanguage, IconMenu2 } from "@tabler/icons-react";
 import { useState, useEffect } from "react";
 import { useLanguage } from "../../context/LanguageContext";
 import { useTranslation } from "react-i18next";
+import { Target } from "../../interfaces/target.interface";
 
-function ScrollSpy(props: any) {
+interface Props {
+  targetIds: Array<Target>;
+}
+
+function ScrollSpy({ targetIds }: Props) {
   const [activeId, setActiveId] = useState("introduce");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { language, toggleLanguage } = useLanguage();
@@ -25,7 +30,7 @@ function ScrollSpy(props: any) {
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 650;
 
-      for (const target of props.targetIds) {
+      for (const target of targetIds) {
         const targetElement = document.getElementById(target.id);
         if (targetElement) {
           const { offsetTop, offsetHeight } = targetElement;
@@ -45,31 +50,31 @@ function ScrollSpy(props: any) {
 
     // Cleanup
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [props.targetIds]);
+  }, [targetIds]);
 
   return (
     <div>
       <button
-        className={`bg-dark-color hover:text-theme mobile:right-8 invisible fixed right-[68px] top-[50px] z-10 flex h-[55px] w-[55px] items-center justify-center rounded-[30px] border border-zinc-600 ${isMenuOpen ? "invisible" : ""} tablet:visible`}
+        className={`invisible fixed right-[68px] top-[50px] z-10 flex h-[55px] w-[55px] items-center justify-center rounded-[30px] border border-zinc-600 bg-dark-color hover:text-theme mobile:right-8 ${isMenuOpen ? "invisible" : ""} tablet:visible`}
         onClick={handleOpenMenu}
       >
         <IconMenu2 className="mx-auto" strokeWidth="1.8" size={20} />
       </button>
       <button
-        className="bg-dark-color hover:text-theme tablet:top-28 mobile:right-8 fixed right-[68px] top-24 z-10 flex h-[55px] w-[55px] flex-col items-center justify-center rounded-[30px] border border-zinc-600"
+        className="fixed right-[68px] top-24 z-10 flex h-[55px] w-[55px] flex-col items-center justify-center rounded-[30px] border border-zinc-600 bg-dark-color hover:text-theme tablet:top-28 mobile:right-8"
         onClick={handleLanguageChange}
       >
         <IconLanguage className="mx-auto" strokeWidth="1.8" size={20} />
         <span
-          className={`text-theme text-[10px] font-semibold ${language === "en" ? "font-vazir" : "font-poppins"}`}
+          className={`text-[10px] font-semibold text-theme ${language === "en" ? "font-vazir" : "font-poppins"}`}
         >
           {language === "en" ? "فارسی" : "English"}
         </span>
       </button>
       <ul
-        className={`bg-dark-color large:top-1/2 tablet:hidden fixed right-[68px] top-[322px] z-10 flex w-[55px] -translate-y-1/2 flex-col gap-5 rounded-[30px] border border-zinc-600 px-0 py-6 text-center ${isMenuOpen ? "invisible" : ""}`}
+        className={`fixed right-[68px] top-[322px] z-10 flex w-[55px] -translate-y-1/2 flex-col gap-5 rounded-[30px] border border-zinc-600 bg-dark-color px-0 py-6 text-center large:top-1/2 tablet:hidden ${isMenuOpen ? "invisible" : ""}`}
       >
-        {props.targetIds.map((target: any) => (
+        {targetIds.map((target: Target) => (
           <li key={target.id}>
             <a
               className={`menu-icon-link ${target.id === activeId ? "text-theme" : ""}`}
@@ -90,7 +95,7 @@ function ScrollSpy(props: any) {
         <div className="m-auto w-[46%]">
           <p className="mb-5 text-xl">{t("menu")}</p>
           <ul className="relative left-0 right-auto top-0 mb-8 flex translate-y-0 flex-col gap-5 rounded-none border-none bg-none px-0 py-6 text-center">
-            {props.targetIds.map((target: any) => (
+            {targetIds.map((target: Target) => (
               <li key={target.id}>
                 <a
                   className={`relative flex items-center gap-3 ${target.id === activeId ? "text-theme" : ""}`}

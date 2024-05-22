@@ -1,8 +1,8 @@
 import { IconCurrencyDollar } from "@tabler/icons-react";
-import Card from "./Card";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../context/LanguageContext";
 import { pricings } from "../../data/pricings";
+import Card from "./Card";
 
 export default function Pricing() {
   const { language } = useLanguage();

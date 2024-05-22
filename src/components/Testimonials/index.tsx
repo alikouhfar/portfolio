@@ -5,25 +5,14 @@ import {
 } from "@tabler/icons-react";
 
 import "./style.css";
-import Swiper from "../Shared/Swiper";
-import { useEffect, useState } from "react";
-import { supabase } from "../../utils/supabase";
+import TestimonialSwiper from "../Shared/Swiper";
+import { useState } from "react";
 
 export default function Testimonials() {
   const [activeSlide, setActiveSlide] = useState(0);
-  const [testimonials, setTestimonials] = useState([]);
+  const testimonials = [1, 2, 3, 4];
 
-  useEffect(() => {
-    const fetchTestimonials = async () => {
-      let { data: testimonials, error: testimonialsError } = await supabase
-        .from("testimonials")
-        .select("*");
-      setTestimonials(testimonials);
-    };
-    fetchTestimonials();
-  }, []);
-
-  function handleActiveSlide(index) {
+  function handleActiveSlide(index: number) {
     setActiveSlide(index);
   }
 
@@ -51,7 +40,7 @@ export default function Testimonials() {
                 </h1>
               </div>
               <div>
-                <Swiper
+                <TestimonialSwiper
                   testimonials={testimonials}
                   setActiveSlide={handleActiveSlide}
                 />

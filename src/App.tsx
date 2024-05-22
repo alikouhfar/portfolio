@@ -1,6 +1,5 @@
 import About from "./components/About";
 import Introduce from "./components/Introduce";
-import Contact from "./components/Contact";
 import Navbar from "./components/Navbar";
 import Pricing from "./components/Pricing";
 import Projects from "./components/Projects";
@@ -27,7 +26,6 @@ export default function App() {
         <Skills />
         <Projects />
         <Pricing />
-        <Contact />
       </div>
     </LanguageProvider>
   );

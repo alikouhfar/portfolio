@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Testimonial from "../Testimonials/Testimonial";
 
-export default ({ testimonials, setActiveSlide }) => {
+export default function TestimonalSwiper({ testimonials, setActiveSlide }) {
   return (
     <Swiper
       modules={[Navigation]}
@@ -29,4 +29,4 @@ export default ({ testimonials, setActiveSlide }) => {
       ))}
     </Swiper>
   );
-};
+}

@@ -1,4 +1,11 @@
-export default function ({ language, pricing }) {
+import { Price } from "../../interfaces/price.interface";
+
+interface Props {
+  language: string;
+  pricing: Price;
+}
+
+export default function Card({ language, pricing }: Props) {
   return (
     <div className="mobile:col-span-2">
       <div className="flex h-full flex-col rounded-[30px] border border-zinc-600 p-10 pt-9 transition-all hover:border-theme">

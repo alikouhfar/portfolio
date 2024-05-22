@@ -4,7 +4,7 @@ interface Props {
   skill: Skill;
 }
 
-export default function ({ skill }: Props) {
+export default function Coding({ skill }: Props) {
   return (
     <div>
       <div className="mb-[50px]">
