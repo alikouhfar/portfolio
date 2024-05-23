@@ -1,7 +1,7 @@
 export interface Price {
   id: number;
-  title: any;
-  price: any;
-  slogan: any;
-  features: any[];
+  title: { [languages: string]: string };
+  price: { [languages: string]: string };
+  slogan: { [languages: string]: string };
+  features: { [languages: string]: string }[];
 }

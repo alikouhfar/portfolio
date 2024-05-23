@@ -2,7 +2,7 @@ import { Service } from "../interfaces/service.interface";
 
 export const services: Service[] = [
   {
-    id: 0,
+    id: 1,
     tag: "development",
     count: 2,
     title: {
@@ -15,7 +15,7 @@ export const services: Service[] = [
     },
   },
   {
-    id: 1,
+    id: 2,
     tag: "design",
     count: 2,
     title: {

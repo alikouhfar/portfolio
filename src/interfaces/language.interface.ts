@@ -1,5 +1,7 @@
 export interface Language {
   id: number;
   mastery: number;
-  title: any;
+  title: {
+    [languages: string]: string;
+  };
 }

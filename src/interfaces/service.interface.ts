@@ -2,6 +2,6 @@ export interface Service {
   id: number;
   tag: string;
   count: number;
-  title: any;
-  body: any;
+  title: { [languages: string]: string };
+  body: { [languages: string]: string };
 }

@@ -2,7 +2,7 @@ import { Record } from "../interfaces/record.interface";
 
 export const educations: Record[] = [
   {
-    id: 0,
+    id: 1,
     start: 2014,
     end: 2018,
     title: {
@@ -15,7 +15,7 @@ export const educations: Record[] = [
     },
   },
   {
-    id: 1,
+    id: 2,
     start: 2018,
     end: 2022,
     title: {
