@@ -4,7 +4,7 @@ import logo from "@/public/logo.png";
 import { IconMenu, IconMoon, IconSun, IconX } from "@tabler/icons-react";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { useTheme } from "../_contexts/ThemeContext";
+import { useTheme } from "@/app/_contexts/ThemeContext";
 import SidebarNavigation from "./SidebarNavigation";
 
 export default function Header() {

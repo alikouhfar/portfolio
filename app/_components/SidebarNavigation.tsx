@@ -1,6 +1,7 @@
-import { sections } from "../_lib/sections";
-import { jost } from "../_ui/fonts";
+import { sections } from "@/app/_lib/sections";
+import { jost } from "@/app/_ui/fonts";
 import SocialMedia from "./SocialMedia";
+import Link from "next/link";
 
 export default function SidebarNavigation() {
   return (
@@ -12,12 +13,12 @@ export default function SidebarNavigation() {
               key={index}
               className="cursor-pointer text-[22px] font-bold uppercase tracking-widest transition-all duration-500 hover:scale-105 hover:text-primary-green"
             >
-              <a href={`#${section}`}>{section}</a>
+              <Link href={`#${section}`}>{section}</Link>
             </li>
           );
         })}
       </ul>
-      <SocialMedia justifyPosition="start" />
+      <SocialMedia justifyPosition="start" hasMarginTop={true} />
     </div>
   );
 }

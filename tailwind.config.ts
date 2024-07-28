@@ -15,15 +15,24 @@ const config: Config = {
         "card-dark": "#1d222a",
       },
       backgroundImage: {
-        "gradient-dark": "linear-gradient(180deg,#31363c 0%,#222831 100%)",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "gradient-dark-top": "linear-gradient(0deg,#31363c 0%,#222831 100%)",
+        "gradient-dark-bottom":
+          "linear-gradient(180deg,#31363c 0%,#222831 100%)",
+        "gradient-dark-center":
+          "linear-gradient(180deg,#222831 0%,#222831 100%)",
+        "gradient-light-top": "linear-gradient(0deg,#fff 0%,#f0ebe3 100%)",
+        "gradient-light-bottom": "linear-gradient(180deg,#fff 0%,#f0ebe3 100%)",
+        "gradient-light-center":
+          "linear-gradient(180deg,#f0ebe3 0%,#f0ebe3 100%)",
       },
       colors: {
         "primary-green": "#29a587",
       },
       width: {
         "cv-button": "calc(100% - 4px)",
+      },
+      maxWidth: {
+        container: "1200px",
       },
       height: {
         "cv-button": "calc(100% - 4px)",

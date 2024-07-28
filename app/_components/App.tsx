@@ -1,4 +1,4 @@
-import { ThemeProvider, useTheme } from "@/app/_contexts/ThemeContext";
+import { ThemeProvider } from "@/app/_contexts/ThemeContext";
 import Footer from "./Footer";
 import Header from "./Header";
 import Main from "./Main";

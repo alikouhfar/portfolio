@@ -5,14 +5,20 @@ import {
 } from "@tabler/icons-react";
 import Link from "next/link";
 
+type JustifyPosition = "start" | "center";
+
+interface ISocialMediaProps {
+  justifyPosition: JustifyPosition;
+  hasMarginTop: boolean;
+}
+
 export default function SocialMedia({
   justifyPosition,
-}: {
-  justifyPosition: string;
-}) {
+  hasMarginTop,
+}: ISocialMediaProps) {
   return (
     <ul
-      className={`mt-8 flex items-center justify-${justifyPosition} gap-6 text-zinc-900 xl:justify-start dark:text-zinc-100`}
+      className={`flex items-center justify-${justifyPosition} ${hasMarginTop && "mt-8"} gap-6 text-zinc-800 xl:justify-start dark:text-zinc-100`}
     >
       <li>
         <Link
