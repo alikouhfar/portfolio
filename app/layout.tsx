@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import Footer from "./_components/Footer";
+import Header from "./_components/Header";
+import { ThemeProvider } from "./_contexts/ThemeContext";
+import { jost } from "./_ui/fonts";
 import "./globals.css";
-
-const poppins = Poppins({
-  display: "swap",
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
 
 export const metadata: Metadata = {
   title: "Portfolio of Ali Kouhfar",
@@ -21,8 +18,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} overflow-x-hidden`}>
-        {children}
+      <body
+        className={`${jost.className} min-h-screen overflow-x-hidden antialiased`}
+      >
+        <ThemeProvider>
+          <Header />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -1,12 +1,11 @@
 import { sections } from "@/app/_lib/sections";
-import { jost } from "@/app/_ui/fonts";
-import SocialMedia from "./SocialMedia";
 import Link from "next/link";
+import SocialMedia from "./SocialMedia";
 
 export default function SidebarNavigation() {
   return (
     <div className="flex flex-1 flex-col justify-between p-5 pb-12 pl-14 sm:pl-24 xl:p-10 xl:pl-24 dark:text-zinc-100">
-      <ul className={`${jost.className} flex flex-col gap-5`}>
+      <ul className="flex flex-col gap-5">
         {sections.map((section, index) => {
           return (
             <li

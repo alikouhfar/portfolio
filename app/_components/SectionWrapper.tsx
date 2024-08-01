@@ -1,5 +1,5 @@
 import useIntersectionObserver from "@/app/_hooks/useIntersectionObserver";
-import { caveat, jost } from "@/app/_ui/fonts";
+import { caveat } from "@/app/_ui/fonts";
 import { FC, ReactNode, useRef } from "react";
 
 type SubtitlePhraseType = "My" | "What" | "Let's";
@@ -56,9 +56,7 @@ const SectionWrapper: FC<ISectionWrapperProps> = ({
       <div
         className={`${isIntersecting ? "top-0 opacity-100" : "top-16 opacity-0"} relative mx-auto flex max-w-[1400px] flex-col items-center gap-20 p-3 pb-52 transition-all duration-1000`}
       >
-        <div
-          className={`${jost.className} flex transform flex-col items-center antialiased`}
-        >
+        <div className="flex transform flex-col items-center">
           <h2 className="text-4xl font-bold uppercase text-zinc-800 transition duration-700 dark:text-zinc-100">
             {title}
           </h2>

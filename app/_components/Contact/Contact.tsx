@@ -1,16 +1,13 @@
-import { jost } from "@/app/_ui/fonts";
-import VerticalLine from "../VerticalLine";
-import ContactCard from "./ContactCard";
 import { contact } from "@/app/_lib/contact";
-import ButtonPrimary from "../ButtonPrimary";
 import dots from "@/public/dots.png";
 import Image from "next/image";
+import LinkButtonPrimary from "../LinkButtonPrimary";
+import VerticalLine from "../VerticalLine";
+import ContactCard from "./ContactCard";
 
 export default function Contact() {
   return (
-    <section
-      className={`${jost.className} relative flex w-full flex-wrap justify-center p-3 pb-14 antialiased`}
-    >
+    <section className="relative flex w-full flex-wrap justify-center p-3 pb-14">
       <div className="flex w-full max-w-full flex-col gap-16 lg:flex-row lg:items-start lg:gap-0 xl:max-w-container">
         <div className="grid w-full grid-cols-1 gap-14 sm:grid-cols-2 sm:gap-10 lg:w-2/5 lg:grid-cols-1 lg:gap-4">
           {contact.map((data, index) => (
@@ -85,7 +82,7 @@ export default function Contact() {
               </div>
             </div>
             <div className="col-span-2 ml-auto">
-              <ButtonPrimary link="" text="Send Message" />
+              <LinkButtonPrimary link="" text="Send Message" />
             </div>
           </form>
         </div>
