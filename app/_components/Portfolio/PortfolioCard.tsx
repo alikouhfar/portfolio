@@ -5,21 +5,29 @@ import test from "@/public/test.png";
 import { IconArrowNarrowRight } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
+import { FC, useEffect, useRef, useState } from "react";
 
-interface IProps {
+interface IGridPortfolioCardProps {
   projects: IProject[];
   project: IProject;
   columnCount: number;
 }
 
-export default function PortfolioCard({
+interface IListPortfolioCardProps {
+  projects: IProject[];
+  project: IProject;
+  columnCount: number;
+  outputCardHeight: (height: any) => void;
+}
+
+export const GridPortfolioCard: FC<IGridPortfolioCardProps> = ({
   projects,
   project,
   columnCount,
-}: IProps) {
+}) => {
   const filteredProjects = projects.filter((project) => project.isVisible);
   const { generateLeftPosition, generateTopPosition, generateCardWidth } =
-    useCardPosition(filteredProjects, project, columnCount);
+    useCardPosition(filteredProjects, project, columnCount, 0, "grid");
 
   return (
     <div
@@ -82,4 +90,81 @@ export default function PortfolioCard({
       </div>
     </div>
   );
-}
+};
+
+export const ListPortfolioCard: FC<IListPortfolioCardProps> = ({
+  projects,
+  project,
+  columnCount,
+  outputCardHeight,
+}) => {
+  const cardRef = useRef<HTMLDivElement>(null);
+  const [cardHeight, setCardHeight] = useState<any>(0);
+  const filteredProjects = projects.filter((project) => project.isVisible);
+  const { generateTopPosition } = useCardPosition(
+    filteredProjects,
+    project,
+    columnCount,
+    cardHeight,
+    "list",
+  );
+
+  useEffect(() => {
+    setCardHeight(cardRef.current?.clientHeight);
+    outputCardHeight(cardRef.current?.clientHeight);
+  }, [cardRef]);
+
+  return (
+    <div
+      ref={cardRef}
+      className="absolute h-fit w-full p-2 sm:p-5 md:p-0"
+      style={{
+        left: 0,
+        top: generateTopPosition(),
+        transition: "all ease 700ms",
+      }}
+    >
+      <div
+        className={`${project.isVisible ? "visible scale-100 opacity-100 blur-none" : "invisible scale-0 opacity-0 blur-sm"} h-[600px] overflow-hidden rounded-3xl shadow transition duration-700 sm:h-[550px] md:h-[450px] md:rounded-none md:shadow-none`}
+      >
+        <Link
+          href={`works/${project.id}`}
+          className="group/project flex h-full flex-col hover:cursor-pointer md:flex-row"
+        >
+          <div className="relative block h-52 overflow-hidden md:h-full md:w-2/5 md:min-w-72 lg:w-1/2">
+            <Image
+              fill
+              src={test}
+              alt="Project Image"
+              className="object-cover transition-all duration-700 group-hover/project:scale-110 md:group-hover/project:h-[90%] md:group-hover/project:w-[90%]"
+            />
+          </div>
+          <div className="flex flex-1 flex-col justify-between bg-white p-7 pt-8 text-zinc-800 transition-all duration-700 md:bg-transparent md:py-16 md:pl-14 lg:p-20 lg:pl-28 dark:bg-card-dark dark:text-zinc-100 dark:md:bg-transparent">
+            <div>
+              <span className="mb-2 block text-sm font-semibold uppercase text-primary-green">
+                {project.category}
+              </span>
+              <h5 className="mb-4 text-2xl font-bold leading-7 md:text-6xl">
+                {project.title}
+              </h5>
+            </div>
+            <div className="flex flex-col gap-5">
+              <p className="min-h-36 leading-7 opacity-80 md:min-h-0">
+                {project.description}
+              </p>
+              <button className="relative flex gap-3 align-top text-base font-bold leading-6 text-zinc-800 transition-all duration-300 group-hover/project:gap-2 group-hover/project:text-primary-green dark:text-zinc-100">
+                <span>See Project</span>
+                <div>
+                  <IconArrowNarrowRight
+                    size={24}
+                    className="text-primary-green"
+                  />
+                </div>
+              </button>
+            </div>
+          </div>
+        </Link>
+      </div>
+    </div>
+  );
+};
