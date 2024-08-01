@@ -1,15 +1,15 @@
 "use client";
 
 import { useTheme } from "@/app/_contexts/ThemeContext";
+import Contact from "./Contact/Contact";
 import Hero from "./Hero";
+import Pricing from "./Pricing/Pricing";
+import Resume from "./Resume/Resume";
 import SectionWrapper from "./SectionWrapper";
 import Services from "./Services/Services";
 import ProfessionalSkills from "./Skills/ProfessionalSkills";
-import Portfolio from "./Portfolio/Portfolio";
-import Resume from "./Resume/Resume";
 import Testimonials from "./Testimonials/Testimonials";
-import Pricing from "./Pricing/Pricing";
-import Contact from "./Contact/Contact";
+import { GridPortfolio } from "./Portfolio/Portfolio";
 
 export default function Main() {
   const { theme } = useTheme();
@@ -31,7 +31,7 @@ export default function Main() {
         gradientPosition="center"
       />
       <SectionWrapper
-        component={<Portfolio />}
+        component={<GridPortfolio />}
         title="Portfolio"
         subtitlePhrase="My"
         subtitle="Cases"

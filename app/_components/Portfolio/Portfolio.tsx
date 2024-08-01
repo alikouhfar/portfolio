@@ -1,16 +1,17 @@
-import { IProject } from "@/app/_models/project.model";
+"use client";
+
 import { projects } from "@/app/_lib/projects";
-import { jost } from "@/app/_ui/fonts";
+import { IProject } from "@/app/_models/project.model";
 import { useSearchParams } from "next/navigation";
-import { useCallback, useEffect, useState } from "react";
-import ButtonPrimary from "../ButtonPrimary";
+import { FC, useCallback, useEffect, useState } from "react";
+import LinkButtonPrimary from "../LinkButtonPrimary";
 import VerticalLine from "../VerticalLine";
-import PortfolioCard from "./PortfolioCard";
+import { GridPortfolioCard, ListPortfolioCard } from "./PortfolioCard";
 import PortfolioFilters from "./PortfolioFilters";
 
-export default function Portfolio() {
+export const GridPortfolio: FC = () => {
   const searchParams = useSearchParams();
-  const activeFilter = searchParams?.get("projects") ?? "all";
+  const activeFilter = searchParams?.get("works") ?? "all";
   const [viewPortWidth, setViewPortWidth] = useState<number>(0);
   const [columnCount, setColumnCount] = useState<number>(0);
   let filteredProjects: IProject[] = [];
@@ -79,14 +80,12 @@ export default function Portfolio() {
   getProjectsCount();
 
   return (
-    <div
-      className={`${jost.className} relative flex w-full flex-wrap justify-center p-3 pb-14 antialiased`}
-    >
+    <div className="relative flex w-full flex-wrap justify-center p-3 pb-14">
       <div className="w-full max-w-full xl:max-w-container">
         <PortfolioFilters />
         <div className="relative" style={{ height: generateContainerHeight() }}>
           {filteredProjects.map((project, index) => (
-            <PortfolioCard
+            <GridPortfolioCard
               key={index}
               projects={filteredProjects}
               project={project}
@@ -95,7 +94,7 @@ export default function Portfolio() {
           ))}
         </div>
         <div className="relative mt-16 text-center">
-          <ButtonPrimary text="View More" link="" />
+          <LinkButtonPrimary text="View More" link="works" />
         </div>
       </div>
       <VerticalLine
@@ -104,4 +103,75 @@ export default function Portfolio() {
       />
     </div>
   );
-}
+};
+
+export const ListPortfolio: FC = () => {
+  const searchParams = useSearchParams();
+  const activeFilter = searchParams?.get("works") ?? "all";
+  const [cardHeight, setCardHeight] = useState<any>(0);
+  let filteredProjects: IProject[] = [];
+  let projectsCount: number = 0;
+
+  function getFilteredProjects() {
+    if (activeFilter === "all") {
+      filteredProjects = projects.map((project) => {
+        return { ...project, isVisible: true };
+      });
+    } else {
+      filteredProjects = projects.map((project) => {
+        if (project.tag === activeFilter) {
+          return { ...project, isVisible: true };
+        } else {
+          return { ...project, isVisible: false };
+        }
+      });
+    }
+  }
+
+  function getProjectsCount() {
+    projectsCount = filteredProjects.filter(
+      (project) => project.isVisible,
+    ).length;
+  }
+
+  function generateContainerHeight() {
+    const columnCount = 1;
+    const rowCount = projectsCount / columnCount;
+    const padding = cardHeight === 450 ? 80 : 20;
+
+    if (projectsCount <= columnCount) {
+      return cardHeight;
+    } else {
+      return `${rowCount * cardHeight + rowCount * padding}px`;
+    }
+  }
+
+  getFilteredProjects();
+  getProjectsCount();
+
+  return (
+    <div className="relative flex w-full flex-wrap justify-center p-3 pb-14 lg:p-0">
+      <div className="w-full max-w-full xl:max-w-screen-xl">
+        <PortfolioFilters />
+        <div className="relative" style={{ height: generateContainerHeight() }}>
+          {filteredProjects.map((project, index) => (
+            <ListPortfolioCard
+              key={index}
+              projects={filteredProjects}
+              project={project}
+              columnCount={1}
+              outputCardHeight={setCardHeight}
+            />
+          ))}
+        </div>
+        <div className="relative mt-16 text-center md:mt-4">
+          <LinkButtonPrimary text="Load More" link="works" />
+        </div>
+      </div>
+      <VerticalLine
+        linePosition="right-0"
+        imagePosition="-left-5 md:-left-12"
+      />
+    </div>
+  );
+};
