@@ -25,12 +25,12 @@ export default function PortfolioFilters() {
 }
 
 function FilterButton({ param, content }: IProps) {
-  const { activeParam, setParam } = useSearchParam("projects", "all");
+  const { activeParam, setParam } = useSearchParam("works", "all");
 
   return (
     <button
       onClick={() => setParam(param)}
-      className={`${param === activeParam ? "text-primary-green after:w-10" : ""} relative font-semibold after:absolute after:bottom-1/2 after:left-0 after:h-0.5 after:w-0 after:max-w-[60%] after:-translate-y-1/2 after:bg-primary-green after:transition-all after:duration-300 after:content-[''] hover:after:w-10 sm:after:-bottom-3`}
+      className={`${param === activeParam ? "text-primary-green after:w-10" : ""} relative font-semibold text-zinc-800 transition-all duration-700 after:absolute after:bottom-1/2 after:left-0 after:h-0.5 after:w-0 after:max-w-[60%] after:-translate-y-1/2 after:bg-primary-green after:transition-all after:duration-300 after:content-[''] hover:after:w-10 sm:after:-bottom-3 dark:text-zinc-100`}
     >
       {content}
     </button>
