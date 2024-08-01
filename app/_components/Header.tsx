@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { useTheme } from "@/app/_contexts/ThemeContext";
 import SidebarNavigation from "./SidebarNavigation";
+import Link from "next/link";
 
 export default function Header() {
   const [isHeaderFixed, setIsHeaderFixed] = useState(false);
@@ -44,9 +45,9 @@ export default function Header() {
         className={`${isHeaderFixed ? "animate-header--in fixed shadow-sm backdrop-blur-md" : "absolute top-0"} ${theme === "dark" ? "dark" : ""} left-1/2 z-[90] h-24 w-full max-w-[1600px] -translate-x-1/2 p-8 px-5 transition-all`}
       >
         <div className="relative mx-auto flex flex-wrap items-center justify-between">
-          <div className="max-w-44">
+          <Link href="/" className="max-w-44">
             <Image src={logo} alt="Logo of Ali Kouhfar" />
-          </div>
+          </Link>
           <div className="flex items-center gap-2">
             <button
               className={`group relative flex h-10 w-10 items-center justify-center overflow-hidden px-3 py-1 transition ${theme === "light" ? "text-zinc-800" : "text-primary-green"}`}
