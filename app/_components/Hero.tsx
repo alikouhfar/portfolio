@@ -1,3 +1,5 @@
+"use client";
+
 import { caveat } from "@/app/_ui/fonts";
 import dotsSmall from "@/public/dots-small.png";
 import dots from "@/public/dots.png";
@@ -5,10 +7,15 @@ import Image from "next/image";
 import Link from "next/link";
 import LinkButtonPrimary from "./LinkButtonPrimary";
 import SocialMedia from "./SocialMedia";
+import { useTheme } from "../_contexts/ThemeContext";
 
 export default function Hero() {
+  const { theme } = useTheme();
+
   return (
-    <div className="bg-gradient-light-top pb-20 transition duration-700 dark:bg-gradient-dark-top">
+    <div
+      className={`${theme === "dark" ? "dark" : ""} bg-gradient-light-top pb-20 transition duration-700 dark:bg-gradient-dark-top`}
+    >
       <div className="relative mx-auto flex max-w-[1600px] flex-wrap justify-center overflow-x-hidden p-3 pb-14">
         <div>
           <div className="container mx-auto grid w-full auto-rows-auto grid-cols-2 pt-32 text-zinc-800 xl:px-4 xl:pt-20 2xl:px-32">

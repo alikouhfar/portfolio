@@ -18,12 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${jost.className} min-h-screen overflow-x-hidden antialiased`}
-      >
+      <body className={`${jost.className} overflow-x-hidden antialiased`}>
         <ThemeProvider>
           <Header />
-          {children}
+          <main className="min-h-screen">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>

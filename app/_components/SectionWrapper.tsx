@@ -1,6 +1,9 @@
+"use client";
+
 import useIntersectionObserver from "@/app/_hooks/useIntersectionObserver";
 import { caveat } from "@/app/_ui/fonts";
 import { FC, ReactNode, useRef } from "react";
+import { useTheme } from "../_contexts/ThemeContext";
 
 type SubtitlePhraseType = "My" | "What" | "Let's";
 
@@ -31,6 +34,7 @@ const SectionWrapper: FC<ISectionWrapperProps> = ({
     threshold: 0.15,
   },
 }) => {
+  const { theme } = useTheme();
   const ref = useRef<HTMLDivElement>(null);
   const isIntersecting = useIntersectionObserver({
     ref,
@@ -51,7 +55,7 @@ const SectionWrapper: FC<ISectionWrapperProps> = ({
     <div
       data-section={title.toLowerCase()}
       ref={ref}
-      className={`${generateGradientColorClass()} relative text-zinc-800 transition duration-700 dark:text-zinc-100`}
+      className={`${theme === "dark" ? "dark" : ""} ${generateGradientColorClass()} relative text-zinc-800 transition duration-700 dark:text-zinc-100`}
     >
       <div
         className={`${isIntersecting ? "top-0 opacity-100" : "top-16 opacity-0"} relative mx-auto flex max-w-[1400px] flex-col items-center gap-20 p-3 pb-52 transition-all duration-1000`}
