@@ -1,10 +1,12 @@
 import { IProject } from "../_models/project.model";
 
-export default function useCardPosition(
+const useCardPosition = (
   projects: IProject[],
   project: IProject,
   columnCount: number,
-) {
+  cardHeight: number,
+  mode: "grid" | "list",
+) => {
   function getCardHorizontalOrder() {
     let order = 0;
     for (let i = 0; i < projects.length; i++) {
@@ -33,18 +35,28 @@ export default function useCardPosition(
   function generateTopPosition() {
     const order = getCardVerticalOrder();
 
-    if (columnCount < 3) {
-      if (order === 0) {
-        return `${order * 550}px`;
-      } else {
-        return `${order * 550 + order * 40}px`;
-      }
-    } else {
-      if (order === 0) {
-        return `${order * 600}px`;
-      } else {
-        return `${order * 600 + order * 40}px`;
-      }
+    switch (mode) {
+      case "grid":
+        if (columnCount < 3) {
+          if (order === 0) {
+            return `${order * 550}px`;
+          } else {
+            return `${order * 550 + order * 40}px`;
+          }
+        } else {
+          if (order === 0) {
+            return `${order * 600}px`;
+          } else {
+            return `${order * 600 + order * 40}px`;
+          }
+        }
+      case "list":
+        const padding = cardHeight === 450 ? 80 : 20;
+        if (order === 0) {
+          return `${order * cardHeight}px`;
+        } else {
+          return `${order * cardHeight + order * padding}px`;
+        }
     }
   }
 
@@ -57,4 +69,6 @@ export default function useCardPosition(
     generateTopPosition,
     generateCardWidth,
   };
-}
+};
+
+export default useCardPosition;

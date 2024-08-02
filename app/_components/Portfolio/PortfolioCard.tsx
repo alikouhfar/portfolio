@@ -6,6 +6,7 @@ import { IconArrowNarrowRight } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 import { FC, useEffect, useRef, useState } from "react";
+import LimitedTextCharacters from "../LimitedTextCharacters";
 
 interface IGridPortfolioCardProps {
   projects: IProject[];
@@ -43,15 +44,15 @@ export const GridPortfolioCard: FC<IGridPortfolioCardProps> = ({
         className={`${project.isVisible ? "visible scale-100 opacity-100 blur-none" : "invisible scale-0 opacity-0 blur-sm"} h-[550px] overflow-hidden rounded-3xl bg-white p-7 text-zinc-800 shadow transition duration-700 xl:h-[600px] dark:bg-card-dark dark:text-zinc-100`}
       >
         <Link
-          href=""
-          className="group/project flex h-full flex-col hover:cursor-pointer"
+          href={`works/${project.id}`}
+          className="group flex h-full flex-col hover:cursor-pointer"
         >
           <div className="relative block h-52 overflow-hidden rounded-2xl">
             <Image
               fill
               src={test}
               alt="Project Image"
-              className="object-cover transition duration-300 group-hover/project:scale-110"
+              className="object-cover transition duration-300 group-hover:scale-110"
             />
           </div>
           <div className="flex flex-1 flex-col justify-between pt-8">
@@ -67,8 +68,8 @@ export const GridPortfolioCard: FC<IGridPortfolioCardProps> = ({
               <p className="min-h-44 leading-7 opacity-80">
                 {project.description}
               </p>
-              <button className="relative flex gap-3 align-top text-base font-bold leading-6 text-zinc-800 transition-all duration-300 group-hover/project:gap-2 group-hover/project:text-primary-green dark:text-zinc-100">
-                <span>See Pricing</span>
+              <button className="relative flex gap-3 align-top text-base font-bold leading-6 text-zinc-800 transition-all duration-300 group-hover:gap-2 group-hover:text-primary-green dark:text-zinc-100">
+                <span>See Project</span>
                 <div>
                   <IconArrowNarrowRight
                     size={24}
@@ -129,14 +130,14 @@ export const ListPortfolioCard: FC<IListPortfolioCardProps> = ({
       >
         <Link
           href={`works/${project.id}`}
-          className="group/project flex h-full flex-col hover:cursor-pointer md:flex-row"
+          className="group flex h-full flex-col hover:cursor-pointer md:flex-row"
         >
-          <div className="relative block h-52 overflow-hidden md:h-full md:w-2/5 md:min-w-72 lg:w-1/2">
+          <div className="relative block h-52 overflow-hidden transition-all duration-700 group-hover:scale-95 md:h-full md:w-2/5 md:min-w-72 lg:w-1/2">
             <Image
               fill
               src={test}
               alt="Project Image"
-              className="object-cover transition-all duration-700 group-hover/project:scale-110 md:group-hover/project:h-[90%] md:group-hover/project:w-[90%]"
+              className="object-cover transition-all duration-700 group-hover:scale-125"
             />
           </div>
           <div className="flex flex-1 flex-col justify-between bg-white p-7 pt-8 text-zinc-800 transition-all duration-700 md:bg-transparent md:py-16 md:pl-14 lg:p-20 lg:pl-28 dark:bg-card-dark dark:text-zinc-100 dark:md:bg-transparent">
@@ -145,14 +146,14 @@ export const ListPortfolioCard: FC<IListPortfolioCardProps> = ({
                 {project.category}
               </span>
               <h5 className="mb-4 text-2xl font-bold leading-7 md:text-6xl">
-                {project.title}
+                <LimitedTextCharacters text={project.title} limit={21} />
               </h5>
             </div>
             <div className="flex flex-col gap-5">
               <p className="min-h-36 leading-7 opacity-80 md:min-h-0">
                 {project.description}
               </p>
-              <button className="relative flex gap-3 align-top text-base font-bold leading-6 text-zinc-800 transition-all duration-300 group-hover/project:gap-2 group-hover/project:text-primary-green dark:text-zinc-100">
+              <button className="relative flex gap-3 align-top text-base font-bold leading-6 text-zinc-800 transition-all duration-300 group-hover:gap-2 group-hover:text-primary-green dark:text-zinc-100">
                 <span>See Project</span>
                 <div>
                   <IconArrowNarrowRight
