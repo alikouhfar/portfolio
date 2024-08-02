@@ -109,6 +109,7 @@ export const ListPortfolio: FC = () => {
   const searchParams = useSearchParams();
   const activeFilter = searchParams?.get("works") ?? "all";
   const [cardHeight, setCardHeight] = useState<any>(0);
+  const [containerHeight, setContainerHeight] = useState<string>();
   let filteredProjects: IProject[] = [];
   let projectsCount: number = 0;
 
@@ -135,16 +136,13 @@ export const ListPortfolio: FC = () => {
   }
 
   function generateContainerHeight() {
-    const columnCount = 1;
-    const rowCount = projectsCount / columnCount;
     const padding = cardHeight === 450 ? 80 : 20;
-
-    if (projectsCount <= columnCount) {
-      return cardHeight;
-    } else {
-      return `${rowCount * cardHeight + rowCount * padding}px`;
-    }
+    return `${projectsCount * cardHeight + projectsCount * padding}px`;
   }
+
+  useEffect(() => {
+    setContainerHeight(generateContainerHeight());
+  }, [filteredProjects]);
 
   getFilteredProjects();
   getProjectsCount();
@@ -153,7 +151,10 @@ export const ListPortfolio: FC = () => {
     <div className="relative flex w-full flex-wrap justify-center p-3 pb-14 lg:p-0">
       <div className="w-full max-w-full xl:max-w-screen-xl">
         <PortfolioFilters />
-        <div className="relative" style={{ height: generateContainerHeight() }}>
+        <div
+          className="relative min-h-screen"
+          style={{ height: containerHeight }}
+        >
           {filteredProjects.map((project, index) => (
             <ListPortfolioCard
               key={index}

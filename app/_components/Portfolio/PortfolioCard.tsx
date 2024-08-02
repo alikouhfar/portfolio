@@ -99,8 +99,10 @@ export const ListPortfolioCard: FC<IListPortfolioCardProps> = ({
   columnCount,
   outputCardHeight,
 }) => {
+  const cardOrder = project.id - 1;
   const cardRef = useRef<HTMLDivElement>(null);
   const [cardHeight, setCardHeight] = useState<any>(0);
+  const [cardTop, setCardTop] = useState<string>(`${cardOrder * 450}px`);
   const filteredProjects = projects.filter((project) => project.isVisible);
   const { generateTopPosition } = useCardPosition(
     filteredProjects,
@@ -113,20 +115,19 @@ export const ListPortfolioCard: FC<IListPortfolioCardProps> = ({
   useEffect(() => {
     setCardHeight(cardRef.current?.clientHeight);
     outputCardHeight(cardRef.current?.clientHeight);
-  }, [cardRef]);
+    setCardTop(generateTopPosition());
+  }, [project]);
 
   return (
     <div
       ref={cardRef}
-      className="absolute h-fit w-full p-2 sm:p-5 md:p-0"
+      className="absolute left-0 h-fit w-full p-2 transition-all duration-700 sm:p-5 md:p-0"
       style={{
-        left: 0,
-        top: generateTopPosition(),
-        transition: "all ease 700ms",
+        top: cardTop,
       }}
     >
       <div
-        className={`${project.isVisible ? "visible scale-100 opacity-100 blur-none" : "invisible scale-0 opacity-0 blur-sm"} h-[600px] overflow-hidden rounded-3xl shadow transition duration-700 sm:h-[550px] md:h-[450px] md:rounded-none md:shadow-none`}
+        className={`${project.isVisible ? "visible scale-100 opacity-100 blur-none" : "invisible scale-0 opacity-0 blur-lg"} h-[600px] overflow-hidden rounded-3xl shadow transition duration-700 sm:h-[550px] md:h-[450px] md:rounded-none md:shadow-none`}
       >
         <Link
           href={`works/${project.id}`}
