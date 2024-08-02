@@ -1,12 +1,12 @@
 import { services } from "@/app/_lib/services";
-import Carousel from "../Carousel";
 import VerticalLine from "../VerticalLine";
+import { ServicesCarousel } from "../Carousel";
 
 export default function Services() {
   return (
     <div className="relative flex w-full flex-wrap justify-center p-3 pb-14">
       <div className="max-w-full xl:max-w-container">
-        <Carousel slides={services} cardType="service" />
+        <ServicesCarousel services={services} />
       </div>
       <VerticalLine
         linePosition="right-0"

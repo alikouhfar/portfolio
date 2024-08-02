@@ -13,14 +13,18 @@
 
 .swiper-slide {
   height: auto;
-  opacity: 0;
-  visibility: hidden;
-  transition: all ease-in-out 0.7s;
 }
 
-.swiper-slide-visible {
+.visible-slide {
   opacity: 1;
   visibility: visible;
+  transition: all ease-in-out 800ms;
+}
+
+.invisible-slide {
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease-in-out 800ms;
 }
 
 .swiper-pagination {

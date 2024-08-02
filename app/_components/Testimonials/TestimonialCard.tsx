@@ -1,4 +1,4 @@
-import { ITestimonial } from "@/app/_models/testimonial.interface";
+import { ITestimonial } from "@/app/_models/testimonial.model";
 import { caveat } from "@/app/_ui/fonts";
 import dotsSmall from "@/public/dots-small.png";
 import test from "@/public/test.png";
