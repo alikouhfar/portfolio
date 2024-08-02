@@ -1,6 +1,5 @@
 "use client";
 
-import LinkButtonPrimary from "@/app/_components/LinkButtonPrimary";
 import { useTheme } from "@/app/_contexts/ThemeContext";
 import { projects } from "@/app/_lib/projects";
 import { caveat } from "@/app/_ui/fonts";
@@ -10,6 +9,7 @@ import test from "@/public/test.png";
 import Image from "next/image";
 import Link from "next/link";
 import { IconChevronRight } from "@tabler/icons-react";
+import { LinkButtonPrimary } from "./Button";
 
 const WorkDetails: FC = () => {
   const params = useParams();

@@ -32,12 +32,11 @@ export const GridPortfolioCard: FC<IGridPortfolioCardProps> = ({
 
   return (
     <div
-      className="absolute top-0 h-fit p-5"
+      className="absolute top-0 h-fit p-5 transition-all duration-700"
       style={{
         left: generateLeftPosition(),
         top: generateTopPosition(),
         width: generateCardWidth(),
-        transition: "all ease 700ms",
       }}
     >
       <div

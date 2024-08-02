@@ -4,10 +4,10 @@ import { projects } from "@/app/_lib/projects";
 import { IProject } from "@/app/_models/project.model";
 import { useSearchParams } from "next/navigation";
 import { FC, useCallback, useEffect, useState } from "react";
-import LinkButtonPrimary from "../LinkButtonPrimary";
 import VerticalLine from "../VerticalLine";
 import { GridPortfolioCard, ListPortfolioCard } from "./PortfolioCard";
 import PortfolioFilters from "./PortfolioFilters";
+import { LinkButtonPrimary } from "../Button";
 
 export const GridPortfolio: FC = () => {
   const searchParams = useSearchParams();
