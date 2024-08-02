@@ -4,7 +4,7 @@ import {
   IconMap,
   IconPhone,
 } from "@tabler/icons-react";
-import { IContact } from "../_models/contact.model";
+import { IContact } from "@/app/_models/contact.model";
 
 export const contact: IContact[] = [
   {

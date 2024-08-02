@@ -1,4 +1,4 @@
-import { IPricing } from "../_models/pricing.model";
+import { IPricing } from "@/app/_models/pricing.model";
 
 export const pricingPlans: IPricing[] = [
   {

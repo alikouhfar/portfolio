@@ -1,4 +1,4 @@
-import { ISkill } from "../_models/skill.model";
+import { ISkill } from "@/app/_models/skill.model";
 
 export const skills: ISkill[] = [
   {

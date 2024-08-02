@@ -1,4 +1,4 @@
-import { IResume } from "../_models/resume.model";
+import { IResume } from "@/app/_models/resume.model";
 
 export const experience: IResume[] = [
   {

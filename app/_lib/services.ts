@@ -1,4 +1,4 @@
-import { IService } from "../_models/service.model";
+import { IService } from "@/app/_models/service.model";
 
 export const services: IService[] = [
   {

@@ -1,4 +1,4 @@
-import { ITestimonial } from "../_models/testimonial.model";
+import { ITestimonial } from "@/app/_models/testimonial.model";
 
 export const testimonials: ITestimonial[] = [
   {
