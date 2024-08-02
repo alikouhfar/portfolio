@@ -9,7 +9,7 @@ interface ISkillCardProps {
 const observerOptions = {
   root: null,
   rootMargin: "0px 0px 0px 0px",
-  threshold: 0.8,
+  threshold: 1,
 };
 
 const SkillCard: FC<ISkillCardProps> = ({ skill }) => {

@@ -28,6 +28,9 @@ const App: FC = () => {
         subtitlePhrase="My"
         subtitle="Talent"
         gradientPosition="center"
+        observerOptions={{
+          threshold: 0.05,
+        }}
       />
       <SectionWrapper
         component={<GridPortfolio />}
