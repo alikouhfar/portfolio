@@ -49,7 +49,7 @@ const ResumeCard: FC<IResumeCardProps> = ({ record, id }) => {
       >
         <div className="flex flex-col items-start justify-between gap-1 lg:flex-row lg:items-center lg:gap-5">
           <h6
-            className={`${caveat.className} text-3xl font-bold leading-7 text-primary-green antialiased`}
+            className={`${caveat.className} text-3xl font-semibold leading-7 text-primary-green antialiased`}
           >
             {record.instituteName}
           </h6>
