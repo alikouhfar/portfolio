@@ -4,9 +4,12 @@ import Link from "next/link";
 import { useTheme } from "@/app/_contexts/ThemeContext";
 import SocialMedia from "./SocialMedia";
 import { FC } from "react";
+import { IconCopyright } from "@tabler/icons-react";
 
 const Footer: FC = () => {
   const { theme } = useTheme();
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer
       className={`${theme === "dark" ? "dark" : ""} bg-primary-light py-16 text-zinc-800 transition-all duration-700 dark:bg-primary-dark dark:text-zinc-100`}
@@ -15,10 +18,14 @@ const Footer: FC = () => {
         <div className="flex justify-center lg:justify-start">
           <SocialMedia justifyPosition="start" hasMarginTop={false} />
         </div>
-        <p className="text-center text-sm font-bold uppercase">
-          © 2022 <span className="text-primary-green">Ali Kouhfar</span>. All
-          rights reserved
-        </p>
+        <div className="flex items-center justify-center gap-1 text-sm font-bold uppercase">
+          <div className="flex items-center gap-1">
+            <IconCopyright size={16} stroke={2.2} />
+            <span>{currentYear}</span>
+          </div>
+          <span className="text-primary-green">Ali Kouhfar.</span>
+          <span>All rights reserved</span>
+        </div>
         <p className="text-center text-sm font-bold uppercase lg:text-right">
           <span>Developed by</span>
           <Link
