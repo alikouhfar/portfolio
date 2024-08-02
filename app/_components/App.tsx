@@ -1,5 +1,6 @@
 "use client";
 
+import { FC } from "react";
 import Contact from "./Contact/Contact";
 import Hero from "./Hero";
 import { GridPortfolio } from "./Portfolio/Portfolio";
@@ -10,7 +11,7 @@ import Services from "./Services/Services";
 import ProfessionalSkills from "./Skills/ProfessionalSkills";
 import Testimonials from "./Testimonials/Testimonials";
 
-export default function App() {
+const App: FC = () => {
   return (
     <>
       <Hero />
@@ -65,4 +66,6 @@ export default function App() {
       />
     </>
   );
-}
+};
+
+export default App;

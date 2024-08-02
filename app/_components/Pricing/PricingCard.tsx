@@ -3,12 +3,13 @@ import dotsSmall from "@/public/dots-small.png";
 import { IconArrowNarrowRight, IconChecks } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
+import { FC } from "react";
 
-interface IProps {
+interface IPricingCardProps {
   plan: IPricing;
 }
 
-export default function PricingCard({ plan }: IProps) {
+const PricingCard: FC<IPricingCardProps> = ({ plan }) => {
   return (
     <div className="relative">
       {plan.isPopluar && (
@@ -67,4 +68,6 @@ export default function PricingCard({ plan }: IProps) {
       </div>
     </div>
   );
-}
+};
+
+export default PricingCard;

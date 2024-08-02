@@ -3,12 +3,13 @@ import { IconArrowNarrowRight } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 import { IService } from "@/app/_models/service.model";
+import { FC } from "react";
 
-interface IProps {
+interface IServiceCardProps {
   service: IService;
 }
 
-export default function ServiceCard({ service }: IProps) {
+const ServiceCard: FC<IServiceCardProps> = ({ service }) => {
   return (
     <div className="relative flex h-full flex-col overflow-hidden rounded-2xl bg-white p-8 text-zinc-800 opacity-100 shadow transition duration-700 dark:bg-card-dark dark:text-zinc-100">
       <span className="mb-16 text-[13px] font-semibold uppercase text-primary-green">
@@ -39,15 +40,6 @@ export default function ServiceCard({ service }: IProps) {
       </div>
     </div>
   );
-}
+};
 
-/*
-    position: absolute;
-    right: -24px;
-    bottom: -24px;
-    width: 141px;
-    height: 141px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
- */
+export default ServiceCard;

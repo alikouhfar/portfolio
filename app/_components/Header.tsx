@@ -3,12 +3,12 @@
 import logo from "@/public/logo.png";
 import { IconMenu, IconMoon, IconSun, IconX } from "@tabler/icons-react";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 import { useTheme } from "@/app/_contexts/ThemeContext";
 import SidebarNavigation from "./SidebarNavigation";
 import Link from "next/link";
 
-export default function Header() {
+const Header: FC = () => {
   const [isHeaderFixed, setIsHeaderFixed] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const headerElementRef = useRef<HTMLDivElement>(null);
@@ -105,4 +105,6 @@ export default function Header() {
       </div>
     </header>
   );
-}
+};
+
+export default Header;

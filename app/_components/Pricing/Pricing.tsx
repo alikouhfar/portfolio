@@ -1,8 +1,9 @@
 import { pricingPlans } from "@/app/_lib/pricing";
 import VerticalLine from "../VerticalLine";
 import PricingCard from "./PricingCard";
+import { FC } from "react";
 
-export default function Pricing() {
+const Pricing: FC = () => {
   return (
     <div className="relative flex w-full flex-wrap justify-center p-3 pb-14">
       <div className="grid max-w-full grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-6 md:gap-10 xl:max-w-container xl:grid-cols-3">
@@ -16,4 +17,6 @@ export default function Pricing() {
       />
     </div>
   );
-}
+};
+
+export default Pricing;

@@ -1,11 +1,12 @@
 import { contact } from "@/app/_lib/contact";
 import dots from "@/public/dots.png";
 import Image from "next/image";
-import LinkButtonPrimary from "../LinkButtonPrimary";
 import VerticalLine from "../VerticalLine";
 import ContactCard from "./ContactCard";
+import { LinkButtonPrimary } from "../Button";
+import { FC } from "react";
 
-export default function Contact() {
+const Contact: FC = () => {
   return (
     <section className="relative flex w-full flex-wrap justify-center p-3 pb-14">
       <div className="flex w-full max-w-full flex-col gap-16 lg:flex-row lg:items-start lg:gap-0 xl:max-w-container">
@@ -93,4 +94,6 @@ export default function Contact() {
       />
     </section>
   );
-}
+};
+
+export default Contact;

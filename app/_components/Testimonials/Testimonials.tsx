@@ -1,8 +1,9 @@
 import { testimonials } from "@/app/_lib/testimonials";
 import { TestimonialsCarousel } from "../Carousel";
 import VerticalLine from "../VerticalLine";
+import { FC } from "react";
 
-export default function Testimonials() {
+const Testimonials: FC = () => {
   return (
     <div className="relative flex w-full flex-wrap justify-center p-3 pb-14">
       <div className="max-w-full xl:max-w-container">
@@ -14,4 +15,6 @@ export default function Testimonials() {
       />
     </div>
   );
-}
+};
+
+export default Testimonials;

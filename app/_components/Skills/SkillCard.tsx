@@ -1,10 +1,11 @@
 import { ISkill } from "@/app/_models/skill.model";
+import { FC } from "react";
 
-interface IProps {
+interface ISkillCardProps {
   skill: ISkill;
 }
 
-export default function SkillCard({ skill }: IProps) {
+const SkillCard: FC<ISkillCardProps> = ({ skill }) => {
   return (
     <div>
       <div className="mb-8 px-5 text-zinc-800 transition duration-700 dark:text-zinc-100">
@@ -25,4 +26,6 @@ export default function SkillCard({ skill }: IProps) {
       </div>
     </div>
   );
-}
+};
+
+export default SkillCard;

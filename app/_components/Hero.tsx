@@ -5,11 +5,12 @@ import dotsSmall from "@/public/dots-small.png";
 import dots from "@/public/dots.png";
 import Image from "next/image";
 import Link from "next/link";
-import LinkButtonPrimary from "./LinkButtonPrimary";
 import SocialMedia from "./SocialMedia";
-import { useTheme } from "../_contexts/ThemeContext";
+import { useTheme } from "@/app/_contexts/ThemeContext";
+import { LinkButtonPrimary } from "./Button";
+import { FC } from "react";
 
-export default function Hero() {
+const Hero: FC = () => {
   const { theme } = useTheme();
 
   return (
@@ -130,4 +131,6 @@ export default function Hero() {
       </div>
     </div>
   );
-}
+};
+
+export default Hero;

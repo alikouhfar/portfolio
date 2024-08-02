@@ -1,6 +1,6 @@
 "use client";
 
-export default function useLocalStorage() {
+const useLocalStorage = () => {
   function setItem(title: string, value: string) {
     window.localStorage.setItem(title, value);
   }
@@ -11,4 +11,6 @@ export default function useLocalStorage() {
   }
 
   return { setItem, getItem };
-}
+};
+
+export default useLocalStorage;

@@ -1,15 +1,16 @@
 import dots from "@/public/dots.png";
 import Image from "next/image";
+import { FC } from "react";
 
-export interface IVerticalLineProps {
+interface IVerticalLineProps {
   linePosition: string;
   imagePosition: string;
 }
 
-export default function VerticalLine({
+const VerticalLine: FC<IVerticalLineProps> = ({
   linePosition,
   imagePosition,
-}: IVerticalLineProps) {
+}) => {
   return (
     <div
       className={`absolute z-50 hidden h-full w-0.5 bg-zinc-800 transition duration-700 before:absolute before:left-1/2 before:top-0 before:h-7 before:w-7 before:-translate-x-1/2 before:rounded-full before:border-2 before:border-zinc-900 before:bg-white before:shadow-primary-light before:content-[''] after:absolute after:bottom-0 after:left-1/2 after:h-7 after:w-7 after:-translate-x-1/2 after:rounded-full after:border-2 after:border-zinc-900 after:bg-white after:shadow-primary-light after:content-[''] 2xl:block dark:bg-zinc-400 dark:before:border-zinc-400 dark:before:bg-card-dark dark:before:shadow-primary-dark dark:after:border-zinc-400 dark:after:bg-card-dark dark:after:shadow-primary-dark ${linePosition}`}
@@ -26,4 +27,6 @@ export default function VerticalLine({
       </div>
     </div>
   );
-}
+};
+
+export default VerticalLine;

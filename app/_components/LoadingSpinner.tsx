@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 import logo from "@/public/logo.png";
-import { useEffect, useRef, useState } from "react";
-import { useTheme } from "../_contexts/ThemeContext";
+import { FC, useEffect, useRef, useState } from "react";
+import { useTheme } from "@/app/_contexts/ThemeContext";
 
-export default function LoadingSpinner() {
+const LoadingSpinner: FC = () => {
   const { theme } = useTheme();
   const loadingRef = useRef<HTMLDivElement>(null);
   const [isSpinnerVisible, setIsSpinnerVisible] = useState<boolean>(true);
@@ -28,4 +28,6 @@ export default function LoadingSpinner() {
       </div>
     </div>
   );
-}
+};
+
+export default LoadingSpinner;

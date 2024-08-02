@@ -3,12 +3,13 @@ import { caveat } from "@/app/_ui/fonts";
 import dotsSmall from "@/public/dots-small.png";
 import test from "@/public/test.png";
 import Image from "next/image";
+import { FC } from "react";
 
-interface IProps {
+interface ITestimonialCardProps {
   testimonial: ITestimonial;
 }
 
-export default function TestimonialCard({ testimonial }: IProps) {
+const TestimonialCard: FC<ITestimonialCardProps> = ({ testimonial }) => {
   return (
     <div className="relative overflow-hidden rounded-3xl bg-white p-7 text-zinc-800 shadow transition duration-700 dark:bg-card-dark dark:text-zinc-100">
       <div className="flex h-full flex-col">
@@ -62,4 +63,6 @@ export default function TestimonialCard({ testimonial }: IProps) {
       </div>
     </div>
   );
-}
+};
+
+export default TestimonialCard;

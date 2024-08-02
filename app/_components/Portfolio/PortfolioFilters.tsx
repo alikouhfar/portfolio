@@ -2,13 +2,14 @@
 
 import useSearchParam from "@/app/_hooks/useSearchParam";
 import { projects } from "@/app/_lib/projects";
+import { FC } from "react";
 
 interface IProps {
   param: string;
   content: string;
 }
 
-export default function PortfolioFilters() {
+const PortfolioFilters: FC = () => {
   const tags = new Set(projects.map((project) => project.tag));
   const params = Array.from(tags);
   const categories = new Set(projects.map((project) => project.category));
@@ -22,7 +23,7 @@ export default function PortfolioFilters() {
       ))}
     </div>
   );
-}
+};
 
 function FilterButton({ param, content }: IProps) {
   const { activeParam, setParam } = useSearchParam("works", "all");
@@ -36,3 +37,5 @@ function FilterButton({ param, content }: IProps) {
     </button>
   );
 }
+
+export default PortfolioFilters;

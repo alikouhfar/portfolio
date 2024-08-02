@@ -4,6 +4,7 @@ import {
   IconBrandLinkedin,
 } from "@tabler/icons-react";
 import Link from "next/link";
+import { FC } from "react";
 
 type JustifyPosition = "start" | "center";
 
@@ -12,10 +13,10 @@ interface ISocialMediaProps {
   hasMarginTop: boolean;
 }
 
-export default function SocialMedia({
+const SocialMedia: FC<ISocialMediaProps> = ({
   justifyPosition,
   hasMarginTop,
-}: ISocialMediaProps) {
+}) => {
   return (
     <ul
       className={`flex items-center justify-${justifyPosition} ${hasMarginTop && "mt-8"} gap-6 text-zinc-800 xl:justify-start dark:text-zinc-100`}
@@ -46,4 +47,6 @@ export default function SocialMedia({
       </li>
     </ul>
   );
-}
+};
+
+export default SocialMedia;

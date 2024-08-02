@@ -3,8 +3,9 @@
 import Link from "next/link";
 import { useTheme } from "@/app/_contexts/ThemeContext";
 import SocialMedia from "./SocialMedia";
+import { FC } from "react";
 
-export default function Footer() {
+const Footer: FC = () => {
   const { theme } = useTheme();
   return (
     <footer
@@ -19,11 +20,11 @@ export default function Footer() {
           rights reserved
         </p>
         <p className="text-center text-sm font-bold uppercase lg:text-right">
-          Developed by{" "}
+          <span>Developed by</span>
           <Link
             href="https://alikouhfar.liara.run/"
             target="_blank"
-            className="text-primary-green"
+            className="ml-1 text-primary-green"
           >
             codecrafter
           </Link>
@@ -31,4 +32,6 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

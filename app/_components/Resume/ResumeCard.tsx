@@ -3,14 +3,14 @@
 import { IResume } from "@/app/_models/resume.model";
 import { caveat } from "@/app/_ui/fonts";
 import { IconMinus, IconPlus } from "@tabler/icons-react";
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 
-interface IProps {
+interface IResumeCardProps {
   record: IResume;
   id: number;
 }
 
-export default function ResumeCard({ record, id }: IProps) {
+const ResumeCard: FC<IResumeCardProps> = ({ record, id }) => {
   const [isCardOpen, setIsCardOpen] = useState(false);
 
   function handleToggleCardOpen() {
@@ -71,4 +71,6 @@ export default function ResumeCard({ record, id }: IProps) {
       </div>
     </div>
   );
-}
+};
+
+export default ResumeCard;
