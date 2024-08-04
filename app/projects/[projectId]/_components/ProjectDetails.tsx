@@ -9,9 +9,9 @@ import test from "@/public/test.png";
 import Image from "next/image";
 import Link from "next/link";
 import { IconChevronRight } from "@tabler/icons-react";
-import { LinkButtonPrimary } from "./Button";
+import { LinkButtonPrimary } from "@/app/_components/Button";
 
-const WorkDetails: FC = () => {
+const ProjectDetails: FC = () => {
   const params = useParams();
   const { theme } = useTheme();
   const project = projects.find((project) => project.id === +params.workId);
@@ -160,4 +160,4 @@ const WorkDetails: FC = () => {
   );
 };
 
-export default WorkDetails;
+export default ProjectDetails;

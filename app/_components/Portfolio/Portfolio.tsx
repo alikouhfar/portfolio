@@ -94,7 +94,7 @@ export const GridPortfolio: FC = () => {
           ))}
         </div>
         <div className="relative mt-16 text-center">
-          <LinkButtonPrimary text="View More" link="works" />
+          <LinkButtonPrimary text="View More" link="projects" />
         </div>
       </div>
       <VerticalLine
@@ -166,7 +166,7 @@ export const ListPortfolio: FC = () => {
           ))}
         </div>
         <div className="relative mt-16 text-center md:mt-4">
-          <LinkButtonPrimary text="Load More" link="works" />
+          <LinkButtonPrimary text="Load More" link="projects" />
         </div>
       </div>
       <VerticalLine

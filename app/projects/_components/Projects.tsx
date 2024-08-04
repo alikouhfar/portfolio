@@ -5,7 +5,7 @@ import { useTheme } from "@/app/_contexts/ThemeContext";
 import { caveat } from "@/app/_ui/fonts";
 import { FC } from "react";
 
-const Works: FC = () => {
+const Projects: FC = () => {
   const { theme } = useTheme();
   return (
     <div className={`${theme === "dark" ? "dark" : ""} relative`}>
@@ -33,4 +33,4 @@ const Works: FC = () => {
   );
 };
 
-export default Works;
+export default Projects;

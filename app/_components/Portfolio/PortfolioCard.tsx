@@ -43,7 +43,7 @@ export const GridPortfolioCard: FC<IGridPortfolioCardProps> = ({
         className={`${project.isVisible ? "visible scale-100 opacity-100 blur-none" : "invisible scale-0 opacity-0 blur-sm"} h-[550px] overflow-hidden rounded-3xl bg-white p-7 text-zinc-800 shadow transition duration-700 xl:h-[600px] dark:bg-card-dark dark:text-zinc-100`}
       >
         <Link
-          href={`works/${project.id}`}
+          href={`projects/${project.id}`}
           className="group flex h-full flex-col hover:cursor-pointer"
         >
           <div className="relative block h-52 overflow-hidden rounded-2xl">
@@ -129,7 +129,7 @@ export const ListPortfolioCard: FC<IListPortfolioCardProps> = ({
         className={`${project.isVisible ? "visible scale-100 opacity-100 blur-none" : "invisible scale-0 opacity-0 blur-lg"} h-[600px] overflow-hidden rounded-3xl shadow transition duration-700 sm:h-[550px] md:h-[450px] md:rounded-none md:shadow-none`}
       >
         <Link
-          href={`works/${project.id}`}
+          href={`projects/${project.id}`}
           className="group flex h-full flex-col hover:cursor-pointer md:flex-row"
         >
           <div className="relative block h-52 overflow-hidden transition-all duration-700 group-hover:scale-95 md:h-full md:w-2/5 md:min-w-72 lg:w-1/2">
