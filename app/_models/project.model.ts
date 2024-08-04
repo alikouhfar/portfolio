@@ -1,3 +1,5 @@
+import { ITechnology } from "./technology.model";
+
 export interface IProject {
   id: number;
   category: string;
@@ -5,6 +7,6 @@ export interface IProject {
   title: string;
   description: string;
   year: number;
-  technology: string[];
+  technologies: ITechnology[];
   isVisible?: boolean;
 }

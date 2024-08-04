@@ -10,11 +10,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { IconChevronRight } from "@tabler/icons-react";
 import { LinkButtonPrimary } from "@/app/_components/Button";
+import TechnologyCard from "./TechnologyCard";
 
 const ProjectDetails: FC = () => {
   const params = useParams();
   const { theme } = useTheme();
-  const project = projects.find((project) => project.id === +params.workId);
+  const project = projects.find((project) => project.id === +params.projectId);
 
   return (
     <div className={`${theme === "dark" ? "dark" : ""} relative`}>
@@ -43,9 +44,9 @@ const ProjectDetails: FC = () => {
                   <span
                     className={`${caveat.className} text-2xl font-bold antialiased`}
                   >
-                    Technologies:
+                    Something:
                   </span>
-                  <span>{project?.technology.join(", ")}</span>
+                  <span>N/A</span>
                 </div>
                 <div className="flex flex-col">
                   <span
@@ -59,7 +60,7 @@ const ProjectDetails: FC = () => {
               <div className="relative mt-8 text-center md:mt-0">
                 <LinkButtonPrimary
                   text="Live Preview"
-                  link="works"
+                  link=""
                   takeAllWidth={true}
                 />
               </div>
@@ -122,10 +123,32 @@ const ProjectDetails: FC = () => {
         <div className="relative mx-auto flex max-w-[1400px] flex-col gap-20 p-3 pt-20">
           <div className="flex flex-col gap-8 px-3 lg:px-5">
             <h4 className="text-2xl font-bold md:text-4xl">Technologies</h4>
-            <div className="flex flex-col gap-8 md:flex-row md:gap-10">
+            <div className="flex flex-col gap-8 md:gap-16">
               <p className="text-justify font-normal leading-7">
-                Create Technology Card Maybe!
+                Lorem ipsum odor amet, consectetuer adipiscing elit. Fusce dui
+                libero tristique sociosqu fusce ante facilisis turpis. Dolor
+                velit nunc; amet lacinia phasellus felis magna. Interdum
+                efficitur consequat pellentesque venenatis sapien eget class
+                ultricies. Et class aenean libero per aenean, phasellus
+                imperdiet platea facilisis. Ultrices risus sagittis parturient
+                arcu taciti tristique. Amet primis mauris quam facilisis
+                consectetur aenean iaculis blandit. Nam natoque feugiat; ad
+                lorem habitasse suscipit. Dictumst libero amet dapibus torquent
+                viverra felis eu. Nec sed tellus porttitor lectus malesuada
+                senectus litora hac. Aliquet ornare fames tristique pharetra
+                gravida felis. Augue semper viverra pharetra hac eros pretium
+                habitasse. Fusce phasellus condimentum auctor quis habitasse
+                purus nulla et. Aliquam arcu montes per leo malesuada interdum.
+                Neque ultrices volutpat rhoncus feugiat; aptent lectus venenatis
+                purus. Purus turpis fermentum et netus hendrerit risus massa
+                sodales. Conubia suspendisse conubia quam ultricies fermentum;
+                venenatis dis rutrum.
               </p>
+              <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                {project?.technologies.map((technology) => (
+                  <TechnologyCard key={technology.id} technology={technology} />
+                ))}
+              </div>
             </div>
           </div>
         </div>
