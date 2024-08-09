@@ -16,6 +16,8 @@ const ProjectDetails: FC = () => {
   const params = useParams();
   const { theme } = useTheme();
   const project = projects.find((project) => project.id === +params.projectId);
+  const nextProject = projects.at(+params.projectId);
+  const isLastProject = +params.projectId === projects.length;
 
   return (
     <div className={`${theme === "dark" ? "dark" : ""} relative`}>
@@ -165,19 +167,24 @@ const ProjectDetails: FC = () => {
             </video>
           </div>
         </div>
-        <div className="relative mx-auto flex max-w-[1400px] flex-col gap-20 p-3 pt-20">
-          <div className="flex flex-col gap-8 px-3 lg:px-5">
-            <Link href="" className="group flex flex-col gap-4">
-              <div className="flex items-center gap-1">
-                <p className="font-bold uppercase">Next Project</p>
-                <IconChevronRight />
-              </div>
-              <p className="relative text-5xl font-bold uppercase transition-all duration-700 after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-primary-green after:content-[''] group-hover:text-primary-green">
-                Title
-              </p>
-            </Link>
+        {!isLastProject && (
+          <div className="relative mx-auto flex max-w-[1400px] flex-col gap-20 p-3 pt-20">
+            <div className="flex flex-col gap-8 px-3 lg:px-5">
+              <Link
+                href={`${nextProject?.id}`}
+                className="group flex flex-col gap-4"
+              >
+                <div className="flex items-center gap-1">
+                  <p className="font-bold uppercase">Next Project</p>
+                  <IconChevronRight />
+                </div>
+                <p className="animated-text relative overflow-hidden text-5xl font-bold uppercase transition-all duration-700">
+                  {nextProject?.title}
+                </p>
+              </Link>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );

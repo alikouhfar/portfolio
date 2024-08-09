@@ -42,3 +42,18 @@
     right: 0;
   }
 }
+
+.animated-text {
+  background: linear-gradient(to right, #29a587, rgb(39, 39, 42));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  background-size: 5000px auto;
+  background-position: right center;
+  transition: all 1s ease-in-out;
+}
+
+.animated-text:hover {
+  background-position: left center;
+}
