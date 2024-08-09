@@ -144,7 +144,7 @@ const ProjectDetails: FC = () => {
                 sodales. Conubia suspendisse conubia quam ultricies fermentum;
                 venenatis dis rutrum.
               </p>
-              <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+              <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-8 md:grid-cols-3 md:gap-6 lg:grid-cols-4">
                 {project?.technologies.map((technology) => (
                   <TechnologyCard key={technology.id} technology={technology} />
                 ))}
