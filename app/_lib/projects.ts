@@ -38,7 +38,22 @@ export const projects: IProject[] = [
         description:
           "Static module bundler for modern JavaScript applications.",
       },
-      { id: 6, title: "Cypress", description: "End-to-end testing framework." },
+      {
+        id: 6,
+        title: "Cypress",
+        description: "End-to-end testing framework.",
+      },
+      {
+        id: 7,
+        title: "GraphQL",
+        description:
+          "Query language for APIs and a runtime for executing those queries.",
+      },
+      {
+        id: 8,
+        title: "Stripe",
+        description: "Online payment processing platform.",
+      },
     ],
     isVisible: false,
   },
@@ -82,6 +97,18 @@ export const projects: IProject[] = [
         id: 6,
         title: "Redux",
         description: "Predictable state container for JavaScript apps.",
+      },
+      {
+        id: 7,
+        title: "Socket.IO",
+        description:
+          "Enables real-time, bidirectional, and event-based communication.",
+      },
+      {
+        id: 8,
+        title: "Docker",
+        description:
+          "Open platform for developing, shipping, and running applications.",
       },
     ],
     isVisible: false,
@@ -127,6 +154,16 @@ export const projects: IProject[] = [
         title: "MobX",
         description: "Simple, scalable state management.",
       },
+      {
+        id: 7,
+        title: "Kotlin Multiplatform Mobile (KMM)",
+        description: "Allows sharing business logic across iOS and Android.",
+      },
+      {
+        id: 8,
+        title: "Retrofit",
+        description: "Type-safe HTTP client for Android and Java applications.",
+      },
     ],
     isVisible: false,
   },
@@ -165,7 +202,22 @@ export const projects: IProject[] = [
         title: "Parcel",
         description: "Zero-configuration web application bundler.",
       },
-      { id: 6, title: "Rollup", description: "Module bundler for JavaScript." },
+      {
+        id: 6,
+        title: "Rollup",
+        description: "Module bundler for JavaScript.",
+      },
+      {
+        id: 7,
+        title: "React Native",
+        description:
+          "Framework for building native apps using React and JavaScript.",
+      },
+      {
+        id: 8,
+        title: "Apollo Client",
+        description: "Comprehensive state management library for JavaScript.",
+      },
     ],
     isVisible: false,
   },
@@ -183,7 +235,11 @@ export const projects: IProject[] = [
         title: "Gulp",
         description: "Toolkit for automating painful or time-consuming tasks.",
       },
-      { id: 2, title: "Grunt", description: "JavaScript task runner." },
+      {
+        id: 2,
+        title: "Grunt",
+        description: "JavaScript task runner.",
+      },
       {
         id: 3,
         title: "Mocha",
@@ -206,6 +262,17 @@ export const projects: IProject[] = [
         description:
           "Development framework that helps create beautiful, responsive layouts.",
       },
+      {
+        id: 7,
+        title: "Socket.IO",
+        description:
+          "Enables real-time, bidirectional, and event-based communication.",
+      },
+      {
+        id: 8,
+        title: "Highcharts",
+        description: "Interactive charts made easy for designers & developers.",
+      },
     ],
     isVisible: false,
   },
@@ -223,7 +290,11 @@ export const projects: IProject[] = [
         title: "Yarn",
         description: "Fast, reliable, and secure dependency manager.",
       },
-      { id: 2, title: "NPM", description: "Package manager for Node.js." },
+      {
+        id: 2,
+        title: "NPM",
+        description: "Package manager for Node.js.",
+      },
       {
         id: 3,
         title: "TypeScript",
@@ -235,8 +306,26 @@ export const projects: IProject[] = [
         title: "ESLint",
         description: "Pluggable linting utility for JavaScript and JSX.",
       },
-      { id: 5, title: "Prettier", description: "Opinionated code formatter." },
-      { id: 6, title: "Babel", description: "JavaScript compiler." },
+      {
+        id: 5,
+        title: "Prettier",
+        description: "Opinionated code formatter.",
+      },
+      {
+        id: 6,
+        title: "Babel",
+        description: "JavaScript compiler.",
+      },
+      {
+        id: 7,
+        title: "PostGIS",
+        description: "Spatial database extender for PostgreSQL.",
+      },
+      {
+        id: 8,
+        title: "Django REST Framework",
+        description: "Powerful and flexible toolkit for building Web APIs.",
+      },
     ],
     isVisible: false,
   },
