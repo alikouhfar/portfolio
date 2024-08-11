@@ -3,59 +3,59 @@ import { IService } from "@/app/_models/service.model";
 export const services: IService[] = [
   {
     id: 1,
-    category: "UI/UX Design",
-    title: "Custom UI/UX Design",
+    category: "Web Development",
+    title: "React Application Development",
     description:
-      "Designs intuitive interfaces based on user behavior, focusing on responsive layouts for enhanced user experience.",
+      "Design and build responsive web applications using React. Implement modern UI/UX designs and integrate with RESTful APIs.",
   },
   {
     id: 2,
     category: "Web Development",
-    title: "Full-Stack Web Development",
+    title: "E-commerce Frontend Development",
     description:
-      "Develops dynamic websites and applications using modern tech stacks like React, Node.js, and MongoDB.",
+      "Develops engaging online shopping experiences with product pages, carts, and checkout processes.",
   },
   {
     id: 3,
+    category: "Responsive Design",
+    title: "Mobile-Friendly UI Development",
+    description:
+      "Create responsive designs that adapt seamlessly across devices. Utilize CSS frameworks like Bootstrap or TailwindCSS.",
+  },
+  {
+    id: 4,
+    category: "State Management",
+    title: "Redux Integration",
+    description:
+      "Integrate Redux for robust state management in React applications. Implement actions, reducers, and store configurations.",
+  },
+  {
+    id: 5,
+    category: "Testing & Debugging",
+    title: "Unit Testing with Jest",
+    description:
+      "Implement unit tests using Jest to ensure reliability and catch bugs early. Write comprehensive test suites for React components.",
+  },
+  {
+    id: 6,
+    category: "Testing & Debugging",
+    title: "Comprehensive Testing",
+    description:
+      "Conducts thorough testing to ensure website functionality and quality, including unit and usability tests.",
+  },
+  {
+    id: 7,
     category: "Performance Optimization",
     title: "Website Performance Enhancement",
     description:
       "Optimizes website speed and efficiency through code optimization and caching strategies.",
   },
   {
-    id: 4,
-    category: "Accessibility Compliance",
-    title: "Web Accessibility Consulting",
-    description:
-      "Ensures websites are accessible to all users by following WCAG guidelines and implementing alternative texts and keyboard navigation.",
-  },
-  {
-    id: 5,
-    category: "Cross-Browser Compatibility Testing",
-    title: "Cross-Browser Testing",
-    description:
-      "Tests websites on multiple browsers to ensure compatibility and resolve any identified issues.",
-  },
-  {
-    id: 6,
-    category: "Progressive Web App (PWA) Development",
-    title: "PWA Development",
-    description:
-      "Creates installable web applications with offline capabilities and push notifications for an app-like experience.",
-  },
-  {
-    id: 7,
-    category: "E-commerce Solutions",
-    title: "E-commerce Frontend Development",
-    description:
-      "Develops engaging online shopping experiences with product pages, carts, and checkout processes.",
-  },
-  {
     id: 8,
-    category: "Mobile Responsiveness",
-    title: "Mobile-Friendly Web Design",
+    category: "Server-Side Rendering",
+    title: "Next.js Applications",
     description:
-      "Ensures websites automatically adjust to fit various screen sizes for a positive mobile experience.",
+      "Develop server-rendered React applications using Next.js. Leverage its features for improved SEO, faster page loads, and enhanced user experience.",
   },
   {
     id: 9,
@@ -80,30 +80,16 @@ export const services: IService[] = [
   },
   {
     id: 12,
-    category: "SEO Optimization",
-    title: "SEO Services",
-    description:
-      "Improves website visibility in search engines through content optimization and structural enhancements.",
-  },
-  {
-    id: 13,
     category: "Maintenance and Support",
     title: "Website Maintenance",
     description:
       "Provides ongoing updates, bug fixes, and security patches to keep websites current and secure.",
   },
   {
-    id: 14,
-    category: "Content Management System (CMS) Integration",
-    title: "CMS Integration",
+    id: 13,
+    category: "Cross-Browser Compatibility Testing",
+    title: "Cross-Browser Testing",
     description:
-      "Sets up CMS platforms and customizes themes and plugins for easy content management.",
-  },
-  {
-    id: 15,
-    category: "Testing and Quality Assurance",
-    title: "Comprehensive Testing",
-    description:
-      "Conducts thorough testing to ensure website functionality and quality, including unit and usability tests.",
+      "Tests websites on multiple browsers to ensure compatibility and resolve any identified issues.",
   },
 ];

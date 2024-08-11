@@ -62,11 +62,8 @@ const ResumeCard: FC<IResumeCardProps> = ({ record, id }) => {
             </span>
           </div>
         </div>
-        <p className="text-base font-normal text-zinc-700 transition duration-700 dark:text-zinc-300">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit
-          repudiandae porro hic amet. Ipsum doloremque corrupti cumque,
-          consequuntur corporis esse quis exercitationem, velit deleniti sint
-          iusto officia laborum praesentium eos!
+        <p className="text-justify text-base font-normal text-zinc-700 transition duration-700 dark:text-zinc-300">
+          {record.description}
         </p>
       </div>
     </div>

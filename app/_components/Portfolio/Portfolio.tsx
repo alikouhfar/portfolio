@@ -93,9 +93,11 @@ export const GridPortfolio: FC = () => {
             />
           ))}
         </div>
-        <div className="relative mt-16 text-center">
-          <LinkButtonPrimary text="View More" link="projects" />
-        </div>
+        {projects.length > 1 && (
+          <div className="relative mt-16 text-center">
+            <LinkButtonPrimary text="View More" link="projects" />
+          </div>
+        )}
       </div>
       <VerticalLine
         linePosition="right-0"
