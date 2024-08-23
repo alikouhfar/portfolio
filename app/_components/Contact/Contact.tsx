@@ -10,13 +10,13 @@ const Contact: FC = () => {
   return (
     <section className="relative flex w-full flex-wrap justify-center p-3 pb-14">
       <div className="flex w-full max-w-full flex-col gap-16 lg:flex-row lg:items-start lg:gap-0 xl:max-w-container">
-        <div className="grid w-full grid-cols-1 gap-14 sm:grid-cols-2 sm:gap-10 lg:w-2/5 lg:grid-cols-1 lg:gap-4">
+        <div className="grid w-full grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-10 lg:w-2/5 lg:grid-cols-1 lg:gap-4">
           {contact.map((data, index) => (
             <ContactCard key={index} contact={data} />
           ))}
         </div>
         <div className="w-full lg:w-3/5">
-          <form className="grid grid-cols-2 gap-6 gap-y-8">
+          <form className="grid grid-cols-2 gap-6 gap-y-8 text-zinc-800 transition-all duration-700 dark:text-zinc-100">
             <div className="col-span-2 sm:col-span-1">
               <label
                 htmlFor="name"
