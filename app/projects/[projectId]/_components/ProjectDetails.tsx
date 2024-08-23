@@ -28,8 +28,8 @@ const ProjectDetails: FC = () => {
               <h2 className="mb-2 text-4xl font-extrabold uppercase text-zinc-800 transition duration-700 md:text-5xl dark:text-zinc-100">
                 {project?.title}
               </h2>
-              <div className="text-sm font-bold uppercase text-primary-green">
-                {project?.category}
+              <div className="text-base font-bold uppercase text-primary-green">
+                {project?.client}
               </div>
             </div>
             <div className="flex flex-col md:flex-row md:items-center md:justify-between">
@@ -46,23 +46,25 @@ const ProjectDetails: FC = () => {
                   <span
                     className={`${caveat.className} text-2xl font-bold antialiased`}
                   >
-                    Something:
+                    Technologies:
                   </span>
-                  <span>N/A</span>
+                  <span>
+                    {project?.technologies.map((item) => item.title).join(", ")}
+                  </span>
                 </div>
                 <div className="flex flex-col">
                   <span
                     className={`${caveat.className} text-2xl font-bold antialiased`}
                   >
-                    Something Else:
+                    Categories:
                   </span>
-                  <span>TBA</span>
+                  <span>{project?.category}</span>
                 </div>
               </div>
               <div className="relative mt-8 text-center md:mt-0">
                 <LinkButtonPrimary
                   text="Live Preview"
-                  link=""
+                  link={project?.url}
                   takeAllWidth={true}
                 />
               </div>
@@ -70,12 +72,12 @@ const ProjectDetails: FC = () => {
           </div>
         </div>
         <div className="pt-20">
-          <div className="h-80 transition-all duration-700 md:h-[450px] lg:h-[700px]">
+          <div className="relative flex h-80 items-center overflow-hidden transition-all duration-700 md:h-[450px] lg:h-[700px]">
             <Image
-              src={test}
-              placeholder="blur"
+              src={project?.images.hero!}
               alt="Project Hero"
-              className="h-full object-cover"
+              fill
+              className="object-cover"
             />
           </div>
         </div>
@@ -84,40 +86,36 @@ const ProjectDetails: FC = () => {
             <h4 className="text-2xl font-bold md:text-4xl">Description</h4>
             <div className="flex flex-col gap-8 md:flex-row md:gap-10">
               <p className="text-justify font-normal leading-7">
-                Lorem ipsum odor amet, consectetuer adipiscing elit. Consectetur
-                feugiat gravida commodo auctor nam leo eget venenatis torquent.
-                Massa urna montes neque ipsum fames at ipsum eros vulputate?
+                {project?.descriptionParagraphOne}
               </p>
               <p className="text-justify font-normal leading-7">
-                Lorem ipsum odor amet, consectetuer adipiscing elit. Consectetur
-                feugiat gravida commodo auctor nam leo eget venenatis torquent.
-                Massa urna montes neque ipsum fames at ipsum eros vulputate?
+                {project?.descriptionParagraphTwo}
               </p>
             </div>
           </div>
-          <div className="grid grid-rows-4 gap-10 px-5 sm:grid-cols-2 sm:grid-rows-2">
-            <div className="group row-span-2 cursor-pointer overflow-hidden transition-all duration-500 hover:scale-95">
+          <div className="grid grid-rows-3 gap-10 px-5 sm:grid-cols-2 sm:grid-rows-2">
+            <div className="group relative min-h-80 cursor-pointer overflow-hidden rounded-2xl shadow transition-all duration-500 hover:scale-95 sm:row-span-2 sm:min-h-[600px]">
               <Image
-                src={test}
-                placeholder="blur"
-                alt="Test"
-                className="h-full object-cover transition-all duration-500 group-hover:scale-110"
+                src={project?.images.gallery_one!}
+                alt="Project Gallery Image One"
+                fill
+                className="object-cover transition-all duration-500 group-hover:scale-110 md:object-right"
               />
             </div>
-            <div className="group cursor-pointer overflow-hidden transition-all duration-500 hover:scale-95">
+            <div className="group relative min-h-80 cursor-pointer overflow-hidden rounded-2xl shadow transition-all duration-500 hover:scale-95">
               <Image
-                src={test}
-                placeholder="blur"
-                alt="Test"
-                className="h-full object-cover transition-all duration-500 group-hover:scale-110"
+                src={project?.images.gallery_two!}
+                alt="Project Gallery Image Two"
+                fill
+                className="object-cover object-top transition-all duration-500 group-hover:scale-110"
               />
             </div>
-            <div className="group cursor-pointer overflow-hidden transition-all duration-500 hover:scale-95">
+            <div className="group relative min-h-80 cursor-pointer overflow-hidden rounded-2xl shadow transition-all duration-500 hover:scale-95">
               <Image
-                src={test}
-                placeholder="blur"
-                alt="Test"
-                className="h-full object-cover transition-all duration-500 group-hover:scale-110"
+                src={project?.images.gallery_three!}
+                alt="Project Gallery Image Three"
+                fill
+                className="object-cover object-top transition-all duration-500 group-hover:scale-110"
               />
             </div>
           </div>
@@ -127,24 +125,7 @@ const ProjectDetails: FC = () => {
             <h4 className="text-2xl font-bold md:text-4xl">Technologies</h4>
             <div className="flex flex-col gap-8 md:gap-16">
               <p className="text-justify font-normal leading-7">
-                Lorem ipsum odor amet, consectetuer adipiscing elit. Fusce dui
-                libero tristique sociosqu fusce ante facilisis turpis. Dolor
-                velit nunc; amet lacinia phasellus felis magna. Interdum
-                efficitur consequat pellentesque venenatis sapien eget class
-                ultricies. Et class aenean libero per aenean, phasellus
-                imperdiet platea facilisis. Ultrices risus sagittis parturient
-                arcu taciti tristique. Amet primis mauris quam facilisis
-                consectetur aenean iaculis blandit. Nam natoque feugiat; ad
-                lorem habitasse suscipit. Dictumst libero amet dapibus torquent
-                viverra felis eu. Nec sed tellus porttitor lectus malesuada
-                senectus litora hac. Aliquet ornare fames tristique pharetra
-                gravida felis. Augue semper viverra pharetra hac eros pretium
-                habitasse. Fusce phasellus condimentum auctor quis habitasse
-                purus nulla et. Aliquam arcu montes per leo malesuada interdum.
-                Neque ultrices volutpat rhoncus feugiat; aptent lectus venenatis
-                purus. Purus turpis fermentum et netus hendrerit risus massa
-                sodales. Conubia suspendisse conubia quam ultricies fermentum;
-                venenatis dis rutrum.
+                {project?.technologiesDescription}
               </p>
               <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-8 md:grid-cols-3 md:gap-6 lg:grid-cols-4">
                 {project?.technologies.map((technology) => (
@@ -154,19 +135,21 @@ const ProjectDetails: FC = () => {
             </div>
           </div>
         </div>
-        <div className="pt-20">
-          <div className="h-80 transition-all duration-700 md:h-[450px] lg:h-[700px]">
-            <video
-              controls
-              preload="none"
-              poster="/video-poster.jpg"
-              className="h-full w-full object-cover"
-            >
-              <source src="/test-video.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+        {project?.video && (
+          <div className="pt-20">
+            <div className="h-80 transition-all duration-700 md:h-[450px] lg:h-[700px]">
+              <video
+                controls
+                preload="none"
+                poster="/video-poster.jpg"
+                className="h-full w-full object-cover"
+              >
+                <source src="/test-video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
-        </div>
+        )}
         {!isLastProject && (
           <div className="relative mx-auto flex max-w-[1400px] flex-col gap-20 p-3 pt-20">
             <div className="flex flex-col gap-8 px-3 lg:px-5">
