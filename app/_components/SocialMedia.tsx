@@ -19,11 +19,11 @@ const SocialMedia: FC<ISocialMediaProps> = ({
 }) => {
   return (
     <ul
-      className={`flex items-center justify-${justifyPosition} ${hasMarginTop && "mt-8"} gap-6 text-zinc-800 xl:justify-start dark:text-zinc-100`}
+      className={`flex items-center justify-${justifyPosition} ${hasMarginTop && "mt-8"} gap-10 text-zinc-800 xl:justify-start dark:text-zinc-100`}
     >
       <li>
         <Link
-          href="/"
+          href="https://github.com/alikouhfar"
           className="transition-colors duration-300 hover:text-primary-green"
         >
           <IconBrandGithubFilled size={28} />
@@ -31,7 +31,7 @@ const SocialMedia: FC<ISocialMediaProps> = ({
       </li>
       <li>
         <Link
-          href="/"
+          href="https://linkedin.com/in/alikouhfar"
           className="transition-colors duration-300 hover:text-primary-green"
         >
           <IconBrandLinkedin size={28} />
@@ -39,7 +39,7 @@ const SocialMedia: FC<ISocialMediaProps> = ({
       </li>
       <li>
         <Link
-          href="/"
+          href="https://instagram.com/alikouhfr"
           className="transition-colors duration-300 hover:text-primary-green"
         >
           <IconBrandInstagram size={28} />
