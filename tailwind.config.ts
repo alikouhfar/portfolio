@@ -10,8 +10,8 @@ const config: Config = {
   theme: {
     extend: {
       backgroundColor: {
-        "primary-light": "#fff",
-        "primary-dark": "#31363c",
+        "primary-light": "#f0ebe3",
+        "primary-dark": "#222831",
         "card-dark": "#1d222a",
       },
       backgroundImage: {
@@ -32,7 +32,7 @@ const config: Config = {
         "cv-button": "calc(100% - 4px)",
       },
       maxWidth: {
-        container: "1200px",
+        container: "1100px",
       },
       height: {
         "cv-button": "calc(100% - 4px)",
