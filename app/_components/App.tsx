@@ -9,25 +9,31 @@ import Resume from "./Resume/Resume";
 import SectionWrapper from "./SectionWrapper";
 import Services from "./Services/Services";
 import ProfessionalSkills from "./Skills/ProfessionalSkills";
-import Testimonials from "./Testimonials/Testimonials";
 
 const App: FC = () => {
   return (
     <>
-      <Hero />
+      {/* <Hero /> */}
+      <SectionWrapper
+        component={<Hero />}
+        sectionId="home"
+        gradientPosition="bottom"
+      />
       <SectionWrapper
         component={<Services />}
         title="What I do"
+        sectionId="services"
         subtitlePhrase="My"
         subtitle="Services"
-        gradientPosition="bottom"
+        gradientPosition="center"
       />
       <SectionWrapper
         component={<ProfessionalSkills />}
         title="Professional Skills"
+        sectionId="skills"
         subtitlePhrase="My"
         subtitle="Talent"
-        gradientPosition="center"
+        gradientPosition="top"
         observerOptions={{
           threshold: 0.05,
         }}
@@ -35,16 +41,18 @@ const App: FC = () => {
       <SectionWrapper
         component={<GridPortfolio />}
         title="Portfolio"
+        sectionId="works"
         subtitlePhrase="My"
         subtitle="Cases"
-        gradientPosition="top"
+        gradientPosition="bottom"
       />
       <SectionWrapper
         component={<Resume />}
         title="Resume"
+        sectionId="resume"
         subtitlePhrase="My"
         subtitle="Story"
-        gradientPosition="bottom"
+        gradientPosition="center"
       />
       {/* <SectionWrapper
         component={<Testimonials />}
@@ -56,16 +64,18 @@ const App: FC = () => {
       <SectionWrapper
         component={<Pricing />}
         title="Pricing"
+        sectionId="pricing"
         subtitlePhrase="My"
         subtitle="Price Board"
-        gradientPosition="center"
+        gradientPosition="top"
       />
       <SectionWrapper
         component={<Contact />}
         title="Contact Me"
+        sectionId="contact"
         subtitlePhrase="Let's"
         subtitle="Talk About Ideas"
-        gradientPosition="top"
+        gradientPosition="bottom"
       />
     </>
   );
