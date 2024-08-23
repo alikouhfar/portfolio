@@ -42,38 +42,40 @@ const Header: FC = () => {
     <header>
       <div
         ref={headerElementRef}
-        className={`${isHeaderFixed ? "animate-header--in fixed shadow-sm backdrop-blur-md" : "absolute top-0"} ${theme === "dark" ? "dark" : ""} left-1/2 z-[90] h-24 w-full max-w-[1600px] -translate-x-1/2 p-8 px-5 transition-all`}
+        className={`${isHeaderFixed ? "animate-header--in fixed shadow-sm backdrop-blur-md" : "absolute top-0"} ${theme === "dark" ? "dark" : ""} left-1/2 z-[90] h-24 w-full -translate-x-1/2 p-8 px-5 transition-all`}
       >
-        <div className="relative mx-auto flex flex-wrap items-center justify-between">
-          <Link href="/" className="max-w-44">
-            <Image src={logo} alt="Logo of Ali Kouhfar" />
-          </Link>
-          <div className="flex items-center gap-2">
-            <button
-              className={`group relative flex h-10 w-10 items-center justify-center overflow-hidden px-3 py-1 transition ${theme === "light" ? "text-zinc-800" : "text-primary-green"}`}
-              onClick={toggleTheme}
-            >
-              <IconMoon
-                size={22}
-                stroke={1.7}
-                className={`absolute ${theme === "light" ? "top-1/2 -translate-y-1/2" : "-top-[50px]"} z-20 transition duration-300 group-hover:scale-105`}
-              />
-              <IconSun
-                size={26}
-                stroke={1.7}
-                className={`absolute ${theme === "dark" ? "top-1/2 -translate-y-1/2" : "top-[50px]"} z-20 transition duration-300 group-hover:scale-105`}
-              />
-            </button>
-            <button
-              className="group flex items-center justify-center px-3 py-1 text-zinc-800 dark:text-zinc-100"
-              onClick={handleOpenMenu}
-            >
-              <IconMenu
-                size={24}
-                stroke={2}
-                className="transition group-hover:scale-105"
-              />
-            </button>
+        <div className="mx-auto max-w-[1300px]">
+          <div className="relative mx-auto flex items-center justify-between">
+            <Link href="/" className="max-w-44">
+              <Image src={logo} alt="Logo of Ali Kouhfar" />
+            </Link>
+            <div className="flex items-center gap-2">
+              <button
+                className="group relative flex h-10 items-center justify-center overflow-hidden px-3 py-1 transition sm:w-10"
+                onClick={toggleTheme}
+              >
+                <IconMoon
+                  size={22}
+                  stroke={1.7}
+                  className={`absolute ${theme === "light" ? "top-1/2 -translate-y-1/2" : "-top-[50px]"} z-20 transition duration-300 group-hover:scale-105 ${theme === "light" ? "text-zinc-800" : "text-primary-green"}`}
+                />
+                <IconSun
+                  size={26}
+                  stroke={1.7}
+                  className={`absolute ${theme === "dark" ? "top-1/2 -translate-y-1/2" : "top-[50px]"} z-20 transition duration-300 group-hover:scale-105 ${theme === "light" ? "text-zinc-800" : "text-primary-green"}`}
+                />
+              </button>
+              <button
+                className="group flex h-10 items-center justify-center px-1 py-1 text-zinc-800 sm:px-3 dark:text-zinc-100"
+                onClick={handleOpenMenu}
+              >
+                <IconMenu
+                  size={24}
+                  stroke={2}
+                  className="transition group-hover:scale-105"
+                />
+              </button>
+            </div>
           </div>
         </div>
       </div>
