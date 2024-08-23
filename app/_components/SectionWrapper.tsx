@@ -15,9 +15,10 @@ interface IObserverOptions {
 
 interface ISectionWrapperProps {
   component: ReactNode;
-  title: string;
-  subtitlePhrase: SubtitlePhraseType;
-  subtitle: string;
+  title?: string;
+  sectionId: string;
+  subtitlePhrase?: SubtitlePhraseType;
+  subtitle?: string;
   gradientPosition: string;
   observerOptions?: IObserverOptions;
 }
@@ -25,6 +26,7 @@ interface ISectionWrapperProps {
 const SectionWrapper: FC<ISectionWrapperProps> = ({
   component,
   title,
+  sectionId,
   subtitlePhrase,
   subtitle,
   gradientPosition,
@@ -52,30 +54,32 @@ const SectionWrapper: FC<ISectionWrapperProps> = ({
     }
   }
   return (
-    <div
-      data-section={title.toLowerCase()}
+    <section
+      id={sectionId}
       ref={ref}
       className={`${theme === "dark" ? "dark" : ""} ${generateGradientColorClass()} relative text-zinc-800 transition duration-700 dark:text-zinc-100`}
     >
       <div
-        className={`${isIntersecting ? "top-0 opacity-100" : "top-16 opacity-0"} relative mx-auto flex max-w-[1400px] flex-col items-center gap-20 p-3 pb-52 transition-all duration-1000`}
+        className={`${isIntersecting ? "top-0 opacity-100" : "top-16 opacity-0"} relative mx-auto flex max-w-[1300px] flex-col items-center gap-20 p-3 pb-28 transition-all duration-1000 xl:pb-44`}
       >
-        <div className="flex transform flex-col items-center">
-          <h2 className="text-4xl font-bold uppercase text-zinc-800 transition duration-700 dark:text-zinc-100">
-            {title}
-          </h2>
-          <div className="text-sm font-bold uppercase text-primary-green">
-            <span>{subtitlePhrase}</span>
-            <b
-              className={`${caveat.className} ml-1 text-3xl capitalize text-zinc-800 antialiased transition duration-700 dark:text-zinc-100`}
-            >
-              {subtitle}
-            </b>
+        {title && subtitle && (
+          <div className="flex transform flex-col items-center">
+            <h2 className="text-center text-4xl font-bold uppercase text-zinc-800 transition duration-700 dark:text-zinc-100">
+              {title}
+            </h2>
+            <div className="text-sm font-bold uppercase text-primary-green">
+              <span>{subtitlePhrase}</span>
+              <b
+                className={`${caveat.className} ml-1 text-3xl capitalize text-zinc-800 antialiased transition duration-700 dark:text-zinc-100`}
+              >
+                {subtitle}
+              </b>
+            </div>
           </div>
-        </div>
+        )}
         <div className="w-full">{component}</div>
       </div>
-    </div>
+    </section>
   );
 };
 
