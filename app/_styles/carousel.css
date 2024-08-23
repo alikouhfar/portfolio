@@ -85,3 +85,9 @@
   .swiper-pagination-bullet:last-child {
   margin-right: 0;
 }
+
+@media (max-width: 450px) {
+  .swiper-pagination {
+    display: none;
+  }
+}

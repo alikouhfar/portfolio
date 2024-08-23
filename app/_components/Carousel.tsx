@@ -29,7 +29,7 @@ export const ServicesCarousel: FC<IServicesCarousel> = ({ services }) => {
     <Swiper
       modules={[Pagination]}
       spaceBetween={30}
-      slidesPerView={3}
+      slidesPerView={1}
       pagination={{ clickable: true }}
       speed={1000}
       breakpoints={{ 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }}
