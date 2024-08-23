@@ -4,8 +4,8 @@ export const sections: Array<string> = [
   "skills",
   "works",
   "resume",
-  "testimonials",
+  // "testimonials",
   "pricing",
-  "blog",
+  // "blog",
   "contact",
 ];
