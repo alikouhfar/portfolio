@@ -40,13 +40,13 @@ export const GridPortfolioCard: FC<IGridPortfolioCardProps> = ({
       }}
     >
       <div
-        className={`${project.isVisible ? "visible scale-100 opacity-100 blur-none" : "invisible scale-0 opacity-0 blur-sm"} h-[550px] overflow-hidden rounded-3xl bg-white p-7 text-zinc-800 shadow transition duration-700 xl:h-[600px] dark:bg-card-dark dark:text-zinc-100`}
+        className={`${project.isVisible ? "visible scale-100 opacity-100 blur-none" : "invisible scale-0 opacity-0 blur-sm"} h-[650px] overflow-hidden rounded-3xl bg-white p-7 text-zinc-800 shadow transition duration-700 sm:h-[600px] dark:bg-card-dark dark:text-zinc-100`}
       >
         <Link
           href={`projects/${project.id}`}
           className="group flex h-full flex-col hover:cursor-pointer"
         >
-          <div className="relative block h-52 overflow-hidden rounded-2xl">
+          <div className="relative block h-32 overflow-hidden rounded-2xl md:h-52">
             <Image
               fill
               src={test}
@@ -64,7 +64,7 @@ export const GridPortfolioCard: FC<IGridPortfolioCardProps> = ({
               </h5>
             </div>
             <div>
-              <p className="min-h-44 leading-7 opacity-80">
+              <p className="mb-10 min-h-52 leading-7 opacity-80 sm:mb-0 md:min-h-44">
                 {project.description}
               </p>
               <button className="relative flex gap-3 align-top text-base font-bold leading-6 text-zinc-800 transition-all duration-300 group-hover:gap-2 group-hover:text-primary-green dark:text-zinc-100">
