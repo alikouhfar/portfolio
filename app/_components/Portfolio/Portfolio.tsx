@@ -154,7 +154,7 @@ export const ListPortfolio: FC = () => {
       <div className="w-full max-w-full xl:max-w-screen-xl">
         <PortfolioFilters />
         <div
-          className="relative min-h-screen"
+          className={`${projects.length === 1 ? "min-h-[650px] md:min-h-[550px]" : "min-h-screen"} relative`}
           style={{ height: containerHeight }}
         >
           {filteredProjects.map((project, index) => (
