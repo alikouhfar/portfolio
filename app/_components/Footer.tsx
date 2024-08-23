@@ -29,7 +29,7 @@ const Footer: FC = () => {
         <p className="text-center text-sm font-bold uppercase lg:text-right">
           <span>Developed by</span>
           <Link
-            href="https://alikouhfar.liara.run/"
+            href="http://www.alikouhfar.ir"
             target="_blank"
             className="ml-1 text-primary-green"
           >
