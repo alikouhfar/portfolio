@@ -42,7 +42,7 @@ const SkillCard: FC<ISkillCardProps> = ({ skill }) => {
       </div>
       <div className="relative h-0.5 bg-zinc-800/10 transition duration-700 dark:bg-zinc-600">
         <div
-          className="relative block h-0.5 bg-zinc-800 transition-all duration-700 ease-in-out after:absolute after:-top-3 after:right-0 after:h-6 after:w-6 after:rounded-full after:border-2 after:border-zinc-800 after:bg-primary-green after:shadow-primary-light dark:bg-primary-green dark:after:border-zinc-400 dark:after:bg-card-dark dark:after:shadow-primary-dark"
+          className="relative block h-[1.5px] bg-zinc-800 transition-all duration-700 ease-in-out after:absolute after:-top-3 after:right-0 after:h-6 after:w-6 after:rounded-full after:border-2 after:border-zinc-800 after:bg-primary-green after:shadow-primary-light dark:bg-primary-green dark:after:border-zinc-400 dark:after:bg-card-dark dark:after:shadow-primary-dark"
           style={{ width: `${progressBarWidth}%` }}
         ></div>
       </div>
