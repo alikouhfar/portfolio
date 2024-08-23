@@ -45,7 +45,7 @@ const ResumeCard: FC<IResumeCardProps> = ({ record, id }) => {
         </button>
       </h5>
       <div
-        className={`flex flex-col gap-5 overflow-hidden px-4 pr-8 transition-all duration-700 ease-in-out lg:px-8 lg:pr-12 ${isCardOpen ? "max-h-96 pb-8" : "max-h-0"}`}
+        className={`flex flex-col gap-5 overflow-hidden px-4 pr-8 transition-all duration-700 ease-in-out lg:px-8 lg:pr-12 ${isCardOpen ? "max-h-[700px] pb-8" : "max-h-0"}`}
       >
         <div className="flex flex-col items-start justify-between gap-1 lg:flex-row lg:items-center lg:gap-5">
           <h6
