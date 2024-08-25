@@ -167,9 +167,11 @@ export const ListPortfolio: FC = () => {
             />
           ))}
         </div>
-        <div className="relative mt-16 text-center md:mt-4">
-          <LinkButtonPrimary text="Load More" link="projects" />
-        </div>
+        {projects.length >= 10 && (
+          <div className="relative mt-16 text-center md:mt-4">
+            <LinkButtonPrimary text="Load More" link="projects" />
+          </div>
+        )}
       </div>
       <VerticalLine
         linePosition="right-0"
