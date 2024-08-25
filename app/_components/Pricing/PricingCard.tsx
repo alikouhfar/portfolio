@@ -2,7 +2,6 @@ import { IPricing } from "@/app/_models/pricing.model";
 import dotsSmall from "@/public/dots-small.png";
 import { IconArrowNarrowRight, IconChecks } from "@tabler/icons-react";
 import Image from "next/image";
-import Link from "next/link";
 import { FC } from "react";
 
 interface IPricingCardProps {
@@ -10,6 +9,15 @@ interface IPricingCardProps {
 }
 
 const PricingCard: FC<IPricingCardProps> = ({ plan }) => {
+  const handleClick = () => {
+    const sectionElement = document.querySelector("#contact") as HTMLElement;
+
+    window.scrollTo({
+      top: sectionElement.offsetTop - 120,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="relative">
       {plan.isPopluar && (
@@ -46,16 +54,15 @@ const PricingCard: FC<IPricingCardProps> = ({ plan }) => {
               </li>
             ))}
           </ul>
-          <Link
-            target="_blank"
-            href=""
+          <button
+            onClick={handleClick}
             className="group/button relative z-50 mt-10 inline-block h-14 w-full overflow-hidden rounded-[50px] border-2 border-zinc-900 px-10 text-center align-top text-sm font-bold uppercase leading-[50px] tracking-wider text-white shadow-primary-light transition duration-700 before:absolute before:left-1/2 before:top-1/2 before:h-cv-button before:w-cv-button before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-[50px] before:bg-primary-green before:transition-all before:content-[''] hover:shadow-none dark:border-zinc-300 dark:shadow-primary-dark"
           >
             <span className="relative z-20">Start Project</span>
             <div className="absolute right-5 top-1/2 z-20 -translate-y-1/2 transition-all duration-500 group-hover/button:right-6 md:right-10 group-hover/button:md:right-12">
               <IconArrowNarrowRight size={24} />
             </div>
-          </Link>
+          </button>
         </div>
         <div className="absolute -bottom-5 -right-5 h-32 w-32">
           <Image
