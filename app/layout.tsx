@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Footer from "./_components/Footer";
 import Header from "./_components/Header";
 import { ThemeProvider } from "./_contexts/ThemeContext";
 import { jost } from "./_ui/fonts";
@@ -25,7 +24,6 @@ export default function RootLayout({
         <ThemeProvider>
           <Header />
           <main className="min-h-screen">{children}</main>
-          <Footer />
         </ThemeProvider>
       </body>
     </html>
