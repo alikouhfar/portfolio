@@ -115,7 +115,7 @@ export const ListPortfolioCard: FC<IListPortfolioCardProps> = ({
     setCardHeight(cardRef.current?.clientHeight);
     outputCardHeight(cardRef.current?.clientHeight);
     setCardTop(generateTopPosition());
-  }, [project]);
+  }, [project, generateTopPosition, outputCardHeight]);
 
   return (
     <div

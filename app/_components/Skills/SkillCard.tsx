@@ -26,7 +26,7 @@ const SkillCard: FC<ISkillCardProps> = ({ skill }) => {
     }, 200);
 
     return () => clearTimeout(progressBarAnimationTimeout);
-  }, [isIntersecting]);
+  }, [isIntersecting, skill.mastery]);
 
   return (
     <div ref={cardRef}>

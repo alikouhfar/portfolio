@@ -21,7 +21,7 @@ const useIntersectionObserver = ({
         options,
       );
     }
-  }, []);
+  }, [options]);
 
   useEffect(() => {
     const element = ref.current;

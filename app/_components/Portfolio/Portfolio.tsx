@@ -12,10 +12,11 @@ import { LinkButtonPrimary } from "../Button";
 export const GridPortfolio: FC = () => {
   const searchParams = useSearchParams();
   const activeFilter = searchParams?.get("works") ?? "all";
-  const [viewPortWidth, setViewPortWidth] = useState<number>(0);
   const [columnCount, setColumnCount] = useState<number>(0);
-  let filteredProjects: IProject[] = [];
-  let projectsCount: number = 0;
+  const [projectsCount, setProjectsCount] = useState<number>(0);
+  const [viewPortWidth, setViewPortWidth] = useState<number>(0);
+  const [containerHeight, setContainerHeight] = useState<string>();
+  const [filteredProjects, setFilteredProjects] = useState<IProject[]>([]);
 
   const getColumnCount = useCallback(() => {
     if (viewPortWidth > 1280) {
@@ -27,39 +28,9 @@ export const GridPortfolio: FC = () => {
     }
   }, [viewPortWidth]);
 
-  useEffect(() => {
-    setViewPortWidth(window.innerWidth);
-  }, []);
-
-  useEffect(() => {
-    setColumnCount(getColumnCount());
-  }, [columnCount, getColumnCount]);
-
-  function getFilteredProjects() {
-    if (activeFilter === "all") {
-      filteredProjects = projects.map((project) => {
-        return { ...project, isVisible: true };
-      });
-    } else {
-      filteredProjects = projects.map((project) => {
-        if (project.tag === activeFilter) {
-          return { ...project, isVisible: true };
-        } else {
-          return { ...project, isVisible: false };
-        }
-      });
-    }
-  }
-
-  function getProjectsCount() {
-    projectsCount = filteredProjects.filter(
-      (project) => project.isVisible,
-    ).length;
-  }
-
-  function generateContainerHeight() {
+  const generateContainerHeight = useCallback(() => {
     const columnCount = getColumnCount();
-    const rowCount = projectsCount / columnCount;
+    const rowCount = Math.ceil(projectsCount / columnCount);
 
     if (columnCount === 3) {
       if (projectsCount <= columnCount) {
@@ -74,16 +45,53 @@ export const GridPortfolio: FC = () => {
         return `${rowCount * 550 + rowCount * 40}px`;
       }
     }
-  }
+  }, [getColumnCount, projectsCount]);
 
-  getFilteredProjects();
-  getProjectsCount();
+  const getFilteredProjects = useCallback(() => {
+    if (activeFilter === "all") {
+      return projects.map((project) => {
+        return { ...project, isVisible: true };
+      });
+    } else {
+      return projects.map((project) => {
+        if (project.tag === activeFilter) {
+          return { ...project, isVisible: true };
+        } else {
+          return { ...project, isVisible: false };
+        }
+      });
+    }
+  }, [activeFilter]);
+
+  const getProjectsCount = useCallback(() => {
+    return filteredProjects.filter((project) => project.isVisible).length;
+  }, [filteredProjects]);
+
+  useEffect(() => {
+    setViewPortWidth(window.innerWidth);
+  }, []);
+
+  useEffect(() => {
+    setProjectsCount(getProjectsCount());
+  }, [getProjectsCount]);
+
+  useEffect(() => {
+    setFilteredProjects(getFilteredProjects());
+  }, [getFilteredProjects]);
+
+  useEffect(() => {
+    setColumnCount(getColumnCount());
+  }, [getColumnCount]);
+
+  useEffect(() => {
+    setContainerHeight(generateContainerHeight());
+  }, [generateContainerHeight]);
 
   return (
     <div className="relative flex w-full flex-wrap justify-center p-3 pb-14">
       <div className="w-full max-w-full xl:max-w-container">
         <PortfolioFilters />
-        <div className="relative" style={{ height: generateContainerHeight() }}>
+        <div className="relative" style={{ height: containerHeight }}>
           {filteredProjects.map((project, index) => (
             <GridPortfolioCard
               key={index}
@@ -93,7 +101,7 @@ export const GridPortfolio: FC = () => {
             />
           ))}
         </div>
-        {projects.length > 1 && (
+        {projects.length >= 10 && (
           <div className="relative mt-16 text-center">
             <LinkButtonPrimary text="View More" link="projects" />
           </div>
@@ -112,16 +120,16 @@ export const ListPortfolio: FC = () => {
   const activeFilter = searchParams?.get("works") ?? "all";
   const [cardHeight, setCardHeight] = useState<any>(0);
   const [containerHeight, setContainerHeight] = useState<string>();
-  let filteredProjects: IProject[] = [];
-  let projectsCount: number = 0;
+  const [filteredProjects, setFilteredProjects] = useState<IProject[]>([]);
+  const [projectsCount, setProjectsCount] = useState<number>(0);
 
-  function getFilteredProjects() {
+  const getFilteredProjects = useCallback(() => {
     if (activeFilter === "all") {
-      filteredProjects = projects.map((project) => {
+      return projects.map((project) => {
         return { ...project, isVisible: true };
       });
     } else {
-      filteredProjects = projects.map((project) => {
+      return projects.map((project) => {
         if (project.tag === activeFilter) {
           return { ...project, isVisible: true };
         } else {
@@ -129,25 +137,28 @@ export const ListPortfolio: FC = () => {
         }
       });
     }
-  }
+  }, [activeFilter]);
 
-  function getProjectsCount() {
-    projectsCount = filteredProjects.filter(
-      (project) => project.isVisible,
-    ).length;
-  }
-
-  function generateContainerHeight() {
+  const generateContainerHeight = useCallback(() => {
     const padding = cardHeight === 450 ? 80 : 20;
     return `${projectsCount * cardHeight + projectsCount * padding}px`;
-  }
+  }, [cardHeight, projectsCount]);
+
+  const getProjectsCount = useCallback(() => {
+    return filteredProjects.filter((project) => project.isVisible).length;
+  }, [filteredProjects]);
+
+  useEffect(() => {
+    setProjectsCount(getProjectsCount());
+  }, [getProjectsCount]);
+
+  useEffect(() => {
+    setFilteredProjects(getFilteredProjects());
+  }, [getFilteredProjects]);
 
   useEffect(() => {
     setContainerHeight(generateContainerHeight());
-  }, [filteredProjects]);
-
-  getFilteredProjects();
-  getProjectsCount();
+  }, [generateContainerHeight]);
 
   return (
     <div className="relative flex w-full flex-wrap justify-center p-3 pb-14 lg:p-0">
