@@ -1,15 +1,14 @@
 "use client";
 
+import { LinkButtonPrimary } from "@/app/_components/Button";
 import { useTheme } from "@/app/_contexts/ThemeContext";
 import { projects } from "@/app/_lib/projects";
 import { caveat } from "@/app/_ui/fonts";
-import { useParams } from "next/navigation";
-import { FC } from "react";
-import test from "@/public/test.png";
+import { IconChevronRight } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
-import { IconChevronRight } from "@tabler/icons-react";
-import { LinkButtonPrimary } from "@/app/_components/Button";
+import { notFound, useParams } from "next/navigation";
+import { FC } from "react";
 import TechnologyCard from "./TechnologyCard";
 
 const ProjectDetails: FC = () => {
@@ -19,9 +18,11 @@ const ProjectDetails: FC = () => {
   const nextProject = projects.at(+params.projectId);
   const isLastProject = +params.projectId === projects.length;
 
+  if (!project) notFound();
+
   return (
     <div className={`${theme === "dark" ? "dark" : ""} relative`}>
-      <div className="relative bg-primary-light pt-48 text-zinc-800 transition-all duration-700 dark:bg-primary-dark dark:text-zinc-100">
+      <div className="relative bg-primary-light pb-10 pt-48 text-zinc-800 transition-all duration-700 dark:bg-primary-dark dark:text-zinc-100">
         <div className="relative mx-auto flex max-w-[1400px] flex-col gap-20 p-3">
           <div className="px-3 lg:px-5">
             <div className="mb-8 flex transform flex-col lg:mb-10">
