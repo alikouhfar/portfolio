@@ -47,7 +47,7 @@ const Header: FC = () => {
         <div className="mx-auto max-w-[1300px]">
           <div className="relative mx-auto flex items-center justify-between">
             <Link href="/" className="max-w-44">
-              <Image src={logo} alt="Logo of Ali Kouhfar" />
+              <Image src={logo} alt="Logo of Ali Kouhfar" priority />
             </Link>
             <div className="flex items-center gap-2">
               <button
@@ -84,7 +84,7 @@ const Header: FC = () => {
       >
         {isMenuOpen && (
           <div
-            className="relative z-50 h-full w-full"
+            className="fixed z-50 h-full w-full"
             onClick={handleCloseMenu}
           ></div>
         )}
