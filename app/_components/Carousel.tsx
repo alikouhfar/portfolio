@@ -32,7 +32,7 @@ export const ServicesCarousel: FC<IServicesCarousel> = ({ services }) => {
       slidesPerView={1}
       pagination={{ clickable: true }}
       speed={1000}
-      breakpoints={{ 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }}
+      breakpoints={{ 768: { slidesPerView: 2 }, 1280: { slidesPerView: 3 } }}
       watchSlidesProgress
       className="w-full"
     >

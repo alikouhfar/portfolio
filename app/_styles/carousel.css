@@ -86,8 +86,12 @@
   margin-right: 0;
 }
 
-@media (max-width: 450px) {
-  .swiper-pagination {
+@media (max-width: 640px) {
+  .swiper-pagination.swiper-pagination-bullets:before {
     display: none;
+  }
+
+  .swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 8px;
   }
 }

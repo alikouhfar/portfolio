@@ -60,7 +60,7 @@ const SectionWrapper: FC<ISectionWrapperProps> = ({
       className={`${theme === "dark" ? "dark" : ""} ${generateGradientColorClass()} max-w-screen relative text-zinc-800 transition duration-700 dark:text-zinc-100`}
     >
       <div
-        className={`${isIntersecting ? "top-0 opacity-100" : "top-16 opacity-0"} relative mx-auto flex max-w-[1300px] flex-col items-center gap-20 p-3 pb-28 transition-all duration-1000 xl:pb-44`}
+        className={`${isIntersecting ? "top-0 opacity-100" : "top-16 opacity-0"} relative mx-auto flex max-w-xs flex-col items-center gap-20 p-3 pb-28 transition-all duration-1000 sm:max-w-xl md:max-w-3xl xl:max-w-[1300px] xl:pb-44`}
       >
         {title && subtitle && (
           <div className="flex transform flex-col items-center">
