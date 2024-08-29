@@ -42,7 +42,7 @@ const Header: FC = () => {
     <header>
       <div
         ref={headerElementRef}
-        className={`${isHeaderFixed ? "animate-header--in fixed shadow-sm backdrop-blur-md" : "absolute top-0"} ${theme === "dark" ? "dark" : ""} left-1/2 z-[90] h-24 w-full -translate-x-1/2 p-8 px-5 transition-all`}
+        className={`${isHeaderFixed ? "animate-header--in fixed shadow-sm backdrop-blur-md" : "absolute top-0"} ${theme === "dark" ? "dark" : ""} max-w-screen left-1/2 z-[90] h-24 w-full -translate-x-1/2 p-8 px-5 transition-all`}
       >
         <div className="mx-auto max-w-[1300px]">
           <div className="relative mx-auto flex items-center justify-between">
