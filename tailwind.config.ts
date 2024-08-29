@@ -33,6 +33,7 @@ const config: Config = {
       },
       maxWidth: {
         container: "1100px",
+        screen: "100vw",
       },
       height: {
         "cv-button": "calc(100% - 4px)",

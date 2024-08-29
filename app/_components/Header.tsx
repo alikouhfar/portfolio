@@ -80,7 +80,7 @@ const Header: FC = () => {
         </div>
       </div>
       <div
-        className={`absolute h-full w-full ${theme === "dark" ? "dark" : ""}`}
+        className={`max-w-screen absolute h-full max-h-screen w-full ${theme === "dark" ? "dark" : ""}`}
       >
         {isMenuOpen && (
           <div

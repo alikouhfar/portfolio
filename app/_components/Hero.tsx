@@ -93,7 +93,7 @@ const Hero: FC = () => {
           <div className="my-12">
             <div className="mx-auto max-w-xl">
               <p className="text-center text-base font-normal capitalize leading-8 text-zinc-600 transition duration-700 xl:text-justify dark:text-zinc-400">
-                Welcome! I&apose;m a Frontend Developer focused on React and
+                Welcome! I&apos;m a Frontend Developer focused on React and
                 Next.js, crafting elegant, interactive web solutions. My
                 expertise is in solving complex problems with user-friendly
                 designs, embracing the latest tech. Browse my projects and
