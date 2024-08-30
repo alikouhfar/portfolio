@@ -13,7 +13,6 @@ import ProfessionalSkills from "./Skills/ProfessionalSkills";
 const App: FC = () => {
   return (
     <>
-      {/* <Hero /> */}
       <SectionWrapper
         component={<Hero />}
         sectionId="home"
@@ -54,13 +53,6 @@ const App: FC = () => {
         subtitle="Story"
         gradientPosition="center"
       />
-      {/* <SectionWrapper
-        component={<Testimonials />}
-        title="Testimonials"
-        subtitlePhrase="What"
-        subtitle="Customers Say"
-        gradientPosition="center"
-      /> */}
       <SectionWrapper
         component={<Pricing />}
         title="Pricing"

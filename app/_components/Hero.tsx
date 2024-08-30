@@ -116,6 +116,7 @@ const Hero: FC = () => {
       <VerticalLine
         linePosition="left-0"
         imagePosition="-right-5 md:-right-12"
+        height="h-4/5"
       />
     </div>
   );
