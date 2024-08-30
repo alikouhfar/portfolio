@@ -67,7 +67,7 @@ const SectionWrapper: FC<ISectionWrapperProps> = ({
             <h2 className="text-center text-4xl font-bold uppercase text-zinc-800 transition duration-700 dark:text-zinc-100">
               {title}
             </h2>
-            <div className="text-sm font-bold uppercase text-primary-green">
+            <div className="text-primary-violet text-sm font-bold uppercase">
               <span>{subtitlePhrase}</span>
               <b
                 className={`${caveat.className} ml-1 text-3xl capitalize text-zinc-800 antialiased transition duration-700 dark:text-zinc-100`}

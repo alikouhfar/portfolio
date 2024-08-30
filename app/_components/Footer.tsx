@@ -23,7 +23,7 @@ const Footer: FC = () => {
             <IconCopyright size={16} stroke={2.2} />
             <span>{currentYear}</span>
           </div>
-          <span className="text-primary-green">Ali Kouhfar.</span>
+          <span className="text-primary-violet">Ali Kouhfar.</span>
           <span>All rights reserved</span>
         </div>
         <p className="text-center text-sm font-bold uppercase lg:text-right">
@@ -31,7 +31,7 @@ const Footer: FC = () => {
           <Link
             href="http://www.alikouhfar.ir"
             target="_blank"
-            className="ml-1 text-primary-green"
+            className="text-primary-violet ml-1"
           >
             codecrafter
           </Link>

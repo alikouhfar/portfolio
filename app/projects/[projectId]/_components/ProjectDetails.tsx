@@ -29,7 +29,7 @@ const ProjectDetails: FC = () => {
               <h2 className="mb-2 text-4xl font-extrabold uppercase text-zinc-800 transition duration-700 md:text-5xl dark:text-zinc-100">
                 {project?.title}
               </h2>
-              <div className="text-base font-bold uppercase text-primary-green">
+              <div className="text-primary-violet text-base font-bold uppercase">
                 {project?.client}
               </div>
             </div>

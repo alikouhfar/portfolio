@@ -34,10 +34,10 @@ export default function NotFound() {
               }}
             >
               <span className="text-zinc-100">4</span>
-              <span className="text-primary-green">0</span>
+              <span className="text-primary-violet">0</span>
               <span className="text-zinc-100">4</span>
             </h1>
-            <div className="text-sm font-bold uppercase text-primary-green">
+            <div className="text-primary-violet text-sm font-bold uppercase">
               <span>No</span>
               <b
                 className={`${caveat.className} ml-2 text-3xl capitalize text-zinc-800 antialiased transition duration-700 dark:text-zinc-100`}
