@@ -39,8 +39,8 @@ export const projects: IProject[] = [
       // },
       {
         id: 3,
-        title: "Netlify Forms",
-        description: "Simple contact form integration for user inquiries.",
+        title: "Formik",
+        description: "Open source form library for React and React Native.",
       },
       // {
       //   id: 7,
