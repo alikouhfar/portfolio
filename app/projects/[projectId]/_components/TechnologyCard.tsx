@@ -7,7 +7,7 @@ export interface ITechnologyCardProps {
 
 const TechnologyCard: FC<ITechnologyCardProps> = ({ technology }) => {
   return (
-    <div className="relative min-h-28 cursor-pointer rounded-2xl border-l-4 border-l-primary-green bg-white p-6 text-zinc-800 shadow transition-all duration-500 hover:border-l-[20px] dark:bg-zinc-900 dark:text-zinc-100">
+    <div className="border-l-primary-violet relative min-h-28 cursor-pointer rounded-2xl border-l-4 bg-white p-6 text-zinc-800 shadow transition-all duration-500 hover:border-l-[20px] dark:bg-zinc-900 dark:text-zinc-100">
       <h4 className="mb-2 text-xl font-extrabold uppercase lg:text-xl">
         {technology.title}
       </h4>

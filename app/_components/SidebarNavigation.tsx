@@ -1,9 +1,12 @@
 import { sections } from "@/app/_lib/sections";
-import Link from "next/link";
-import SocialMedia from "./SocialMedia";
 import { FC } from "react";
+import SocialMedia from "./SocialMedia";
 
-const SidebarNavigation: FC = () => {
+interface ISidebarNavigation {
+  handleCloseMenu: Function;
+}
+
+const SidebarNavigation: FC<ISidebarNavigation> = ({ handleCloseMenu }) => {
   const handleClick = (href: string, event: any) => {
     event.preventDefault();
     const sectionElement = document.querySelector(href) as HTMLElement;
@@ -13,6 +16,10 @@ const SidebarNavigation: FC = () => {
         top: sectionElement.offsetTop - 120,
         behavior: "smooth",
       });
+
+      setTimeout(() => {
+        handleCloseMenu();
+      }, 600);
     }
   };
 
@@ -23,7 +30,7 @@ const SidebarNavigation: FC = () => {
           return (
             <li
               key={index}
-              className="cursor-pointer transition-all duration-500 hover:scale-105 hover:text-primary-green"
+              className="hover:text-primary-violet cursor-pointer transition-all duration-500 hover:scale-105"
             >
               <button
                 onClick={(e) => handleClick(`#${section}`, e)}

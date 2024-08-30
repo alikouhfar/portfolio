@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 .animate-header--in {
   animation: headerAnimation ease 0.5s forwards;
 }
@@ -44,7 +48,7 @@
 }
 
 .animated-text {
-  background: linear-gradient(to right, #29a587, rgb(39, 39, 42));
+  background: linear-gradient(to right, #7678ed, rgb(39, 39, 42));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

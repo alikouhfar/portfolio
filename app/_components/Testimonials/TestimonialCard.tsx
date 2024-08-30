@@ -20,7 +20,7 @@ const TestimonialCard: FC<ITestimonialCardProps> = ({ testimonial }) => {
             alt="Project Image"
             className="rounded-2xl object-cover transition duration-300"
           />
-          <div className="absolute -left-0.5 top-0 z-50 h-16 w-16 rounded-br-2xl bg-white p-1 text-primary-green transition duration-700 dark:bg-card-dark">
+          <div className="text-primary-violet absolute -left-0.5 top-0 z-50 h-16 w-16 rounded-br-2xl bg-white p-1 transition duration-700 dark:bg-card-dark">
             <svg xmlns="http://www.w3.org/2000/svg" width="44px" height="34px">
               <path
                 fillRule="evenodd"
@@ -41,7 +41,7 @@ const TestimonialCard: FC<ITestimonialCardProps> = ({ testimonial }) => {
               <h5 className="mb-4 text-2xl font-bold leading-7">
                 {testimonial.name}
               </h5>
-              <div className="flex flex-col text-sm font-semibold text-primary-green">
+              <div className="text-primary-violet flex flex-col text-sm font-semibold">
                 <span className="uppercase">{testimonial.jobTitle}</span>
                 <span
                   className={`${caveat.className} text-xl font-medium leading-5 antialiased`}

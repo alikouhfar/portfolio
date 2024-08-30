@@ -26,7 +26,7 @@ const config: Config = {
           "linear-gradient(180deg,#f0ebe3 0%,#f0ebe3 100%)",
       },
       colors: {
-        "primary-green": "#29a587",
+        "primary-violet": "#7678ed",
       },
       width: {
         "cv-button": "calc(100% - 4px)",
