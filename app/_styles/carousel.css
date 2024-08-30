@@ -87,7 +87,28 @@
 }
 
 @media (max-width: 450px) {
-  .swiper-pagination {
+  .swiper-pagination.swiper-pagination-bullets {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 18px;
+    column-gap: 5px;
+  }
+
+  .swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+
+  .swiper-pagination.swiper-pagination-bullets
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    height: 16px;
+    width: 16px;
+    top: 0;
+  }
+
+  .swiper-pagination.swiper-pagination-bullets:before {
     display: none;
   }
 }
