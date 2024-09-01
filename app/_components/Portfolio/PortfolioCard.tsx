@@ -1,7 +1,6 @@
 import useCardPosition from "@/app/_hooks/useCardPosition";
 import { IProject } from "@/app/_models/project.model";
 import dotsSmall from "@/public/dots-small.png";
-import test from "@/public/test.png";
 import { IconArrowNarrowRight } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -49,14 +48,14 @@ export const GridPortfolioCard: FC<IGridPortfolioCardProps> = ({
           <div className="relative block h-32 overflow-hidden rounded-2xl md:h-52">
             <Image
               fill
-              src={test}
+              src="/portfolio/cover.webp"
               alt="Project Image"
               className="object-cover transition duration-300 group-hover:scale-110"
             />
           </div>
           <div className="flex flex-1 flex-col justify-between pt-8">
             <div>
-              <span className="mb-2 block text-sm font-semibold uppercase text-primary-green">
+              <span className="text-primary-violet mb-2 block text-sm font-semibold uppercase">
                 {project.category}
               </span>
               <h5 className="mb-4 text-2xl font-bold leading-7">
@@ -67,12 +66,12 @@ export const GridPortfolioCard: FC<IGridPortfolioCardProps> = ({
               <p className="mb-10 min-h-52 leading-7 opacity-80 sm:mb-0 md:min-h-44">
                 {project.description}
               </p>
-              <button className="relative flex gap-3 align-top text-base font-bold leading-6 text-zinc-800 transition-all duration-300 group-hover:gap-2 group-hover:text-primary-green dark:text-zinc-100">
+              <button className="group-hover:text-primary-violet relative flex gap-3 align-top text-base font-bold leading-6 text-zinc-800 transition-all duration-300 group-hover:gap-2 dark:text-zinc-100">
                 <span>See Project</span>
                 <div>
                   <IconArrowNarrowRight
                     size={24}
-                    className="text-primary-green"
+                    className="text-primary-violet"
                   />
                 </div>
               </button>
@@ -135,14 +134,14 @@ export const ListPortfolioCard: FC<IListPortfolioCardProps> = ({
           <div className="relative block h-52 overflow-hidden transition-all duration-700 group-hover:scale-95 md:h-full md:w-2/5 md:min-w-72 lg:w-1/2">
             <Image
               fill
-              src={test}
+              src="/portfolio/cover.webp"
               alt="Project Image"
               className="object-cover transition-all duration-700 group-hover:scale-125"
             />
           </div>
           <div className="flex flex-1 flex-col justify-between bg-white p-7 pt-8 text-zinc-800 transition-all duration-700 md:bg-transparent md:py-16 md:pl-14 lg:p-20 lg:pl-28 dark:bg-card-dark dark:text-zinc-100 dark:md:bg-transparent">
             <div>
-              <span className="mb-2 block text-sm font-semibold uppercase text-primary-green">
+              <span className="text-primary-violet mb-2 block text-sm font-semibold uppercase">
                 {project.category}
               </span>
               <h5 className="mb-4 text-2xl font-bold leading-7 md:text-6xl">
@@ -153,12 +152,12 @@ export const ListPortfolioCard: FC<IListPortfolioCardProps> = ({
               <p className="min-h-36 leading-7 opacity-80 md:min-h-0">
                 {project.description}
               </p>
-              <button className="relative flex gap-3 align-top text-base font-bold leading-6 text-zinc-800 transition-all duration-300 group-hover:gap-2 group-hover:text-primary-green dark:text-zinc-100">
+              <button className="group-hover:text-primary-violet relative flex gap-3 align-top text-base font-bold leading-6 text-zinc-800 transition-all duration-300 group-hover:gap-2 dark:text-zinc-100">
                 <span>See Project</span>
                 <div>
                   <IconArrowNarrowRight
                     size={24}
-                    className="text-primary-green"
+                    className="text-primary-violet"
                   />
                 </div>
               </button>

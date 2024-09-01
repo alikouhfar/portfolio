@@ -20,7 +20,7 @@ const ServiceCard: FC<IServiceCardProps> = ({ service }) => {
 
   return (
     <div className="relative flex h-full flex-col overflow-hidden rounded-2xl bg-white p-8 text-zinc-800 opacity-100 shadow transition duration-700 dark:bg-card-dark dark:text-zinc-100">
-      <span className="mb-8 text-[13px] font-semibold uppercase text-primary-green sm:mb-16">
+      <span className="text-primary-violet mb-8 text-[13px] font-semibold uppercase sm:mb-16">
         {service.category}
       </span>
       <div className="flex flex-1 flex-col justify-between">
@@ -31,11 +31,11 @@ const ServiceCard: FC<IServiceCardProps> = ({ service }) => {
           </p>
           <button
             onClick={handleClick}
-            className="relative flex gap-3 align-top text-base font-bold leading-6 text-zinc-800 transition-all duration-500 hover:gap-2 hover:text-primary-green dark:text-zinc-100"
+            className="hover:text-primary-violet relative flex gap-3 align-top text-base font-bold leading-6 text-zinc-800 transition-all duration-500 hover:gap-2 dark:text-zinc-100"
           >
             <span>See Pricing</span>
             <div>
-              <IconArrowNarrowRight size={24} className="text-primary-green" />
+              <IconArrowNarrowRight size={24} className="text-primary-violet" />
             </div>
           </button>
         </div>
