@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "0.1.0",
+  "version": "2.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -12,7 +12,6 @@
     "@tabler/icons-react": "^3.7.0",
     "formik": "^2.4.6",
     "next": "14.2.4",
-    "nodemailer": "^6.9.14",
     "react": "^18",
     "react-dom": "^18",
     "sharp": "^0.33.5",
