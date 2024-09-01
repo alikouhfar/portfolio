@@ -10,7 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       backgroundColor: {
-        "primary-light": "#f0ebe3",
+        "primary-light": "#fff",
         "primary-dark": "#222831",
         "card-dark": "#1d222a",
       },

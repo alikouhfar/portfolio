@@ -2,6 +2,7 @@ import { education } from "@/app/_lib/education";
 import { experience } from "@/app/_lib/experience";
 import ResumeRecords from "./ResumeRecords";
 import { FC } from "react";
+import VerticalLine from "../VerticalLine";
 
 const Resume: FC = () => {
   return (
@@ -10,6 +11,10 @@ const Resume: FC = () => {
         <ResumeRecords title="Education" records={education} />
         <ResumeRecords title="Experience" records={experience} />
       </div>
+      <VerticalLine
+        linePosition="left-0"
+        imagePosition="-right-5 md:-right-12"
+      />
     </div>
   );
 };
