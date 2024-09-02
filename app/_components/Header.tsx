@@ -57,12 +57,12 @@ const Header: FC = () => {
                 <IconMoon
                   size={22}
                   stroke={1.7}
-                  className={`absolute ${theme === "light" ? "top-1/2 -translate-y-1/2" : "-top-[50px]"} z-20 transition duration-300 group-hover:scale-105 ${theme === "light" ? "text-zinc-800" : "text-primary-green"}`}
+                  className={`absolute ${theme === "light" ? "top-1/2 -translate-y-1/2" : "-top-[50px]"} z-20 transition duration-300 group-hover:scale-105 ${theme === "light" ? "text-zinc-800" : "text-primary-violet"}`}
                 />
                 <IconSun
                   size={26}
                   stroke={1.7}
-                  className={`absolute ${theme === "dark" ? "top-1/2 -translate-y-1/2" : "top-[50px]"} z-20 transition duration-300 group-hover:scale-105 ${theme === "light" ? "text-zinc-800" : "text-primary-green"}`}
+                  className={`absolute ${theme === "dark" ? "top-1/2 -translate-y-1/2" : "top-[50px]"} z-20 transition duration-300 group-hover:scale-105 ${theme === "light" ? "text-zinc-800" : "text-primary-violet"}`}
                 />
               </button>
               <button
@@ -80,7 +80,7 @@ const Header: FC = () => {
         </div>
       </div>
       <div
-        className={`absolute h-full w-full ${theme === "dark" ? "dark" : ""}`}
+        className={`absolute h-full max-h-screen w-full max-w-screen ${theme === "dark" ? "dark" : ""}`}
       >
         {isMenuOpen && (
           <div
@@ -101,7 +101,7 @@ const Header: FC = () => {
               className="transition group-hover:scale-105"
             />
           </button>
-          <SidebarNavigation />
+          <SidebarNavigation handleCloseMenu={handleCloseMenu} />
           <div className="absolute left-10 top-3/4 hidden h-5/6 w-0.5 -translate-y-3/4 bg-zinc-800 before:absolute before:left-1/2 before:top-0 before:h-7 before:w-7 before:-translate-x-1/2 before:rounded-full before:border-2 before:border-zinc-900 before:bg-white before:shadow-primary-light before:content-[''] after:absolute after:bottom-0 after:left-1/2 after:h-7 after:w-7 after:-translate-x-1/2 after:rounded-full after:border-2 after:border-zinc-900 after:bg-white after:shadow-primary-light after:content-[''] 2xl:block dark:bg-zinc-400 dark:before:border-zinc-400 dark:before:bg-card-dark dark:after:border-zinc-400 dark:after:bg-card-dark"></div>
         </div>
       </div>

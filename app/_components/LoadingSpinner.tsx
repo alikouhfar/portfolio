@@ -24,7 +24,7 @@ const LoadingSpinner: FC = () => {
           <Image src={logo} alt="Logo" />
         </div>
         <div className="absolute bottom-0 left-0 h-0.5 w-full bg-zinc-100/70 dark:bg-zinc-800/70"></div>
-        <div className="loading-spinner--animation absolute bottom-0 left-0 h-0.5 w-full bg-primary-green"></div>
+        <div className="loading-spinner--animation bg-primary-violet absolute bottom-0 left-0 h-0.5 w-full"></div>
       </div>
     </div>
   );

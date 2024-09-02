@@ -24,7 +24,7 @@ const SocialMedia: FC<ISocialMediaProps> = ({
       <li>
         <Link
           href="https://github.com/alikouhfar"
-          className="transition-colors duration-300 hover:text-primary-green"
+          className="hover:text-primary-violet transition-colors duration-300"
         >
           <IconBrandGithubFilled size={28} />
         </Link>
@@ -32,7 +32,7 @@ const SocialMedia: FC<ISocialMediaProps> = ({
       <li>
         <Link
           href="https://linkedin.com/in/alikouhfar"
-          className="transition-colors duration-300 hover:text-primary-green"
+          className="hover:text-primary-violet transition-colors duration-300"
         >
           <IconBrandLinkedin size={28} />
         </Link>
@@ -40,7 +40,7 @@ const SocialMedia: FC<ISocialMediaProps> = ({
       <li>
         <Link
           href="https://instagram.com/alikouhfr"
-          className="transition-colors duration-300 hover:text-primary-green"
+          className="hover:text-primary-violet transition-colors duration-300"
         >
           <IconBrandInstagram size={28} />
         </Link>

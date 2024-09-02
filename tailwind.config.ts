@@ -10,8 +10,8 @@ const config: Config = {
   theme: {
     extend: {
       backgroundColor: {
-        "primary-light": "#f0ebe3",
-        "primary-dark": "#222831",
+        "primary-light": "#fff",
+        "primary-dark": "#31363c",
         "card-dark": "#1d222a",
       },
       backgroundImage: {
@@ -26,13 +26,14 @@ const config: Config = {
           "linear-gradient(180deg,#f0ebe3 0%,#f0ebe3 100%)",
       },
       colors: {
-        "primary-green": "#29a587",
+        "primary-violet": "#7678ed",
       },
       width: {
         "cv-button": "calc(100% - 4px)",
       },
       maxWidth: {
         container: "1100px",
+        screen: "100vw",
       },
       height: {
         "cv-button": "calc(100% - 4px)",

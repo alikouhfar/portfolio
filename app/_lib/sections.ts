@@ -5,7 +5,7 @@ export const sections: Array<string> = [
   "works",
   "resume",
   // "testimonials",
-  "pricing",
+  // "pricing",
   // "blog",
   "contact",
 ];

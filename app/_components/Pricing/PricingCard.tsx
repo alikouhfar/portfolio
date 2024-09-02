@@ -21,7 +21,7 @@ const PricingCard: FC<IPricingCardProps> = ({ plan }) => {
   return (
     <div className="relative">
       {plan.isPopluar && (
-        <div className="absolute -top-4 right-12 z-30 block h-8 rounded-3xl border-2 border-zinc-800 bg-primary-green px-6 text-xs font-bold uppercase leading-7 text-white shadow-primary-light xl:-top-8 xl:scale-105 dark:shadow-primary-dark">
+        <div className="bg-primary-violet absolute -top-4 right-12 z-30 block h-8 rounded-3xl border-2 border-zinc-800 px-6 text-xs font-bold uppercase leading-7 text-white shadow-primary-light xl:-top-8 xl:scale-105 dark:shadow-primary-dark">
           <span>Popular</span>
         </div>
       )}
@@ -35,7 +35,7 @@ const PricingCard: FC<IPricingCardProps> = ({ plan }) => {
           <div className="mb-5 mt-12 flex items-center gap-4 text-3xl font-bold text-zinc-800 transition duration-700 dark:text-zinc-100">
             <span>
               {plan.price}
-              <b className="text-primary-green">$</b>
+              <b className="text-primary-violet">$</b>
             </span>
             <p className="text-base">/ {plan.rate}</p>
           </div>
@@ -48,7 +48,7 @@ const PricingCard: FC<IPricingCardProps> = ({ plan }) => {
             {plan.features.map((feature, index) => (
               <li key={index} className="flex items-center gap-2">
                 <div>
-                  <IconChecks size={20} className="text-primary-green" />
+                  <IconChecks size={20} className="text-primary-violet" />
                 </div>
                 <span>{feature}</span>
               </li>
@@ -56,7 +56,7 @@ const PricingCard: FC<IPricingCardProps> = ({ plan }) => {
           </ul>
           <button
             onClick={handleClick}
-            className="group/button relative z-50 mt-10 inline-block h-14 w-full overflow-hidden rounded-[50px] border-2 border-zinc-900 px-10 text-center align-top text-sm font-bold uppercase leading-[50px] tracking-wider text-white shadow-primary-light transition duration-700 before:absolute before:left-1/2 before:top-1/2 before:h-cv-button before:w-cv-button before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-[50px] before:bg-primary-green before:transition-all before:content-[''] hover:shadow-none dark:border-zinc-300 dark:shadow-primary-dark"
+            className="group/button before:bg-primary-violet relative z-50 mt-10 inline-block h-14 w-full overflow-hidden rounded-[50px] border-2 border-zinc-900 px-10 text-center align-top text-sm font-bold uppercase leading-[50px] tracking-wider text-white shadow-primary-light transition duration-700 before:absolute before:left-1/2 before:top-1/2 before:h-cv-button before:w-cv-button before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-[50px] before:transition-all before:content-[''] hover:shadow-none dark:border-zinc-300 dark:shadow-primary-dark"
           >
             <span className="relative z-20">Start Project</span>
             <div className="absolute right-5 top-1/2 z-20 -translate-y-1/2 transition-all duration-500 group-hover/button:right-6 md:right-10 group-hover/button:md:right-12">
