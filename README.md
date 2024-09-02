@@ -1,5 +1,7 @@
 # Personal Portfolio Showcase of Ali Kouhfar
 
+![Ali Kouhfar Logo](https://www.alikouhfar.ir/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.0b29b488.png&w=2048&q=75)
+
 ## Table of Contents
 
 1. [Description](#description)
