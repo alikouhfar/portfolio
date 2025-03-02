@@ -44,7 +44,7 @@ export const ThemeProvider = ({ children }: IThemeProvider) => {
     } else {
       setTheme("light");
     }
-  }, [getItem]);
+  }, []);
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>

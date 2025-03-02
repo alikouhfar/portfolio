@@ -29,6 +29,8 @@ This repository contains a sleek and professional portfolio website built using 
 - **TypeScript**: A statically typed language that helps catch errors early and improves developer productivity.
 - **React**: A JavaScript library for building user interfaces.
 - **React Hooks**: Allows functional components to manage state and side effects.
+- **Formik**: A lightweight library for managing forms in React applications.
+- **Swiper**: A modern, powerful, and flexible slider library for web applications
 - **Tailwind CSS**: A utility-first CSS framework packed with classes.
 - **ESLint**: JavaScript linting utility for maintaining code quality.
 - **Prettier**: Code formatter for ensuring consistent code style.
@@ -46,7 +48,7 @@ This repository contains a sleek and professional portfolio website built using 
   - Changed the project structure to use TypeScript.
   - As it is not a good thing to use database to store static data, the necessary information is now stored inside of project folders.
 
-- **Version 2.0.0** (2024-08-25 Current Version):
+- **Version 2.0.0** (2024-08-25):
   - Migrated to Next.js with TypeScript for improved performance and maintainability.
   - Enhanced routing capabilities with Next.js features.
   - Improved type safety and developer experience with TypeScript.
@@ -56,6 +58,11 @@ This repository contains a sleek and professional portfolio website built using 
   - Simplified state management using React Context API and custom hooks.
   - Implemented responsive design improvements for better mobile experience.
   - Added TypeScript-specific linting rules for stricter code quality checks.
+ 
+- **Version 2.1.0** (2024-09-01 Current Version):
+  - Bug fixes and error resolutions.
+  - Accent color changed.
+  - Contact form functionality improvement.
 
 ## Challenges
 
