@@ -8,9 +8,9 @@ const Footer = () => {
   return (
     <footer className="mx-auto my-6 w-full max-w-6xl max-lg:px-4">
       <div className="bg-white-2 relative mx-auto flex flex-col items-center gap-6 rounded-3xl px-4 py-10 shadow-sm backdrop-blur-lg md:flex-row dark:bg-white/[0.02]">
-        <div className="flex flex-1 flex-col items-start gap-4 md:flex-row md:gap-10 md:px-8">
+        <div className="flex w-full flex-1 flex-col items-start gap-4 md:flex-row md:gap-10 md:px-8">
           <div className="hidden flex-col gap-y-6 md:flex md:w-1/2">
-            <Link className="inline-block" href="/">
+            <Link className="inline-block" href="/public">
               LOGO
             </Link>
             <p className="w-60 text-sm leading-5 dark:text-gray-300">
@@ -49,7 +49,7 @@ const Footer = () => {
             &copy; 2025
             <Link
               className="ml-1 whitespace-nowrap transition-colors hover:text-black dark:hover:text-white"
-              href="/"
+              href="/public"
             >
               Ali Kouhfar
             </Link>
@@ -71,20 +71,20 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex flex-col items-center gap-4 md:flex-row md:justify-end">
-          <div className="flex gap-3">
+          <div className="flex items-center gap-3">
             <Link
               target="_blank"
               href="https://instagram.com/ali.kouhfar"
               className="transition-all duration-300 hover:scale-105 hover:text-indigo-500"
             >
-              <Icon icon="simple-icons:instagram" width="18" />
+              <Icon icon="lucide:instagram" width="20" />
             </Link>
             <Link
               target="_blank"
               href="https://github.com/alikouhfar"
               className="transition-all duration-300 hover:scale-105 hover:text-indigo-500"
             >
-              <Icon icon="simple-icons:github" width="18" />
+              <Icon icon="lucide:github" width="20" />
             </Link>
             <Link
               target="_blank"

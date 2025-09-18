@@ -1,1 +1,1 @@
-export type Technology = { title: string; logo?: string }
+export type Technology = { title: string; logo?: string; description?: string }

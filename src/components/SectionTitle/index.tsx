@@ -14,7 +14,7 @@ const SectionTitle: FC<SectionTitleProps> = (props) => {
   return (
     <h2
       className={clsx(
-        'mb-20 text-center text-4xl font-medium tracking-tight text-balance sm:text-5xl md:text-6xl',
+        'mx-auto mb-20 max-w-lg text-center text-4xl font-medium tracking-tight text-balance sm:text-5xl md:text-6xl',
         rootClassName
       )}
       style={{

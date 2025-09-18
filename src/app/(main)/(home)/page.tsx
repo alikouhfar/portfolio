@@ -1,13 +1,19 @@
-import Hero from '@/app/(main)/(home)/Hero'
+import Hero from './components/Hero'
+import Projects from './components/Projects'
+import Skills from './components/Skills'
+import About from './components/About'
+import Intro from './components/Intro'
 
-export default function HomePage() {
+const Home = () => {
   return (
     <>
       <Hero />
-      {/*<HomeIntro />*/}
-      {/*<HomeProjects />*/}
-      {/*<HomeSkills />*/}
-      {/*<HomeAbout />*/}
+      <Intro />
+      <Projects />
+      <Skills />
+      <About />
     </>
   )
 }
+
+export default Home

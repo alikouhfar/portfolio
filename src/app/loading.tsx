@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 
-const Page = () => {
+const Loading = () => {
   const [dots, setDots] = useState('')
 
   useEffect(() => {
@@ -26,4 +26,4 @@ const Page = () => {
   )
 }
 
-export default Page
+export default Loading
