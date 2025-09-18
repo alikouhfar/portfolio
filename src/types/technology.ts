@@ -1,0 +1,1 @@
+export type Technology = { title: string; logo?: string }
