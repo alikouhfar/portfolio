@@ -2,18 +2,16 @@
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import { Badge } from '@/components/ui/badge'
-import { projectItemThemeColors } from '@/lib/project-item-theme-colors'
 import { Project } from '@/types/project'
 import { Icon } from '@iconify/react'
-import clsx from 'clsx'
 import { ArrowUpRight, RectangleVertical } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FC, useEffect, useState } from 'react'
 import { useInView } from 'react-intersection-observer'
-import ProjectDetailsSidebar from '../ProjectDetailsSidebar'
 import { ProjectDetailsSectionsEnum } from '../../enum'
 import { projectDetailSections } from '../../lib'
+import ProjectDetailsSidebar from '../ProjectDetailsSidebar'
 
 const ProjectDetails: FC<Project> = (props) => {
   const [activeSection, setActiveSection] = useState(ProjectDetailsSectionsEnum.Overview)
@@ -82,7 +80,9 @@ const ProjectDetails: FC<Project> = (props) => {
             >
               {props.status}
             </Badge>
-            <Badge variant="secondary">{props.role}</Badge>
+            <Badge variant="outline" className="border-sky-500 text-sky-500">
+              {props.role}
+            </Badge>
             <Badge variant="secondary">
               <span>{props.startYear}</span>
               {props.finishYear && (
@@ -194,30 +194,38 @@ const ProjectDetails: FC<Project> = (props) => {
           </ul>
         </section>
 
-        <section ref={galleryRef} id={projectDetailSections.gallery.id} aria-labelledby="gallery-heading">
-          <h3
-            id="gallery-heading"
-            className="mb-4 flex items-center gap-2.5 text-3xl font-bold text-indigo-400"
-          >
-            <span className="text-2xl">{projectDetailSections.gallery.emoji}</span>
-            <span>{projectDetailSections.gallery.title}</span>
-          </h3>
-          <div className="grid gap-4 sm:grid-cols-2">
-            {props.gallery?.map((image, index) => (
-              <figure key={index} className="relative h-80">
-                <Image
-                  fill
-                  src={`/images/${image}`}
-                  alt={`Screenshot ${index + 1} of ${props.title}`}
-                  className="absolute rounded-md object-cover shadow"
-                />
-              </figure>
-            ))}
-          </div>
-        </section>
+        {props.gallery && (
+          <section ref={galleryRef} id={projectDetailSections.gallery.id} aria-labelledby="gallery-heading">
+            <h3
+              id="gallery-heading"
+              className="mb-4 flex items-center gap-2.5 text-3xl font-bold text-indigo-400"
+            >
+              <span className="text-2xl">{projectDetailSections.gallery.emoji}</span>
+              <span>{projectDetailSections.gallery.title}</span>
+            </h3>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {props.gallery?.map((url, index) => (
+                <figure
+                  key={index}
+                  className="h-80 w-full overflow-hidden rounded-lg border bg-neutral-900 p-2"
+                >
+                  <div className="relative h-full w-full">
+                    <Image
+                      src={url}
+                      alt={`Screenshot ${index + 1} of ${props.title}`}
+                      className="mx-auto rounded object-cover shadow-md"
+                      loading="lazy"
+                      fill
+                    />
+                  </div>
+                </figure>
+              ))}
+            </div>
+          </section>
+        )}
       </article>
 
-      <ProjectDetailsSidebar activeSection={activeSection} />
+      <ProjectDetailsSidebar activeSection={activeSection} hasGallery={!!props.gallery?.length} />
     </div>
   )
 }

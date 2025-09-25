@@ -1,4 +1,4 @@
-import { GithubStatisticColorsEnum } from '@/app/(main)/about/enums'
+import { GithubStatisticColorsEnum } from '@/app/(main)/about/components/Github/GithubStatisticList/enums'
 import { ReactNode } from 'react'
 
 export type GtihubStatisticPropsType = {

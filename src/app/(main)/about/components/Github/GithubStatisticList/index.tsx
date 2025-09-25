@@ -1,7 +1,7 @@
 import { FolderGit2, GitFork, Star, Users } from 'lucide-react'
 import GithubStatistic from './GithubStatistic'
-import { GithubStatisticColorsEnum } from '../../../enums'
-import { getUserData } from '../../../utils'
+import { GithubStatisticColorsEnum } from './enums'
+import { getUserData } from './utils'
 
 const GithubStatisticList = async () => {
   const { followers, repositories } = await getUserData()

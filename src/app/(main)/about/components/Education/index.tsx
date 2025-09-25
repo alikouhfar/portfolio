@@ -1,4 +1,5 @@
 import SectionTitle from '@/components/SectionTitle'
+import EducationList from './EducationList'
 
 const Education = () => {
   return (
@@ -8,6 +9,7 @@ const Education = () => {
         description="Building Mindsets, Not Just"
         descriptionKeyword="Skills"
       />
+      <EducationList />
     </section>
   )
 }

@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { githubStatisticColorTheme } from '@/app/(main)/about/lib'
+import { githubStatisticColorTheme } from '@/app/(main)/about/components/Github/GithubStatisticList/lib'
 import { GtihubStatisticPropsType } from './types'
 
 const GithubStatistic: FC<GtihubStatisticPropsType> = (props) => {

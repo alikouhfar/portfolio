@@ -11,7 +11,7 @@ export const projects: Project[] = [
       'Where Code Meets Canvas: A Developer’s Story Told Through Interactive Design, Micro-Animations, and Zero-Compromise Performance',
     description: 'Pixels Polished, Journeys Shared: Where Clean Code Meets Compelling Narratives',
     overview: `This portfolio is a comprehensive showcase of my frontend development skills, combining clean code, interactive design, and micro-animations. It demonstrates my expertise in building performant, responsive, and visually engaging applications using Next.js, Tailwind CSS, and Framer Motion. The platform serves as both a personal branding tool and a technical case study, highlighting projects in detail with structured case studies, feature breakdowns, and technical insights.`,
-    imageUrl: '/images/portfolio.webp',
+    imageUrl: '/images/projects/portfolio/hero.webp',
     role: 'Frontend Developer',
     status: ProjectStatus.Ongoing,
     startYear: 2025,
@@ -95,10 +95,10 @@ export const projects: Project[] = [
       'Enhanced developer experience with maintainable component architecture and TypeScript safety',
     ],
     gallery: [
-      '/gallery/portfolio/hero-section.webp',
-      '/gallery/portfolio/project-showcase.webp',
-      '/gallery/portfolio/dark-theme.webp',
-      '/gallery/portfolio/mobile-view.webp',
+      '/images/projects/portfolio/gallery-1.webp',
+      '/images/projects/portfolio/gallery-2.webp',
+      '/images/projects/portfolio/gallery-3.webp',
+      '/images/projects/portfolio/gallery-4.webp',
     ],
   },
   {
@@ -109,7 +109,7 @@ export const projects: Project[] = [
       'Learn, Build, Earn: A Platform That Turns Tutorials into Resumes, Resumes into Jobs, and JavaScript into Career Velocity—Powered by .NET and Webpack’s Raw Muscle',
     description: 'Knowledge Traded, Careers Made: A Dual Marketplace for Learning and Professional Growth',
     overview: `TBAO is a dual-purpose platform designed to accelerate career growth by connecting learning and professional opportunities. It allows users to create CVs dynamically, access curated tutorials, purchase courses, and get matched with relevant job opportunities. The platform leverages Webpack for optimized bundling, Swiper.js for interactive galleries, and vanilla JavaScript for custom functionality, delivering a seamless and efficient user experience for both learners and recruiters.`,
-    imageUrl: '/images/ecommerce.webp',
+    imageUrl: '/images/projects/tbao/hero.webp',
     role: 'Fullstack Developer',
     status: ProjectStatus.Completed,
     startYear: 2022,
@@ -186,12 +186,6 @@ export const projects: Project[] = [
       'Processed 500+ course enrollments with seamless payment integration',
       'Achieved 99.8% uptime with robust error handling and monitoring systems',
     ],
-    gallery: [
-      '/gallery/tbao/dashboard.webp',
-      '/gallery/tbao/cv-builder.webp',
-      '/gallery/tbao/course-catalog.webp',
-      '/gallery/tbao/job-matching.webp',
-    ],
   },
   {
     id: 'isilearning',
@@ -202,7 +196,7 @@ export const projects: Project[] = [
     description:
       'Classes Hosted, Skills Mastered: A Corporate Learning Hub Blending Live and Self-Paced Education',
     overview: `ISILEARNING is a corporate learning management system designed to deliver both live and self-paced educational experiences for employees. It integrates BigBlueButton for live virtual classes, automated certificate generation, and configurable quizzes to track progress. The platform ensures role-based content access, provides a seamless video bookmarking system, and leverages Angular, RxJs, and TypeScript to create an interactive and engaging environment that drives employee skill development and training ROI.`,
-    imageUrl: '/images/lms.webp',
+    imageUrl: '/images/projects/lms/hero.webp',
     role: 'Frontend Developer',
     status: ProjectStatus.Completed,
     startYear: 2021,
@@ -286,12 +280,6 @@ export const projects: Project[] = [
       'Achieved 40% increase in course engagement with interactive video bookmarking feature',
       'Maintained 99.9% live class reliability with seamless BigBlueButton integration',
       'Improved quiz performance tracking with real-time analytics and progress dashboards',
-    ],
-    gallery: [
-      '/gallery/isilearning/live-classroom.webp',
-      '/gallery/isilearning/course-library.webp',
-      '/gallery/isilearning/certificate-generation.webp',
-      '/gallery/isilearning/progress-dashboard.webp',
     ],
   },
 ]

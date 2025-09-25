@@ -84,13 +84,15 @@ const ProjectDetailsSidebar: FC<ProjectDetailsSidebarPropsType> = (props) => {
           title={projectDetailSections.results.title}
           isActive={props.activeSection === ProjectDetailsSectionsEnum.Results}
         />
-        <SidebarItem
-          ref={gallerySpyRef}
-          id={projectDetailSections.gallery.id}
-          emoji={projectDetailSections.gallery.emoji}
-          title={projectDetailSections.gallery.title}
-          isActive={props.activeSection === ProjectDetailsSectionsEnum.Gallery}
-        />
+        {props.hasGallery && (
+          <SidebarItem
+            ref={gallerySpyRef}
+            id={projectDetailSections.gallery.id}
+            emoji={projectDetailSections.gallery.emoji}
+            title={projectDetailSections.gallery.title}
+            isActive={props.activeSection === ProjectDetailsSectionsEnum.Gallery}
+          />
+        )}
       </ul>
     </aside>
   )
