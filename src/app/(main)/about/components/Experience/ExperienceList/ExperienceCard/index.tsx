@@ -41,7 +41,7 @@ const ExperienceCard: FC<ExperienceCardPropsType> = (props) => {
                 <div className="mt-2 space-y-3">
                   <ReactMarkdown
                     components={{
-                      p: ({ node, ...props }) => <p className="text-justify leading-5" {...props} />,
+                      p: ({ ...props }) => <p className="text-justify leading-5" {...props} />,
                     }}
                   >
                     {roleWithDescription.description}
