@@ -4,38 +4,47 @@
 
 ## Table of Contents
 
-1. [Description](#description)
-2. [Features](#features)
-3. [Technologies Used](#technologies-used)
-4. [Version History](#version-history)
-5. [Getting Started](#getting-started)
-6. [Contributing](#contributing)
-7. [License](#license)
+- [Personal Portfolio Showcase of Ali Kouhfar](#personal-portfolio-showcase-of-ali-kouhfar)
+  - [Table of Contents](#table-of-contents)
+  - [Description](#description)
+  - [Features](#features)
+  - [Technologies Used](#technologies-used)
+  - [Version History](#version-history)
+  - [Challenges](#challenges)
+    - [Technical Challenges](#technical-challenges)
+    - [Design \& Performance](#design--performance)
+  - [What I Learned](#what-i-learned)
+  - [Getting Started](#getting-started)
+  - [Contributing](#contributing)
+  - [License](#license)
 
 ## Description
 
-This repository contains a sleek and professional portfolio website built using Next.js with TypeScript. The application serves as a showcase for my projects, skills, and experiences, demonstrating my expertise to potential employers or clients. With its modern design and intuitive user interface, this portfolio app is sure to leave a lasting impression.
+This repository contains a sleek and professional portfolio website built using Next.js with TypeScript. The application serves as a showcase for my projects, skills, and experiences, demonstrating my expertise to potential employers or clients. With its modern design, intuitive navigation, and dedicated project detail pages, this portfolio app highlights both my technical and design capabilities.
 
 ## Features
 
-- **Customizable Content**: Easily update and customize your portfolio content, including projects, skills, and contact information.
-- **Responsive Design**: Ensures your portfolio looks great on all devices, from desktops to smartphones.
-- **Project Showcase**: Highlight your projects with detailed descriptions, screenshots, and links to live demos or repositories.
-- **Skills Section**: Showcase your skills and technologies you're proficient in, helping visitors understand your expertise.
-- **Contact Form**: Allows visitors to reach out to you directly through a contact form, enhancing communication.
-- **Social Media Integration**: Links to your social media profiles for increased visibility and networking opportunities.
+- **Customizable Content**: Easily update and customize portfolio sections including projects, skills, and personal information.
+- **Responsive Design**: Optimized for viewing on all devices.
+- **Dedicated Projects Page**: Centralized hub to explore projects in detail.
+- **Project Detail Pages**: Includes descriptions, animations, and integration with GitHub data.
+- **Skills Section**: Highlights core technical expertise.
+- **Modern Theme**: Clean and minimal aesthetic with motion-based interactions.
+- **Social Media Integration**: Links to social profiles for visibility and networking.
 
 ## Technologies Used
 
-- **Next.js**: A Meta-Framework for React library for building user interfaces.
-- **TypeScript**: A statically typed language that helps catch errors early and improves developer productivity.
-- **React**: A JavaScript library for building user interfaces.
-- **React Hooks**: Allows functional components to manage state and side effects.
-- **Formik**: A lightweight library for managing forms in React applications.
-- **Swiper**: A modern, powerful, and flexible slider library for web applications
-- **Tailwind CSS**: A utility-first CSS framework packed with classes.
-- **ESLint**: JavaScript linting utility for maintaining code quality.
-- **Prettier**: Code formatter for ensuring consistent code style.
+- **Next.js (v15)**: Framework for React with support for server-side rendering and static generation.
+- **TypeScript**: Strong typing for reliability and maintainability.
+- **React (v19)**: Library for building user interfaces.
+- **Framer Motion (via Motion)**: For smooth animations and transitions.
+- **Radix UI**: Accessible and customizable UI primitives.
+- **Lucide Icons & Iconify**: Modern, flexible icon libraries.
+- **React Fast Marquee**: For animated text/scroll effects.
+- **React Markdown**: For rendering markdown content.
+- **React Intersection Observer**: For scroll-based interactions.
+- **Tailwind CSS v4 + Tailwind Merge**: Utility-first styling with streamlined class merging.
+- **ESLint + Prettier**: For consistent code style and quality.
 
 ## Version History
 
@@ -60,83 +69,77 @@ This repository contains a sleek and professional portfolio website built using 
   - Simplified state management using React Context API and custom hooks.
   - Implemented responsive design improvements for better mobile experience.
   - Added TypeScript-specific linting rules for stricter code quality checks.
- 
-- **Version 2.1.0** (2024-09-01 Current Version):
+
+- **Version 2.1.0** (2024-09-01):
   - Bug fixes and error resolutions.
   - Accent color changed.
   - Contact form functionality improvement.
+
+- **Version 3.0.0** (2025-10-02 – Current Version):
+  - Brand new theme and design overhaul.
+  - Introduced a dedicated projects page with individual project detail pages.
+  - Replaced **Swiper** with lightweight alternatives.
+  - Integrated **GitHub GraphQL API** to fetch project/user details.
+  - Added advanced scroll-spy behavior for project details.
+  - Animations powered by **Framer Motion**.
+  - Contact form temporarily removed (to be reintroduced in a future release).
 
 ## Challenges
 
 ### Technical Challenges
 
-- Implementing TypeScript in an existing React project required careful refactoring of component props and state management.
-- Balancing the need for fast initial loading with the desire for rich, interactive content presented unique challenges.
-- Integrating Next.js with TypeScript required adapting to its unique file system structure and build process.
+- Implementing a **scroll-spy system** for tracking sections in project detail pages.
+- Connecting to **GitHub APIs via GraphQL** and handling authentication/data fetching.
+- Migrating away from Swiper while keeping lightweight and smooth UI interactions.
 
-### Design Considerations
+### Design & Performance
 
-- Maintaining a clean, minimalist aesthetic while incorporating complex features like dynamic imports was challenging.
-- Ensuring consistency in styling across multiple pages and components required careful attention to detail.
-- Balancing visual appeal with accessibility considerations presented ongoing challenges.
-
-### Performance Optimization
-
-- Finding the right balance between server-side rendering and client-side interactivity proved difficult at times.
-- Optimizing images for web use without sacrificing quality was a recurring challenge.
-- Fine-tuning the build process to achieve optimal performance required experimentation and iteration.
-
-### Learning Curve
-
-- Mastering Next.js and TypeScript simultaneously presented a steep learning curve.
-- Adapting to TypeScript's strict typing system took time but significantly improved code reliability.
-- Exploring Next.js features like getStaticProps and getServerSideProps added complexity but improved performance.
-
+- Creating a **fresh theme** that balances animations with minimalism.
+- Ensuring smooth animations and transitions with **Framer Motion** while maintaining performance.
+- Designing new **project detail pages** with consistent styling and responsive layout.
 
 ## What I Learned
 
-During the development of this portfolio project, I gained several valuable insights that I'd like to share:
-
-1. **TypeScript's Power**: Working with TypeScript revealed its ability to catch errors early and improve code reliability. It also forced me to think more carefully about my code structure and potential edge cases.
-
-2. **Next.js Ecosystem**: I discovered the power of Next.js's built-in features like getStaticProps and getServerSideProps, which greatly simplified server-side rendering and data fetching processes.
-
-3. **Performance Optimization**: I learned that balancing server-side rendering and client-side interactivity is crucial for providing a smooth user experience. Techniques like lazy loading and dynamic imports were particularly effective.
-
-4. **State Management**: Using React Context API and custom hooks for state management allowed for cleaner, more modular code organization.
-
-5. **Accessibility**: Focusing on accessibility ensured that my portfolio would be usable by everyone, regardless of their abilities or device.
-
-6. **Continuous Learning**: This project reinforced the importance of staying up-to-date with the latest web development trends and technologies.
-
-7. **Design Principles**: Applying principles of minimalism and simplicity helped create a clean, professional look that effectively showcases my work.
-
-8. **Version Control**: Utilizing Git for version control taught me the value of regular commits and meaningful commit messages.
-
-9. **Documentation**: Creating this README file highlighted the significance of thorough documentation in open-source projects, making it easier for others to understand and contribute to the project.
-
+1. **Framer Motion**: Leveraged its animation system for smooth, production-ready transitions.
+2. **GraphQL Integration**: Learned to fetch GitHub project/user data via GraphQL efficiently.
+3. **Scroll Spy Techniques**: Implemented intersection observer hooks for advanced scroll tracking.
+4. **Design Overhaul**: Experience in redesigning an entire theme while preserving accessibility.
+5. **Package Ecosystem Update**: Migrated to new libraries and removed unnecessary dependencies for performance gains.
 
 ## Getting Started
 
-To get started with this project, follow these steps:
+To get started with this project:
 
-1. Clone this repository: `git clone https://github.com/alikouhfar/portfolio.git`
-2. Navigate to the project directory: `cd portfolio`
-3. Install dependencies: `npm install`
-4. Customize the content in the `app` directory to match your portfolio.
-5. Run the development server: `npm run dev`
-6. Open [http://localhost:3000](http://localhost:3000) in your browser to view your portfolio.
+1. Clone this repository:
+
+   ```bash
+   git clone https://github.com/alikouhfar/portfolio.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd portfolio
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Run the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to view the app.
 
 ## Contributing
 
-Contributions are welcome! If you'd like to contribute to this project, please follow these guidelines:
-
-1. Fork the repository on GitHub.
-2. Create a new branch with a descriptive name: `git checkout -b feature/my-new-feature`.
-3. Make your changes and commit them with descriptive commit messages: `git commit -m 'Feature: New Feature' or git commit -m 'Bug Fix: Fixed Bugs'`.
-4. Push your changes to your fork: `git push origin feature/my-new-feature`.
-5. Submit a pull request detailing the changes you made and why they are necessary.
+Contributions are welcome! Please fork the repo, create a branch, make changes, and submit a pull request.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
