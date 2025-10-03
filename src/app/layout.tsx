@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { Outfit } from 'next/font/google'
 import './globals.css'
 import { ReactNode } from 'react'
+import Providers from '@/providers/Providers'
+import { Toaster } from 'react-hot-toast'
 
 const outfit = Outfit({
   subsets: ['latin'],
@@ -18,7 +20,12 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
     <html lang="en" className="dark">
-      <body className={`${outfit.className} bg-[#0a0a0a] antialiased`}>{children}</body>
+      <body className={`${outfit.className} bg-[#0a0a0a] antialiased`}>
+        <Providers>
+          {children}
+          <Toaster toastOptions={{ position: 'top-center', duration: 3000 }} />
+        </Providers>
+      </body>
     </html>
   )
 }

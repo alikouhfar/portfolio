@@ -14,7 +14,7 @@ const GithubStatistic: FC<GtihubStatisticPropsType> = (props) => {
       </div>
       <div>
         <h4 className="line-clamp-1 text-sm text-zinc-400">{props.label}</h4>
-        <p className="text-xl font-bold text-zinc-100 md:text-2xl">{props.value.toLocaleString()}</p>
+        <p className="text-xl font-bold text-zinc-100 md:text-2xl">{props.value?.toLocaleString() ?? 0}</p>
       </div>
     </li>
   )
