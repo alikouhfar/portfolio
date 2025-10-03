@@ -29,5 +29,5 @@ export const getUserData = async (): Promise<GetUserDataReturnType> => {
   })
 
   const json = await res.json()
-  return json.data.user
+  return json.data?.user
 }
