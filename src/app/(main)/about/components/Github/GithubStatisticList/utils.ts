@@ -1,4 +1,4 @@
-import { GetUserDataReturnType } from './types'
+import { GetUserDataReturnType } from "./types"
 
 export const getUserData = async (): Promise<GetUserDataReturnType> => {
   const query = `
@@ -22,12 +22,21 @@ export const getUserData = async (): Promise<GetUserDataReturnType> => {
   const res = await fetch('https://api.github.com/graphql', {
     method: 'POST',
     headers: {
-      Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+      Authorization: `Bearer ${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`,
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({ query }),
   })
 
   const json = await res.json()
-  return json.data?.user
+  const user = json.data?.user
+
+  if (!user) {
+    throw new Error("GitHub API returned no user data")
+  }
+
+  return {
+    followers: user.followers,
+    repositories: user.repositories,
+  }
 }
