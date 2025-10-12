@@ -24,7 +24,7 @@ const ProjectItem: FC<ProjectItemProps> = (props) => {
           <Link
             draggable="false"
             className="border-white-3 relative cursor-pointer overflow-hidden rounded-2xl border bg-[#f2f2f20c] p-1.5 shadow-2xl lg:h-[560px] lg:rounded-3xl lg:p-2 dark:border-white/15"
-            href="/projects/next-venture"
+            href={`/projects/${props.projectDetails.id}`}
           >
             <div
               className="absolute inset-x-0 top-0 h-px"

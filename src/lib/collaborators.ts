@@ -8,7 +8,7 @@ export const collaborators:Array<Collaborator> = [
       left: 'left-[63%]',
     },
     size: 80,
-    src: 'https://randomuser.me/api/portraits/women/3.jpg',
+    src: '/images/collaborations/3.jpg',
   },
   {
     id: 'c4d6e8f0-3c4d-6e8f-0g3h-3456789012cd',
@@ -17,7 +17,7 @@ export const collaborators:Array<Collaborator> = [
       left: 'left-[32%]',
     },
     size: 72,
-    src: 'https://randomuser.me/api/portraits/men/7.jpg',
+    src: '/images/collaborations/7.jpg',
   },
   {
     id: 'a2b4c6d8-1a2b-4c6d-8e1f-1234567890ab',
@@ -26,7 +26,7 @@ export const collaborators:Array<Collaborator> = [
       left: 'left-[20%] md:left-[20%] lg:left-[20%]',
     },
     size: 64,
-    src: 'https://randomuser.me/api/portraits/men/1.jpg',
+    src: '/images/collaborations/1.jpg',
   },
   {
     id: 'd5e7f901-4d5e-7f90-1h4i-4567890123de',
@@ -35,7 +35,7 @@ export const collaborators:Array<Collaborator> = [
       left: 'left-[68%] lg:left-[72%]',
     },
     size: 56,
-    src: 'https://randomuser.me/api/portraits/women/8.jpg',
+    src: '/images/collaborations/8.jpg',
   },
   {
     id: 'e6f80112-5e6f-8011-2i5j-5678901234ef',
@@ -44,7 +44,7 @@ export const collaborators:Array<Collaborator> = [
       left: 'left-[5%] md:left-[10%] lg:left-[11%%]',
     },
     size: 48,
-    src: 'https://randomuser.me/api/portraits/women/25.jpg',
+    src: '/images/collaborations/25.jpg',
   },
   {
     id: 'f7091223-6f70-9122-3j6k-6789012345fa',
@@ -53,6 +53,6 @@ export const collaborators:Array<Collaborator> = [
       left: 'left-[78%] md:left-[80%] lg:left-[85%]',
     },
     size: 40,
-    src: 'https://randomuser.me/api/portraits/men/25.jpg',
+    src: '/images/collaborations/26.jpg',
   },
 ];
