@@ -20,8 +20,8 @@ const Header = () => {
   }
 
   return (
-    <div className="fixed inset-x-0 top-2.5 z-50 mx-auto mt-1.5 flex w-full max-w-7xl items-center justify-between px-6 py-1.5 pr-4 lg:top-4">
-      <div>LOGO</div>
+    <div className="fixed inset-x-0 min-h-12 top-2.5 z-50 mx-auto mt-1.5 flex w-full max-w-7xl items-center justify-between px-6 py-1.5 pr-4 lg:top-4">
+      {/*<div>LOGO</div>*/}
       <NavigationMenu className="absolute top-1/2 left-1/2 flex w-fit -translate-x-1/2 -translate-y-1/2 rounded-full backdrop-blur-md">
         <NavigationMenuList className="relative flex rounded-full border border-white/10 bg-white/10 px-1.5 py-1">
           {headerItems.map((item) => (

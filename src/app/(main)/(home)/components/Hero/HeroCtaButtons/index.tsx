@@ -1,4 +1,4 @@
-import { ArrowRight, Copy } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
 const HeroCtaButtons = () => {
   return (
@@ -23,7 +23,7 @@ const HeroCtaButtons = () => {
         type="button"
         className="flex cursor-pointer items-center gap-2 py-3 text-base font-light text-black outline-hidden transition-all duration-300 hover:text-black/60 dark:text-white/75 dark:hover:text-white/90"
       >
-        <Copy size={20} />
+        {/*<Copy size={20} />*/}
         {process.env.NEXT_PUBLIC_EMAIL}
       </button>
     </div>
