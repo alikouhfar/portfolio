@@ -1,17 +1,16 @@
+import { IProjectItemProps } from '@/app/(main)/(home)/types/project-item'
+import TechnologyBadge from '@/components/TechnologyBadge'
+import { projectItemThemeColors } from '@/lib/project-item-theme-colors'
+import { clsx } from 'clsx'
 import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
-import { FC } from 'react'
-import { clsx } from 'clsx'
-import { ProjectItemProps } from './types'
-import { ProjectItemDirections } from './enums'
-import TechnologyBadge from '@/components/TechnologyBadge'
 import Link from 'next/link'
-import { projectItemThemeColors } from '@/lib/project-item-theme-colors'
+import { FC } from 'react'
 
-const ProjectItem: FC<ProjectItemProps> = (props) => {
+const ProjectItem: FC<IProjectItemProps> = (props) => {
   return (
     <div
-      className={`relative mx-auto flex w-full flex-col items-center ${props.direction === ProjectItemDirections.Right ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}
+      className={`relative mx-auto flex w-full flex-col items-center ${props.direction === 'right' ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}
     >
       <div
         className="project-card flex w-full flex-row lg:flex-4"
@@ -23,8 +22,8 @@ const ProjectItem: FC<ProjectItemProps> = (props) => {
         <div className="flex w-full flex-col sm:mx-auto sm:w-4/5 lg:mx-10 lg:w-full">
           <Link
             draggable="false"
-            className="border-white-3 relative cursor-pointer overflow-hidden rounded-2xl border bg-[#f2f2f20c] p-1.5 shadow-2xl lg:h-[560px] lg:rounded-3xl lg:p-2 dark:border-white/15"
-            href="/projects/next-venture"
+            className="border-white-3 relative cursor-pointer overflow-hidden rounded-2xl border bg-[#f2f2f20c] p-1.5 shadow-2xl lg:rounded-3xl lg:p-2 dark:border-white/15"
+            href={`/projects/${props.projectDetails.id}`}
           >
             <div
               className="absolute inset-x-0 top-0 h-px"
@@ -83,7 +82,7 @@ const ProjectItem: FC<ProjectItemProps> = (props) => {
                 projectItemThemeColors[props.projectDetails.theme].background
               )}
             />
-            <div className="flex flex-col items-start lg:h-[500px]">
+            <div className="flex flex-col items-start">
               <div className="flex items-center gap-3">
                 <h3 className="text-foreground text-2xl font-bold">{props.projectDetails.title}</h3>
               </div>

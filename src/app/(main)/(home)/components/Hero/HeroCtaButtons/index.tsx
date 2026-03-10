@@ -1,3 +1,4 @@
+import CopyToClipboardButton from '@/components/CopyToClipboardButton'
 import { ArrowRight, Copy } from 'lucide-react'
 
 const HeroCtaButtons = () => {
@@ -19,13 +20,9 @@ const HeroCtaButtons = () => {
           />
         </span>
       </button>
-      <button
-        type="button"
-        className="flex cursor-pointer items-center gap-2 py-3 text-base font-light text-black outline-hidden transition-all duration-300 hover:text-black/60 dark:text-white/75 dark:hover:text-white/90"
-      >
-        <Copy size={20} />
-        {process.env.NEXT_PUBLIC_EMAIL}
-      </button>
+      <CopyToClipboardButton content={process.env.NEXT_PUBLIC_EMAIL as string}>
+        <p>{process.env.NEXT_PUBLIC_EMAIL}</p>
+      </CopyToClipboardButton>
     </div>
   )
 }

@@ -1,6 +1,5 @@
-import { ProjectItemThemes } from '@/enums/project-item-themes'
+import { ProjectItemThemesEnum } from '@/enums/project-item-themes'
 import { Technology } from '@/types/technology'
-import { ProjectStatus } from '@/enums/project-status'
 
 export type Feature = {
   title: string
@@ -28,11 +27,11 @@ export type Project = {
   overview?: string
   imageUrl: string
   images?: ProjectImages
-  theme: ProjectItemThemes
+  theme: keyof typeof ProjectItemThemesEnum
   features: Array<Feature>
   technologies: Array<Technology>
   role: string
-  status: ProjectStatus
+  status: 'ongoing' | 'completed'
   startYear: number
   finishYear?: number
   repositoryUrl?: string

@@ -1,6 +1,4 @@
 import { Project } from '@/types/project'
-import { ProjectItemThemes } from '@/enums/project-item-themes'
-import { ProjectStatus } from '@/enums/project-status'
 
 export const projects: Project[] = [
   {
@@ -13,7 +11,7 @@ export const projects: Project[] = [
     overview: `This portfolio is a comprehensive showcase of my frontend development skills, combining clean code, interactive design, and micro-animations. It demonstrates my expertise in building performant, responsive, and visually engaging applications using Next.js, Tailwind CSS, and Framer Motion. The platform serves as both a personal branding tool and a technical case study, highlighting projects in detail with structured case studies, feature breakdowns, and technical insights.`,
     imageUrl: '/images/projects/portfolio/hero.webp',
     role: 'Frontend Developer',
-    status: ProjectStatus.Ongoing,
+    status: 'ongoing',
     startYear: 2025,
     repositoryUrl: 'https://github.com/alikouhfar/portfolio',
     demoUrl: 'https://alikouhfar.com',
@@ -74,7 +72,7 @@ export const projects: Project[] = [
         description: 'Utility-first CSS framework for fast and responsive styling',
       },
     ],
-    theme: ProjectItemThemes.Pink,
+    theme: 'Pink',
     challengesAndSolutions: [
       {
         challenge: 'Balancing micro-animations with performance across devices.',
@@ -111,7 +109,7 @@ export const projects: Project[] = [
     overview: `TBAO is a dual-purpose platform designed to accelerate career growth by connecting learning and professional opportunities. It allows users to create CVs dynamically, access curated tutorials, purchase courses, and get matched with relevant job opportunities. The platform leverages Webpack for optimized bundling, Swiper.js for interactive galleries, and vanilla JavaScript for custom functionality, delivering a seamless and efficient user experience for both learners and recruiters.`,
     imageUrl: '/images/projects/tbao/hero.webp',
     role: 'Fullstack Developer',
-    status: ProjectStatus.Completed,
+    status: 'completed',
     startYear: 2022,
     finishYear: 2023,
     demoUrl: 'https://tbao.ir',
@@ -165,7 +163,7 @@ export const projects: Project[] = [
         description: 'CSS framework for responsive, mobile-first layouts',
       },
     ],
-    theme: ProjectItemThemes.Blue,
+    theme: 'Blue',
     challengesAndSolutions: [
       {
         challenge:
@@ -198,7 +196,7 @@ export const projects: Project[] = [
     overview: `ISILEARNING is a corporate learning management system designed to deliver both live and self-paced educational experiences for employees. It integrates BigBlueButton for live virtual classes, automated certificate generation, and configurable quizzes to track progress. The platform ensures role-based content access, provides a seamless video bookmarking system, and leverages Angular, RxJs, and TypeScript to create an interactive and engaging environment that drives employee skill development and training ROI.`,
     imageUrl: '/images/projects/lms/hero.webp',
     role: 'Frontend Developer',
-    status: ProjectStatus.Completed,
+    status: 'completed',
     startYear: 2021,
     demoUrl: 'https://isilearning.ir',
     features: [
@@ -261,7 +259,7 @@ export const projects: Project[] = [
         description: 'CSS preprocessor for modular and maintainable styles',
       },
     ],
-    theme: ProjectItemThemes.Emerald,
+    theme: 'Emerald',
     challengesAndSolutions: [
       {
         challenge: 'Handling real-time live sessions alongside asynchronous course content.',

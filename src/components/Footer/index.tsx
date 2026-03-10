@@ -1,24 +1,27 @@
-import Link from 'next/link'
+import { footerPageListOne } from '@/lib/footer-page-list'
 import { Icon } from '@iconify/react'
-import { AppWindow, Code, Ellipsis } from 'lucide-react'
+import { AppWindow } from 'lucide-react'
+import Link from 'next/link'
 import FooterPageList from './FooterPageList'
-import { footerPageListOne, footerPageListThree, footerPageListTwo } from './FooterPageList/lib'
 
 const Footer = () => {
+  const establishmentYear = 2024
+  const currentYear = new Date().getFullYear()
+
   return (
     <footer className="mx-auto my-6 w-full max-w-6xl max-lg:px-4">
-      <div className="bg-white-2 relative mx-auto flex flex-col items-center gap-6 rounded-3xl px-4 py-10 shadow-sm backdrop-blur-lg md:flex-row dark:bg-white/[0.02]">
+      <div className="bg-white-2 relative mx-auto flex flex-col items-center gap-6 rounded-3xl px-4 py-10 shadow-sm backdrop-blur-lg md:flex-row dark:bg-white/2">
         <div className="flex w-full flex-1 flex-col items-start gap-4 md:flex-row md:gap-10 md:px-8">
           <div className="hidden flex-col gap-y-6 md:flex md:w-1/2">
-            <Link className="inline-block" href="/public">
+            {/* <Link className="inline-block" href="/public">
               LOGO
-            </Link>
+            </Link> */}
             <p className="w-60 text-sm leading-5 dark:text-gray-300">
               I&apos;m Ali - a frontend developer, UI craftsman &amp; creative problem solver. Thanks for
               stopping by!
             </p>
           </div>
-          <div className="flex flex-col items-start justify-between gap-6 md:mx-4 md:w-1/2 md:flex-row md:gap-16">
+          <div className="flex flex-col items-start justify-end gap-6 md:mx-4 md:w-1/2 md:flex-row md:gap-16">
             <div className="flex flex-col gap-2 md:gap-4">
               <h4 className="font-semibold text-indigo-400">
                 <AppWindow size={18} />
@@ -26,7 +29,7 @@ const Footer = () => {
               </h4>
               <FooterPageList pages={footerPageListOne} />
             </div>
-            <div className="flex flex-col gap-2 md:gap-4">
+            {/* <div className="flex flex-col gap-2 md:gap-4">
               <h4 className="font-semibold text-indigo-400">
                 <Code size={18} />
                 Specifics
@@ -39,14 +42,14 @@ const Footer = () => {
                 More
               </h4>
               <FooterPageList pages={footerPageListThree} />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
-      <div className="mt-4 flex flex-col items-center justify-between gap-4 text-sm text-neutral-600 md:flex-row md:px-8 dark:text-neutral-400">
+      <div className="mt-4 flex flex-col items-center justify-between gap-4 text-sm text-neutral-600 md:flex-row dark:text-neutral-400">
         <div className="flex flex-col items-center gap-3 sm:flex-row sm:gap-6">
           <p className="whitespace-nowrap">
-            &copy; 2025
+            &copy; {establishmentYear} &mdash; {currentYear}
             <Link
               className="ml-1 whitespace-nowrap transition-colors hover:text-black dark:hover:text-white"
               href="/public"
@@ -55,7 +58,7 @@ const Footer = () => {
             </Link>
             . All rights reserved
           </p>
-          <div className="flex items-center justify-center gap-4 sm:gap-6">
+          {/* <div className="flex items-center justify-center gap-4 sm:gap-6">
             <a
               className="whitespace-nowrap transition-colors hover:text-black dark:hover:text-white"
               href="/legal/privacy"
@@ -68,7 +71,7 @@ const Footer = () => {
             >
               Terms &amp; Conditions
             </a>
-          </div>
+          </div> */}
         </div>
         <div className="flex flex-col items-center gap-4 md:flex-row md:justify-end">
           <div className="flex items-center gap-3">

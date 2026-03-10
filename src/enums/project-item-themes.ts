@@ -1,4 +1,4 @@
-export enum ProjectItemThemes {
+export const enum ProjectItemThemesEnum {
   Red = 'red',
   Orange = 'orange',
   Amber = 'amber',

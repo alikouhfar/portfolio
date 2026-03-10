@@ -6,7 +6,6 @@ import { FC } from 'react'
 const IntroTechnologiesMarquee: FC<IntroTechnologiesMarqueeProps> = (props) => {
   const { direction = 'left' } = props
 
-
   return (
     <Marquee direction={direction} gradient={false} speed={20} loop={100} className="p-2">
       {props.technologies.map((technology, index) => (

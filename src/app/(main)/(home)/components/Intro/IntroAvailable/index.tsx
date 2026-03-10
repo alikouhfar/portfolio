@@ -1,4 +1,4 @@
-import { Copy } from 'lucide-react'
+import CopyToClipboardButton from '@/components/CopyToClipboardButton'
 
 const IntroAvailable = () => {
   return (
@@ -6,7 +6,7 @@ const IntroAvailable = () => {
       <div className="size-full">
         <div className="flex size-full flex-col items-center justify-center bg-cover bg-center">
           <div
-            className="absolute inset-0 z-[-1] h-[150px] w-full overflow-hidden bg-neutral-950/80 opacity-100"
+            className="absolute inset-0 z-[-1] h-37.5 w-full overflow-hidden bg-neutral-950/80 opacity-100"
             style={{
               maskImage: 'linear-gradient(rgb(0, 0, 0) 40%, rgba(0, 0, 0, 0) 100%)',
             }}
@@ -20,15 +20,9 @@ const IntroAvailable = () => {
           >
             Available for your next digital challenge
           </span>
-          <div className="relative flex">
-            <button
-              type="button"
-              className="flex cursor-pointer items-center gap-2 py-3 text-base font-light text-white/75 outline-hidden transition-all duration-300 hover:text-white/90"
-            >
-              <Copy size={20} />
-              {process.env.NEXT_PUBLIC_EMAIL}
-            </button>
-          </div>
+          <CopyToClipboardButton content={process.env.NEXT_PUBLIC_EMAIL as string}>
+            <p>{process.env.NEXT_PUBLIC_EMAIL}</p>
+          </CopyToClipboardButton>
         </div>
       </div>
       <div className="pointer-events-none absolute inset-0 transition-all duration-300 group-hover:bg-neutral-800/10" />

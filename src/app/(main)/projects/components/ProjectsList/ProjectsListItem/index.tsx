@@ -62,7 +62,7 @@ const ProjectsListItem: FC<ProjectListItemProps> = (props) => {
           </div>
         </div>
       </Link>
-      <div className="flex flex-col items-start py-4 lg:h-[500px]">
+      <div className="flex flex-col items-start py-4">
         <p className="text-muted-foreground my-2 text-base font-light">{props.project.subtitle}</p>
         <ul className="mt-3 flex flex-wrap gap-2 text-sm lg:mt-10">
           {props.project.technologies.map((technology) => (

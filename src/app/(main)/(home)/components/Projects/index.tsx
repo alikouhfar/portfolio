@@ -1,4 +1,3 @@
-import { ProjectItemDirections } from './ProjectItem/enums'
 import ProjectItem from './ProjectItem'
 import { projects } from '@/lib/projects'
 import SectionTitle from '@/components/SectionTitle'
@@ -15,8 +14,8 @@ const Projects = () => {
           return (
             <ProjectItem
               key={index}
-              direction={isOdd ? ProjectItemDirections.Right : ProjectItemDirections.Left}
               projectDetails={project}
+              direction={isOdd ? 'right' : 'left'}
             />
           )
         })}

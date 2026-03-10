@@ -1,12 +1,11 @@
-import { Norican } from 'next/font/google'
 import { clsx } from 'clsx'
 import { FC } from 'react'
 import { SectionTitleProps } from './types'
 
-const norican = Norican({
-  subsets: ['latin'],
-  weight: ['400'],
-})
+// const norican = Norican({
+//   subsets: ['latin'],
+//   weight: ['400'],
+// })
 
 const SectionTitle: FC<SectionTitleProps> = (props) => {
   const rootClassName = props?.rootClassName ?? ''
@@ -27,7 +26,7 @@ const SectionTitle: FC<SectionTitleProps> = (props) => {
       <>
         <span>{props.description}</span>
         <span
-          className={`${norican.className} text-colorful animate-gradient-x ml-3 bg-linear-to-b text-5xl font-light tracking-wide text-transparent italic md:text-6xl lg:text-7xl dark:from-zinc-700 dark:via-zinc-200 dark:to-zinc-50`}
+          className={`text-colorful animate-gradient-x ml-3 bg-linear-to-b text-5xl font-light tracking-wide text-transparent italic md:text-6xl lg:text-7xl dark:from-zinc-700 dark:via-zinc-200 dark:to-zinc-50`}
         >
           {props.descriptionKeyword}
         </span>

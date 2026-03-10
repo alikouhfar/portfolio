@@ -1,8 +1,8 @@
+import { IFooterPageListProps } from '@/types/footer-page-list'
 import Link from 'next/link'
 import { FC } from 'react'
-import { FooterPageListProps } from './types'
 
-const FooterPageList: FC<FooterPageListProps> = (props) => {
+const FooterPageList: FC<IFooterPageListProps> = (props) => {
   return (
     <ul className="flex flex-wrap items-start gap-x-4 gap-y-2 text-sm md:flex-col md:gap-y-3 dark:text-neutral-300">
       {props.pages.map((item, index) => (
