@@ -34,7 +34,7 @@ const ProjectDetails: FC<Project> = (props) => {
 
   return (
     <div className="flex gap-14">
-      <article className="flex flex-[3] flex-col gap-12">
+      <article className="flex flex-3 flex-col gap-12">
         <header className="space-y-2">
           <div className="flex justify-between">
             <h2 className="text-5xl font-extrabold">{props.shortTitle}</h2>
@@ -73,7 +73,7 @@ const ProjectDetails: FC<Project> = (props) => {
             <Badge
               variant="outline"
               className={
-                props.status === 'Completed'
+                props.status === 'completed'
                   ? 'border-lime-500 text-lime-500'
                   : 'border-yellow-500 text-yellow-500'
               }
@@ -95,7 +95,7 @@ const ProjectDetails: FC<Project> = (props) => {
           </div>
         </header>
 
-        <figure className="h-[500px] w-full overflow-hidden rounded-lg border bg-neutral-900 p-2.5 lg:h-[650px]">
+        <figure className="h-125 w-full overflow-hidden rounded-lg border bg-neutral-900 p-2.5 lg:h-162.5">
           <div className="relative h-full w-full">
             <Image
               src={props.imageUrl}
