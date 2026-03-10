@@ -1,5 +1,5 @@
 import CopyToClipboardButton from '@/components/CopyToClipboardButton'
-import { ArrowRight, Copy } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
 const HeroCtaButtons = () => {
   return (
