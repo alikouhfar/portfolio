@@ -25,7 +25,7 @@ const Header = () => {
       <NavigationMenu className="absolute top-1/2 left-1/2 flex w-fit -translate-x-1/2 -translate-y-1/2 rounded-full backdrop-blur-md">
         <NavigationMenuList className="relative flex rounded-full border border-white/10 bg-white/10 px-1.5 py-1">
           {headerItems.map((item) => (
-            <NavigationMenuItem key={item.href}>
+            <NavigationMenuItem key={item.id}>
               <NavigationMenuLink
                 href={item.href}
                 className="focus:text-accent-foreground ring-ring/10 dark:ring-ring/20 dark:outline-ring/40 outline-ring/50 [&_svg:not([class*='text-'])]:text-muted-foreground inline-block cursor-pointer gap-1 rounded-full p-2 px-4 py-1.5 text-sm font-light text-black transition-[text-shadow,color] duration-300 hover:bg-transparent hover:text-black/85 focus-visible:ring-4 focus-visible:outline-1 dark:text-white/70 dark:hover:text-white/90 [&_svg:not([class*='size-'])]:size-4"

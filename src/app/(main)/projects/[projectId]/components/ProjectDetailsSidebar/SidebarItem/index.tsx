@@ -1,7 +1,7 @@
 import { FC } from 'react'
-import { SidebarItemPropsType } from './types'
+import { ISidebarItemProps } from '../../../types/sidebar-item'
 
-const SidebarItem: FC<SidebarItemPropsType> = (props) => {
+const SidebarItem: FC<ISidebarItemProps> = (props) => {
   return (
     <li
       ref={props.ref}

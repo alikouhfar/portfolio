@@ -1,8 +1,8 @@
-import { ProjectItemThemesEnum } from '@/enums/project-item-themes'
 import { IProjectItemThemeColor } from '@/types/project-item-theme-colors'
+import { ProjectItemThemesType } from '@/types/project-item-themes'
 
-export const projectItemThemeColors: Record<keyof typeof ProjectItemThemesEnum, IProjectItemThemeColor> = {
-  Red: {
+export const projectItemThemeColors: Record<ProjectItemThemesType, IProjectItemThemeColor> = {
+  red: {
     title: 'text-red-500',
     gradient:
       'bg-[linear-gradient(188.62deg,theme(colors.red.950)_49.9%,theme(colors.red.600)_81.7%,theme(colors.red.300)_93.88%,theme(colors.red.200)_113.5%)]',
@@ -11,7 +11,7 @@ export const projectItemThemeColors: Record<keyof typeof ProjectItemThemesEnum, 
     background: 'bg-red-500',
     fill: 'fill-red-500',
   },
-  Orange: {
+  orange: {
     title: 'text-orange-500',
     gradient:
       'bg-[linear-gradient(188.62deg,theme(colors.orange.950)_49.9%,theme(colors.orange.600)_81.7%,theme(colors.orange.300)_93.88%,theme(colors.orange.200)_113.5%)]',
@@ -20,7 +20,7 @@ export const projectItemThemeColors: Record<keyof typeof ProjectItemThemesEnum, 
     background: 'bg-orange-500',
     fill: 'fill-orange-500',
   },
-  Amber: {
+  amber: {
     title: 'text-amber-500',
     gradient:
       'bg-[linear-gradient(188.62deg,theme(colors.amber.950)_49.9%,theme(colors.amber.600)_81.7%,theme(colors.amber.300)_93.88%,theme(colors.amber.200)_113.5%)]',
@@ -29,7 +29,7 @@ export const projectItemThemeColors: Record<keyof typeof ProjectItemThemesEnum, 
     background: 'bg-amber-500',
     fill: 'fill-amber-500',
   },
-  Yellow: {
+  yellow: {
     title: 'text-yellow-500',
     gradient:
       'bg-[linear-gradient(188.62deg,theme(colors.yellow.950)_49.9%,theme(colors.yellow.600)_81.7%,theme(colors.yellow.300)_93.88%,theme(colors.yellow.200)_113.5%)]',
@@ -38,7 +38,7 @@ export const projectItemThemeColors: Record<keyof typeof ProjectItemThemesEnum, 
     background: 'bg-yellow-500',
     fill: 'fill-yellow-500',
   },
-  Lime: {
+  lime: {
     title: 'text-lime-500',
     gradient:
       'bg-[linear-gradient(188.62deg,theme(colors.lime.950)_49.9%,theme(colors.lime.600)_81.7%,theme(colors.lime.300)_93.88%,theme(colors.lime.200)_113.5%)]',
@@ -47,7 +47,7 @@ export const projectItemThemeColors: Record<keyof typeof ProjectItemThemesEnum, 
     background: 'bg-lime-500',
     fill: 'fill-lime-500',
   },
-  Green: {
+  green: {
     title: 'text-green-500',
     gradient:
       'bg-[linear-gradient(188.62deg,theme(colors.green.950)_49.9%,theme(colors.green.600)_81.7%,theme(colors.green.300)_93.88%,theme(colors.green.200)_113.5%)]',
@@ -56,7 +56,7 @@ export const projectItemThemeColors: Record<keyof typeof ProjectItemThemesEnum, 
     background: 'bg-green-500',
     fill: 'fill-green-500',
   },
-  Emerald: {
+  emerald: {
     title: 'text-emerald-500',
     gradient:
       'bg-[linear-gradient(188.62deg,theme(colors.emerald.950)_49.9%,theme(colors.emerald.600)_81.7%,theme(colors.emerald.300)_93.88%,theme(colors.emerald.200)_113.5%)]',
@@ -65,7 +65,7 @@ export const projectItemThemeColors: Record<keyof typeof ProjectItemThemesEnum, 
     background: 'bg-emerald-500',
     fill: 'fill-emerald-500',
   },
-  Teal: {
+  teal: {
     title: 'text-teal-500',
     gradient:
       'bg-[linear-gradient(188.62deg,theme(colors.teal.950)_49.9%,theme(colors.teal.600)_81.7%,theme(colors.teal.300)_93.88%,theme(colors.teal.200)_113.5%)]',
@@ -74,7 +74,7 @@ export const projectItemThemeColors: Record<keyof typeof ProjectItemThemesEnum, 
     background: 'bg-teal-500',
     fill: 'fill-teal-500',
   },
-  Cyan: {
+  cyan: {
     title: 'text-cyan-500',
     gradient:
       'bg-[linear-gradient(188.62deg,theme(colors.cyan.950)_49.9%,theme(colors.cyan.600)_81.7%,theme(colors.cyan.300)_93.88%,theme(colors.cyan.200)_113.5%)]',
@@ -83,7 +83,7 @@ export const projectItemThemeColors: Record<keyof typeof ProjectItemThemesEnum, 
     background: 'bg-cyan-500',
     fill: 'fill-cyan-500',
   },
-  Sky: {
+  sky: {
     title: 'text-sky-500',
     gradient:
       'bg-[linear-gradient(188.62deg,theme(colors.sky.950)_49.9%,theme(colors.sky.600)_81.7%,theme(colors.sky.300)_93.88%,theme(colors.sky.200)_113.5%)]',
@@ -92,7 +92,7 @@ export const projectItemThemeColors: Record<keyof typeof ProjectItemThemesEnum, 
     background: 'bg-sky-500',
     fill: 'fill-sky-500',
   },
-  Blue: {
+  blue: {
     title: 'text-blue-500',
     gradient:
       'bg-[linear-gradient(188.62deg,theme(colors.blue.950)_49.9%,theme(colors.blue.600)_81.7%,theme(colors.blue.300)_93.88%,theme(colors.blue.200)_113.5%)]',
@@ -101,7 +101,7 @@ export const projectItemThemeColors: Record<keyof typeof ProjectItemThemesEnum, 
     background: 'bg-blue-500',
     fill: 'fill-blue-500',
   },
-  Indigo: {
+  indigo: {
     title: 'text-indigo-500',
     gradient:
       'bg-[linear-gradient(188.62deg,theme(colors.indigo.950)_49.9%,theme(colors.indigo.600)_81.7%,theme(colors.indigo.300)_93.88%,theme(colors.indigo.200)_113.5%)]',
@@ -110,7 +110,7 @@ export const projectItemThemeColors: Record<keyof typeof ProjectItemThemesEnum, 
     background: 'bg-indigo-500',
     fill: 'fill-indigo-500',
   },
-  Violet: {
+  violet: {
     title: 'text-violet-500',
     gradient:
       'bg-[linear-gradient(188.62deg,theme(colors.violet.950)_49.9%,theme(colors.violet.600)_81.7%,theme(colors.violet.300)_93.88%,theme(colors.violet.200)_113.5%)]',
@@ -119,7 +119,7 @@ export const projectItemThemeColors: Record<keyof typeof ProjectItemThemesEnum, 
     background: 'bg-violet-500',
     fill: 'fill-violet-500',
   },
-  Purple: {
+  purple: {
     title: 'text-purple-500',
     gradient:
       'bg-[linear-gradient(188.62deg,theme(colors.purple.950)_49.9%,theme(colors.purple.600)_81.7%,theme(colors.purple.300)_93.88%,theme(colors.purple.200)_113.5%)]',
@@ -128,7 +128,7 @@ export const projectItemThemeColors: Record<keyof typeof ProjectItemThemesEnum, 
     background: 'bg-purple-500',
     fill: 'fill-purple-500',
   },
-  Fuchsia: {
+  fuchsia: {
     title: 'text-fuchsia-500',
     gradient:
       'bg-[linear-gradient(188.62deg,theme(colors.fuchsia.950)_49.9%,theme(colors.fuchsia.600)_81.7%,theme(colors.fuchsia.300)_93.88%,theme(colors.fuchsia.200)_113.5%)]',
@@ -137,7 +137,7 @@ export const projectItemThemeColors: Record<keyof typeof ProjectItemThemesEnum, 
     background: 'bg-fuchsia-500',
     fill: 'fill-fuchsia-500',
   },
-  Pink: {
+  pink: {
     title: 'text-pink-600',
     gradient:
       'bg-[linear-gradient(188.62deg,theme(colors.pink.950)_49.9%,theme(colors.pink.600)_81.7%,theme(colors.pink.300)_93.88%,theme(colors.pink.200)_113.5%)]',
@@ -146,7 +146,7 @@ export const projectItemThemeColors: Record<keyof typeof ProjectItemThemesEnum, 
     background: 'bg-pink-500',
     fill: 'fill-pink-500',
   },
-  Rose: {
+  rose: {
     title: 'text-rose-500',
     gradient:
       'bg-[linear-gradient(188.62deg,theme(colors.rose.950)_49.9%,theme(colors.rose.600)_81.7%,theme(colors.rose.300)_93.88%,theme(colors.rose.200)_113.5%)]',

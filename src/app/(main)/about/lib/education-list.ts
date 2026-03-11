@@ -1,7 +1,9 @@
-import { EducationType } from './types'
+import { generateRandomUUID } from '@/utils/generate-random-uuid'
+import { IEducation } from '../types/education-list'
 
-export const educations: Array<EducationType> = [
+export const educations: Array<IEducation> = [
   {
+    id: generateRandomUUID(),
     startYear: 2018,
     finishYear: 2022,
     title: 'Architectural Engineering',
@@ -11,6 +13,7 @@ export const educations: Array<EducationType> = [
       'Completed a comprehensive program in Architectural Engineering with emphasis on architectural design, structural systems, and sustainable construction methods. Gained hands-on experience through studio projects, technical workshops, and interdisciplinary teamwork. Developed strong analytical, visualization, and project management skills, while applying engineering principles to real-world urban and architectural challenges.',
   },
   {
+    id: generateRandomUUID(),
     startYear: 2014,
     finishYear: 2018,
     title: 'Mathematics',

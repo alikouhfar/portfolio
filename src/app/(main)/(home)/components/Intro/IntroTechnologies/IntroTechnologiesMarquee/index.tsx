@@ -1,16 +1,19 @@
+import { IIntroTechnologiesMarqueeProps } from '@/app/(main)/(home)/types/intro-technologies-marquee'
 import { Icon } from '@iconify/react'
-import Marquee from 'react-fast-marquee'
-import { IntroTechnologiesMarqueeProps } from './types'
 import { FC } from 'react'
+import Marquee from 'react-fast-marquee'
 
-const IntroTechnologiesMarquee: FC<IntroTechnologiesMarqueeProps> = (props) => {
-  const { direction = 'left' } = props
+const IntroTechnologiesMarquee: FC<IIntroTechnologiesMarqueeProps> = (props) => {
+  const {
+    technologies,
+    direction = 'left'
+  } = props
 
   return (
     <Marquee direction={direction} gradient={false} speed={20} loop={100} className="p-2">
-      {props.technologies.map((technology, index) => (
+      {technologies.map((technology) => (
         <div
-          key={index}
+          key={technology.id}
           data-slot="badge"
           className="mx-2 inline-flex w-fit shrink-0 items-center cursor-context-menu justify-center gap-2 overflow-hidden rounded-lg border border-white/15 bg-neutral-900 px-3 py-1 text-sm whitespace-nowrap text-white transition-all duration-500 hover:border-white/40 hover:shadow-md hover:shadow-white/10"
           aria-label={technology.title}

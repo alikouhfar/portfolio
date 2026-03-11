@@ -1,24 +1,36 @@
-import { ProjectItemThemesEnum } from '@/enums/project-item-themes'
-import { Technology } from '@/types/technology'
+import { ProjectItemThemesType } from './project-item-themes'
+import { ITechnology } from './technology'
 
-export type Feature = {
+export interface IFeature {
+  id: string
   title: string
-  description: string
   icon?: string
+  description: string
 }
 
-export type ProjectImages = {
+export interface IResult {
+  id: string
+  title: string
+}
+
+export interface IGallery {
+  id: string
+  src: string
+}
+
+export interface IProjectImages {
   hero?: string
   featuresImages?: string[]
   gallery?: string[]
 }
 
-export type ChallengeSolution = {
-  challenge: string
+export interface IChallengeSolution {
+  id: string
   solution: string
+  challenge: string
 }
 
-export type Project = {
+export interface IProject {
   id: string
   title: string
   shortTitle: string
@@ -26,17 +38,17 @@ export type Project = {
   description: string
   overview?: string
   imageUrl: string
-  images?: ProjectImages
-  theme: keyof typeof ProjectItemThemesEnum
-  features: Array<Feature>
-  technologies: Array<Technology>
+  images?: IProjectImages
+  theme: ProjectItemThemesType
+  features: Array<IFeature>
+  technologies: Array<ITechnology>
   role: string
   status: 'ongoing' | 'completed'
   startYear: number
   finishYear?: number
   repositoryUrl?: string
   demoUrl?: string
-  challengesAndSolutions?: Array<ChallengeSolution>
-  results?: Array<string>
-  gallery?: Array<string>
+  challengesAndSolutions?: Array<IChallengeSolution>
+  results?: Array<IResult>
+  gallery?: Array<IGallery>
 }

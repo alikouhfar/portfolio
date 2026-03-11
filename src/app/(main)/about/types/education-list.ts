@@ -1,4 +1,5 @@
-export type EducationType = {
+export interface IEducation {
+  id: string
   startYear: number | null
   finishYear: number | null
   title: string

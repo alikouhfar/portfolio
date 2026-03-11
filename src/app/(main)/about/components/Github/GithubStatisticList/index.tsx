@@ -1,16 +1,15 @@
 'use client'
 
 import { useQuery } from '@tanstack/react-query'
-import { getUserData } from './utils'
-import GithubStatisticListSkeleton from './GithubStatisticListSkeleton'
-import GithubStatistic from './GithubStatistic'
 import { FolderGit2, GitFork, Star, Users } from 'lucide-react'
-import { GithubStatisticColorsEnum } from './enums'
+import { GetUserData } from '../../../services/github-statistic-list'
+import GithubStatistic from './GithubStatistic'
+import GithubStatisticListSkeleton from './GithubStatisticListSkeleton'
 
 const GithubStatisticList = () => {
   const { data, isLoading } = useQuery({
     queryKey: ['user-data'],
-    queryFn: getUserData,
+    queryFn: GetUserData,
   })
 
   if (isLoading) return <GithubStatisticListSkeleton />
@@ -21,31 +20,31 @@ const GithubStatisticList = () => {
   return (
     <ul className="grid grid-cols-2 gap-4 lg:grid-cols-4">
       <GithubStatistic
+        color='pink'
         icon={<Users />}
         label="Followers"
         value={data?.followers.totalCount as number}
-        color={GithubStatisticColorsEnum.Pink}
       />
 
       <GithubStatistic
+        color='amber'
         icon={<Star />}
         label="Total Stars"
         value={totalStars as number}
-        color={GithubStatisticColorsEnum.Amber}
       />
 
       <GithubStatistic
+        color='blue'
         icon={<FolderGit2 />}
         label="Repositories"
         value={data?.repositories.totalCount as number}
-        color={GithubStatisticColorsEnum.Blue}
       />
 
       <GithubStatistic
+        color='emerald'
         icon={<GitFork />}
         label="Total Forks"
         value={totalForks as number}
-        color={GithubStatisticColorsEnum.Emerald}
       />
     </ul>
   )

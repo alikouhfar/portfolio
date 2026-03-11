@@ -3,6 +3,7 @@ export interface IFooterPageListProps {
 }
 
 export interface IFooterPage {
+    id: string
     route: string
     title: string
 }

@@ -1,8 +1,8 @@
+import { githubStatisticColorTheme } from '@/app/(main)/about/lib/github-statistic-list'
+import { IGtihubStatisticProps } from '@/app/(main)/about/types/github-statistic'
 import { FC } from 'react'
-import { githubStatisticColorTheme } from '@/app/(main)/about/components/Github/GithubStatisticList/lib'
-import { GtihubStatisticPropsType } from './types'
 
-const GithubStatistic: FC<GtihubStatisticPropsType> = (props) => {
+const GithubStatistic: FC<IGtihubStatisticProps> = (props) => {
   const colorTheme = githubStatisticColorTheme[props.color]
 
   return (

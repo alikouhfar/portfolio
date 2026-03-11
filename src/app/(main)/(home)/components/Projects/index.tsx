@@ -13,7 +13,7 @@ const Projects = () => {
 
           return (
             <ProjectItem
-              key={index}
+              key={project.id}
               projectDetails={project}
               direction={isOdd ? 'right' : 'left'}
             />

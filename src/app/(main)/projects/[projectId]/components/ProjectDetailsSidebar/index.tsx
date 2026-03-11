@@ -1,12 +1,12 @@
 'use client'
 
 import { FC, useEffect, useRef, useState } from 'react'
-import { ProjectDetailsSectionsEnum } from '../../enum'
+import { ProjectDetailsSectionsEnum } from '../../enums/project-details-sections'
+import { projectDetailsSections } from '../../lib/project-details-sections'
+import { IProjectDetailsSidebarProps } from '../../types/project-details-sidebar'
 import SidebarItem from './SidebarItem'
-import { projectDetailSections } from '../../lib'
-import { ProjectDetailsSidebarPropsType } from './types'
 
-const ProjectDetailsSidebar: FC<ProjectDetailsSidebarPropsType> = (props) => {
+const ProjectDetailsSidebar: FC<IProjectDetailsSidebarProps> = (props) => {
   const [activeIndicatorTop, setActiveIndicatorTop] = useState(0)
   const overviewSpyRef = useRef<HTMLLIElement>(null)
   const techSpyRef = useRef<HTMLLIElement>(null)
@@ -51,45 +51,45 @@ const ProjectDetailsSidebar: FC<ProjectDetailsSidebarPropsType> = (props) => {
           }}
         />
         <SidebarItem
-          id={projectDetailSections.overview.id}
-          title={projectDetailSections.overview.title}
+          id={projectDetailsSections.overview.id}
+          title={projectDetailsSections.overview.title}
           ref={overviewSpyRef}
           isActive={props.activeSection === ProjectDetailsSectionsEnum.Overview}
         />
         <SidebarItem
           ref={techSpyRef}
-          id={projectDetailSections.tech.id}
-          emoji={projectDetailSections.tech.emoji}
-          title={projectDetailSections.tech.title}
+          id={projectDetailsSections.tech.id}
+          emoji={projectDetailsSections.tech.emoji}
+          title={projectDetailsSections.tech.title}
           isActive={props.activeSection === ProjectDetailsSectionsEnum.Tech}
         />
         <SidebarItem
           ref={featuresSpyRef}
-          id={projectDetailSections.features.id}
-          emoji={projectDetailSections.features.emoji}
-          title={projectDetailSections.features.title}
+          id={projectDetailsSections.features.id}
+          emoji={projectDetailsSections.features.emoji}
+          title={projectDetailsSections.features.title}
           isActive={props.activeSection === ProjectDetailsSectionsEnum.Features}
         />
         <SidebarItem
           ref={challengesSpyRef}
-          id={projectDetailSections.challenges.id}
-          emoji={projectDetailSections.challenges.emoji}
-          title={projectDetailSections.challenges.title}
+          id={projectDetailsSections.challenges.id}
+          emoji={projectDetailsSections.challenges.emoji}
+          title={projectDetailsSections.challenges.title}
           isActive={props.activeSection === ProjectDetailsSectionsEnum.Challenges}
         />
         <SidebarItem
           ref={resultsSpyRef}
-          id={projectDetailSections.results.id}
-          emoji={projectDetailSections.results.emoji}
-          title={projectDetailSections.results.title}
+          id={projectDetailsSections.results.id}
+          emoji={projectDetailsSections.results.emoji}
+          title={projectDetailsSections.results.title}
           isActive={props.activeSection === ProjectDetailsSectionsEnum.Results}
         />
         {props.hasGallery && (
           <SidebarItem
             ref={gallerySpyRef}
-            id={projectDetailSections.gallery.id}
-            emoji={projectDetailSections.gallery.emoji}
-            title={projectDetailSections.gallery.title}
+            id={projectDetailsSections.gallery.id}
+            emoji={projectDetailsSections.gallery.emoji}
+            title={projectDetailsSections.gallery.title}
             isActive={props.activeSection === ProjectDetailsSectionsEnum.Gallery}
           />
         )}

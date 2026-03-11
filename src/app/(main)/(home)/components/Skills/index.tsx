@@ -8,7 +8,7 @@ const Skills = () => {
       <SectionTitle title="What I Bring" description="The Magic" descriptionKeyword="Mix" />
       <ul className="mx-auto flex max-w-4xl flex-wrap justify-center gap-2">
         {technologies.map((technology) => (
-          <TechnologyBadge key={technology.title} {...technology} />
+          <TechnologyBadge key={technology.id} {...technology} />
         ))}
       </ul>
     </section>

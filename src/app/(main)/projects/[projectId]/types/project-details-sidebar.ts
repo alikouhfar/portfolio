@@ -1,4 +1,4 @@
-export type ProjectDetailsSidebarPropsType = {
+export interface IProjectDetailsSidebarProps {
   activeSection: string
   hasTechStack?: boolean
   hasKeyFeatures?: boolean

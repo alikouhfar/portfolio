@@ -10,7 +10,7 @@ import { projects } from '@/lib/projects'
 import { SlashIcon } from 'lucide-react'
 import Image from 'next/image'
 import ProjectDetails from './components/ProjectDetails'
-import { getProject } from './utils'
+import { getProject } from './utils/get-project'
 
 export const generateMetadata = async ({
   params,

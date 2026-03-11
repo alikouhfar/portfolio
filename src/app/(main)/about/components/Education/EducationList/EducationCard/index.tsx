@@ -1,8 +1,8 @@
-import { FC } from 'react'
-import { EducationCardPropsType } from './types'
 import { MapPin, School } from 'lucide-react'
+import { FC } from 'react'
+import { IEducation } from '../../../../types/education-list'
 
-const EducationCard: FC<EducationCardPropsType> = (props) => {
+const EducationCard: FC<IEducation> = (props) => {
   const startYear = props.startYear
   const finishYear = props.finishYear || 'Present'
 

@@ -1,6 +1,6 @@
-import { Project } from '@/types/project'
+import { IProject } from '@/types/project'
 
 export interface IProjectItemProps {
   direction?: 'left' | 'right'
-  projectDetails: Project
+  projectDetails: IProject
 }

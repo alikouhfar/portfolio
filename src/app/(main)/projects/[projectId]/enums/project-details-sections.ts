@@ -1,4 +1,4 @@
-export enum ProjectDetailsSectionsEnum {
+export const enum ProjectDetailsSectionsEnum {
   Overview = 'overview',
   Tech = 'tech',
   Features = 'features',

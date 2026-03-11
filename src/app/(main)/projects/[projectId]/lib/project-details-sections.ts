@@ -1,6 +1,7 @@
-import { ProjectDetailsSectionsEnum } from './enum'
+import { ProjectDetailsSectionsEnum } from '../enums/project-details-sections'
+import { IProjectDetailsSection } from '../types/project-details-sections'
 
-export const projectDetailSections = {
+export const projectDetailsSections: Record<ProjectDetailsSectionsEnum, IProjectDetailsSection> = {
   [ProjectDetailsSectionsEnum.Overview]: { id: 'overview', title: 'Overview' },
   [ProjectDetailsSectionsEnum.Tech]: {
     id: 'tech',

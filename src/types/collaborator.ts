@@ -1,4 +1,4 @@
-export type Collaborator = {
+export interface ICollaborator {
   id: string,
   classNames: {
     top: string,

@@ -4,7 +4,7 @@ import IntroTechnologiesBrowserComponent from './IntroTechnologiesBrowserCompone
 import { technologies } from '@/lib/technologies'
 
 const IntroTechnologies = () => {
-  const rowCount = technologies.length / 3
+  const rowItemCount = technologies.length / 3
 
   return (
     <div className="group relative col-span-6 flex size-full flex-col justify-between overflow-hidden rounded-xl [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] max-md:min-h-140 md:col-span-3 md:row-span-2 lg:col-span-2 dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] dark:[border:1px_solid_rgba(255,255,255,.1)]">
@@ -17,12 +17,12 @@ const IntroTechnologies = () => {
             <div className="relative flex h-full flex-col items-center justify-end">
               <div className="absolute -bottom-32 size-48 rounded-full bg-purple-300 blur-3xl" />
               <div className="z-20 mb-8 flex w-full flex-col gap-y-10 lg:mb-16">
-                <IntroTechnologiesMarquee technologies={technologies.slice(0, rowCount)} />
+                <IntroTechnologiesMarquee technologies={technologies.slice(0, rowItemCount)} />
                 <IntroTechnologiesMarquee
                   direction="right"
-                  technologies={technologies.slice(rowCount, rowCount * 2)}
+                  technologies={technologies.slice(rowItemCount, rowItemCount * 2)}
                 />
-                <IntroTechnologiesMarquee technologies={technologies.slice(rowCount * 2, rowCount * 3)} />
+                <IntroTechnologiesMarquee technologies={technologies.slice(rowItemCount * 2, rowItemCount * 3)} />
               </div>
               <IntroTechnologiesCircularPatterns />
               <IntroTechnologiesBrowserComponent />

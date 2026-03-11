@@ -1,42 +1,56 @@
-import { ExperienceType } from './types'
+import { generateRandomUUID } from '@/utils/generate-random-uuid'
+import { IExperience } from '../types/experience-list'
 
-export const experiences: Array<ExperienceType> = [
+export const experiences: Array<IExperience> = [
   {
+    id: generateRandomUUID(),
     startYear: 2024,
     companyTitle: 'Setigh Fara Ofogh',
     location: 'Tehran - Iran',
     technologies: [
-      { title: 'React', logo: 'devicon:react', description: 'Front-end library for building UI components' },
       {
+        id: generateRandomUUID(),
+        title: 'React',
+        logo: 'devicon:react',
+        description: 'Front-end library for building UI components'
+      },
+      {
+        id: generateRandomUUID(),
         title: 'TypeScript',
         logo: 'devicon:typescript',
         description: 'Typed superset of JavaScript for scalable code',
       },
       {
+        id: generateRandomUUID(),
         title: 'Tailwind CSS',
         logo: 'devicon:tailwindcss',
         description: 'Utility-first CSS framework for responsive layouts',
       },
       {
+        id: generateRandomUUID(),
         title: 'Material UI',
         logo: 'logos:material-ui',
         description: 'React component library for consistent UI',
       },
       {
+        id: generateRandomUUID(),
         title: 'Styled-Components',
         logo: 'devicon:styledcomponents',
         description: 'CSS-in-JS library for component-scoped styling',
       },
       {
+        id: generateRandomUUID(),
         title: 'SignalR',
         description: 'Real-time communication for live vehicle tracking',
       },
       {
+        id: generateRandomUUID(),
         title: 'MapLibre',
         logo: 'simple-icons:mapbox',
         description: 'Open-source mapping library for interactive maps',
       },
       {
+        id: generateRandomUUID(),
         title: 'Webpack',
         logo: 'devicon:webpack',
         description: 'Module bundler to optimize frontend performance',
@@ -44,6 +58,7 @@ export const experiences: Array<ExperienceType> = [
     ],
     rolesWithDescription: [
       {
+        id: generateRandomUUID(),
         startYear: 2022,
         role: 'Frontend Developer',
         description: `
@@ -60,42 +75,50 @@ Throughout these projects, I emphasized scalable component design, clean modular
     isRemote: false,
   },
   {
+    id: generateRandomUUID(),
     startYear: 2022,
     finishYear: 2024,
     companyTitle: 'ISIRAN Institute',
     location: 'Tehran - Iran',
     technologies: [
       {
+        id: generateRandomUUID(),
         title: 'Angular',
         logo: 'devicon:angular',
         description: 'Front-end framework for building dynamic web apps',
       },
       {
+        id: generateRandomUUID(),
         title: 'RxJs',
         logo: 'devicon:rxjs',
         description: 'Reactive programming library for managing asynchronous data',
       },
       {
+        id: generateRandomUUID(),
         title: 'TypeScript',
         logo: 'devicon:typescript',
         description: 'Typed superset of JavaScript for safer, scalable code',
       },
       {
+        id: generateRandomUUID(),
         title: 'SCSS',
         logo: 'devicon:sass',
         description: 'CSS preprocessor for modular and maintainable styles',
       },
       {
+        id: generateRandomUUID(),
         title: 'Bootstrap',
         logo: 'devicon:bootstrap',
         description: 'CSS framework for responsive layouts and components',
       },
       {
+        id: generateRandomUUID(),
         title: 'Webpack',
         logo: 'devicon:webpack',
         description: 'Module bundler that optimizes code for production',
       },
       {
+        id: generateRandomUUID(),
         title: 'Swiper',
         logo: 'simple-icons:swiper',
         description: 'Modern touch slider for galleries and carousels',
@@ -103,6 +126,7 @@ Throughout these projects, I emphasized scalable component design, clean modular
     ],
     rolesWithDescription: [
       {
+        id: generateRandomUUID(),
         startYear: 2022,
         finishYear: 2024,
         role: 'Frontend Developer',

@@ -1,15 +1,15 @@
-export type RespositoryType = {
+export interface IRespository {
   name: string
   stargazerCount: number
   forkCount: number
 }
 
-export type GetUserDataReturnType = {
+export interface IGetUserDataReturn {
   followers: {
     totalCount: number
   }
   repositories: {
     totalCount: number
-    nodes: Array<RespositoryType>
+    nodes: Array<IRespository>
   }
 }

@@ -2,18 +2,18 @@
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import { Badge } from '@/components/ui/badge'
-import { Project } from '@/types/project'
+import { IProject } from '@/types/project'
 import { Icon } from '@iconify/react'
 import { ArrowUpRight, RectangleVertical } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FC, useEffect, useState } from 'react'
 import { useInView } from 'react-intersection-observer'
-import { ProjectDetailsSectionsEnum } from '../../enum'
-import { projectDetailSections } from '../../lib'
+import { ProjectDetailsSectionsEnum } from '../../enums/project-details-sections'
 import ProjectDetailsSidebar from '../ProjectDetailsSidebar'
+import { projectDetailsSections } from '../../lib/project-details-sections'
 
-const ProjectDetails: FC<Project> = (props) => {
+const ProjectDetails: FC<IProject> = (props) => {
   const [activeSection, setActiveSection] = useState(ProjectDetailsSectionsEnum.Overview)
 
   const [overviewRef, overviewInView] = useInView({ threshold: 0.3 })
@@ -108,38 +108,38 @@ const ProjectDetails: FC<Project> = (props) => {
           <figcaption className="sr-only">{props.shortTitle} main screenshot</figcaption>
         </figure>
 
-        <section ref={overviewRef} id={projectDetailSections.overview.id} aria-labelledby="overview-heading">
+        <section ref={overviewRef} id={projectDetailsSections.overview.id} aria-labelledby="overview-heading">
           <h3 id="overview-heading" className="mb-2 text-3xl font-bold text-indigo-400">
-            {projectDetailSections.overview.title}
+            {projectDetailsSections.overview.title}
           </h3>
           <p className="leading-6 text-zinc-400">{props.overview}</p>
         </section>
 
-        <section ref={techRef} id={projectDetailSections.tech.id} aria-labelledby="tech-heading">
+        <section ref={techRef} id={projectDetailsSections.tech.id} aria-labelledby="tech-heading">
           <h3 id="tech-heading" className="mb-4 flex items-center gap-2.5 text-3xl font-bold text-indigo-400">
-            <span className="text-2xl">{projectDetailSections.tech.emoji}</span>
-            <span>{projectDetailSections.tech.title}</span>
+            <span className="text-2xl">{projectDetailsSections.tech.emoji}</span>
+            <span>{projectDetailsSections.tech.title}</span>
           </h3>
           <ul className="space-y-2">
             {props.technologies.map((technology) => (
-              <li key={technology.title} className="text-zinc-400">
+              <li key={technology.id} className="text-zinc-400">
                 <strong className="text-zinc-50">{technology.title} –</strong> {technology.description}
               </li>
             ))}
           </ul>
         </section>
 
-        <section ref={featuresRef} id={projectDetailSections.features.id} aria-labelledby="features-heading">
+        <section ref={featuresRef} id={projectDetailsSections.features.id} aria-labelledby="features-heading">
           <h3
             id="features-heading"
             className="mb-4 flex items-center gap-2.5 text-3xl font-bold text-indigo-400"
           >
-            <span className="text-2xl">{projectDetailSections.features.emoji}</span>
-            <span>{projectDetailSections.features.title}</span>
+            <span className="text-2xl">{projectDetailsSections.features.emoji}</span>
+            <span>{projectDetailsSections.features.title}</span>
           </h3>
           <Accordion type="single" collapsible className="rounded-lg border bg-neutral-900">
             {props.features.map((feature) => (
-              <AccordionItem value={feature.title} key={feature.title} className="px-3">
+              <AccordionItem value={feature.title} key={feature.id} className="px-3">
                 <AccordionTrigger className="text-base font-semibold hover:cursor-pointer hover:no-underline">
                   <span className="flex gap-1.5">
                     <span>{feature.icon}</span> {feature.title}
@@ -155,19 +155,19 @@ const ProjectDetails: FC<Project> = (props) => {
 
         <section
           ref={challengesRef}
-          id={projectDetailSections.challenges.id}
+          id={projectDetailsSections.challenges.id}
           aria-labelledby="challenges-heading"
         >
           <h3
             id="challenges-heading"
             className="mb-4 flex items-center gap-2.5 text-3xl font-bold text-indigo-400"
           >
-            <span className="text-2xl">{projectDetailSections.challenges.emoji}</span>
-            <span>{projectDetailSections.challenges.title}</span>
+            <span className="text-2xl">{projectDetailsSections.challenges.emoji}</span>
+            <span>{projectDetailsSections.challenges.title}</span>
           </h3>
           <ul className="space-y-4">
             {props.challengesAndSolutions?.map((challengeAndSolution) => (
-              <li key={challengeAndSolution.challenge} className="flex flex-col">
+              <li key={challengeAndSolution.id} className="flex flex-col">
                 <span className="flex items-center gap-1 text-lg font-bold">
                   <RectangleVertical size={18} /> {challengeAndSolution.challenge}
                 </span>
@@ -177,42 +177,42 @@ const ProjectDetails: FC<Project> = (props) => {
           </ul>
         </section>
 
-        <section ref={resultsRef} id={projectDetailSections.results.id} aria-labelledby="results-heading">
+        <section ref={resultsRef} id={projectDetailsSections.results.id} aria-labelledby="results-heading">
           <h3
             id="results-heading"
             className="mb-4 flex items-center gap-2.5 text-3xl font-bold text-indigo-400"
           >
-            <span className="text-2xl">{projectDetailSections.results.emoji}</span>
-            <span>{projectDetailSections.results.title}</span>
+            <span className="text-2xl">{projectDetailsSections.results.emoji}</span>
+            <span>{projectDetailsSections.results.title}</span>
           </h3>
           <ul className="space-y-4">
-            {props.results?.map((result, index) => (
-              <li key={index} className="text-zinc-400">
-                ▫️ {result}
+            {props.results?.map((result) => (
+              <li key={result.id} className="text-zinc-400">
+                ▫️ {result.title}
               </li>
             ))}
           </ul>
         </section>
 
         {props.gallery && (
-          <section ref={galleryRef} id={projectDetailSections.gallery.id} aria-labelledby="gallery-heading">
+          <section ref={galleryRef} id={projectDetailsSections.gallery.id} aria-labelledby="gallery-heading">
             <h3
               id="gallery-heading"
               className="mb-4 flex items-center gap-2.5 text-3xl font-bold text-indigo-400"
             >
-              <span className="text-2xl">{projectDetailSections.gallery.emoji}</span>
-              <span>{projectDetailSections.gallery.title}</span>
+              <span className="text-2xl">{projectDetailsSections.gallery.emoji}</span>
+              <span>{projectDetailsSections.gallery.title}</span>
             </h3>
             <div className="grid gap-4 sm:grid-cols-2">
-              {props.gallery?.map((url, index) => (
+              {props.gallery?.map((image) => (
                 <figure
-                  key={index}
+                  key={image.id}
                   className="h-80 w-full overflow-hidden rounded-lg border bg-neutral-900 p-2"
                 >
                   <div className="relative h-full w-full">
                     <Image
-                      src={url}
-                      alt={`Screenshot ${index + 1} of ${props.title}`}
+                      src={image.src}
+                      alt={`Screenshot of ${props.title}`}
                       className="mx-auto rounded object-cover shadow-md"
                       loading="lazy"
                       fill

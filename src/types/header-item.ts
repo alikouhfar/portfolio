@@ -1,1 +1,5 @@
-export type HeaderItem = { href: string, label: string}
+export interface IHeaderItem {
+    id: string
+    href: string
+    label: string
+}

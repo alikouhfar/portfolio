@@ -1,6 +1,6 @@
-import { GetUserDataReturnType } from "./types"
+import { IGetUserDataReturn } from "../types/github-statistic-list"
 
-export const getUserData = async (): Promise<GetUserDataReturnType> => {
+export const GetUserData = async (): Promise<IGetUserDataReturn> => {
   const query = `
     query {
       user(login: "alikouhfar") {

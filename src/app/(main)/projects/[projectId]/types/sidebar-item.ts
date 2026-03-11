@@ -1,6 +1,6 @@
 import { RefObject } from 'react'
 
-export type SidebarItemPropsType = {
+export interface ISidebarItemProps {
   id: string
   ref: RefObject<HTMLLIElement | null>
   emoji?: string

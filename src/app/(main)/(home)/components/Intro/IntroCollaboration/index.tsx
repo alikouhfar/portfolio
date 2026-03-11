@@ -16,19 +16,19 @@ const IntroCollaboration = () => {
     <div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="group relative col-span-6 flex size-full flex-col justify-between overflow-hidden rounded-xl [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] max-md:h-[21rem] md:col-span-3 lg:col-span-4 dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] dark:[border:1px_solid_rgba(255,255,255,.1)]"
+      className="group relative col-span-6 flex size-full flex-col justify-between overflow-hidden rounded-xl [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] max-md:h-84 md:col-span-3 lg:col-span-4 dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] dark:[border:1px_solid_rgba(255,255,255,.1)]"
     >
       <div className="size-full">
-        <div className="absolute flex h-[300px] w-full flex-col">
-          <div className="relative h-full [mask-image:linear-gradient(to_right,transparent,black_40%,black_60%,transparent)]">
+        <div className="absolute flex h-75 w-full flex-col">
+          <div className="relative h-full mask-[linear-gradient(to_right,transparent,black_40%,black_60%,transparent)]">
             <IntroCollaborationPattern />
-            <div className="absolute top-15.5 left-1/2 h-[116px] w-[116px] -translate-x-1/2 rounded-full border border-[#494949] bg-[#2A2A2A] transition-colors delay-200 duration-500 group-hover:border-indigo-400">
+            <div className="absolute top-15.5 left-1/2 h-29 w-29 -translate-x-1/2 rounded-full border border-[#494949] bg-[#2A2A2A] transition-colors delay-200 duration-500 group-hover:border-indigo-400">
               <Image
                 src="/images/alikouhfar.jpg"
                 alt="Portrait of Ali Kouhfar"
                 width={100}
                 height={100}
-                className="absolute top-1/2 left-1/2 h-[100px] w-[100px] -translate-x-1/2 -translate-y-1/2 transform rounded-full"
+                className="absolute top-1/2 left-1/2 h-25 w-25 -translate-x-1/2 -translate-y-1/2 transform rounded-full"
               />
             </div>
             <ul className="hidden lg:block">
@@ -67,9 +67,9 @@ const IntroCollaboration = () => {
               </AnimatePresence>
             </ul>
             <ul className="hidden sm:block lg:hidden">
-              {collaborators.slice(2).map((collaborator, index) => (
+              {collaborators.slice(2).map((collaborator) => (
                 <li
-                  key={index}
+                  key={collaborator.id}
                   className={clsx(
                     'absolute rounded-full border border-white/5 bg-[#2A2A2A] p-1',
                     collaborator.classNames.top,
@@ -110,7 +110,7 @@ const IntroCollaboration = () => {
           <ArrowRight className="ml-2 size-4" />
         </Link>
       </div>
-      <div className="pointer-events-none absolute inset-0 transition-all duration-300 group-hover:bg-black/[.03] dark:group-hover:bg-neutral-800/10" />
+      <div className="pointer-events-none absolute inset-0 transition-all duration-300 group-hover:bg-black/3 dark:group-hover:bg-neutral-800/10" />
     </div>
   )
 }
