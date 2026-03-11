@@ -1,6 +1,6 @@
 'use client'
 
-import useCopyToClipboard from "@/hooks/useCopyToClipboard"
+import useCopyToClipboard from "@/hooks/use-copy-to-clipboard"
 import clsx from "clsx"
 import { Check, Copy } from "lucide-react"
 import { FC, PropsWithChildren } from "react"
@@ -11,7 +11,7 @@ interface ICopyToClipboardButton extends PropsWithChildren {
 
 const CopyToClipboardButton: FC<ICopyToClipboardButton> = (props) => {
     const { content, children } = props
-    const { isCopied, onCopyToClipboard } = useCopyToClipboard()
+    const { isCopied, onCopyToClipboard } = useCopyToClipboard({ successMessage: 'Email copied' })
 
 
     return (
