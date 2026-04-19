@@ -1,8 +1,8 @@
+import { ThemeProvider } from '@/contexts/ThemeContext'
 import { ReactNode } from 'react'
-import ReactQueryProvider from './ReactQueryProvider'
 
 const Providers = ({ children }: { children: ReactNode }) => {
-  return <ReactQueryProvider>{children}</ReactQueryProvider>
+  return <ThemeProvider>{children}</ThemeProvider>
 }
 
 export default Providers

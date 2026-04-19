@@ -1,7 +1,5 @@
 # Personal Portfolio Showcase of Ali Kouhfar
 
-![Ali Kouhfar Logo](https://alikouhfar.liara.run/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.0b29b488.png&w=2048&q=75)
-
 ## Table of Contents
 
 - [Personal Portfolio Showcase of Ali Kouhfar](#personal-portfolio-showcase-of-ali-kouhfar)
@@ -20,31 +18,38 @@
 
 ## Description
 
-This repository contains a sleek and professional portfolio website built using Next.js with TypeScript. The application serves as a showcase for my projects, skills, and experiences, demonstrating my expertise to potential employers or clients. With its modern design, intuitive navigation, and dedicated project detail pages, this portfolio app highlights both my technical and design capabilities.
+This repository contains a sleek, professional portfolio website built with Next.js, TypeScript, and Tailwind CSS. The website serves as a showcase for my projects, skills, and experiences, designed to highlight my technical and design capabilities. It features smooth animations, a modern theme, and multi-language support, providing a seamless experience for potential employers or clients.
 
 ## Features
 
-- **Customizable Content**: Easily update and customize portfolio sections including projects, skills, and personal information.
-- **Responsive Design**: Optimized for viewing on all devices.
-- **Dedicated Projects Page**: Centralized hub to explore projects in detail.
-- **Project Detail Pages**: Includes descriptions, animations, and integration with GitHub data.
-- **Skills Section**: Highlights core technical expertise.
-- **Modern Theme**: Clean and minimal aesthetic with motion-based interactions.
-- **Social Media Integration**: Links to social profiles for visibility and networking.
+- **Single-page layout**: The portfolio consists of a single page with the following sections:
+  1. Hero Section
+  2. About Section
+  3. Work Experience Section
+  4. Education Section
+  5. Languages Section
+  6. Technical Skills Section
+
+- **Theming System**: Supports 3 main color themes, customizable via a context provider.
+- **Multi-lingual Support**: Available in English, Persian, and German, based on the user's language preference.
+- **Responsive Design**: Optimized for a wide range of devices.
+- **Language Detection**: Utilizes Next.js proxy to detect the user's preferred language and display data accordingly.
+- **Customizable Content**: Easy updates to sections including work experiences, education, and skills.
+- **Smooth Animations**: Powered by **Framer Motion** for smooth transitions and interactions.
+- **UI Components**: Utilizes **ShadCN** for accessible and customizable UI primitives.
+- **Modern Aesthetic**: Clean, minimal design with motion-based interactions.
 
 ## Technologies Used
 
-- **Next.js (v15)**: Framework for React with support for server-side rendering and static generation.
-- **TypeScript**: Strong typing for reliability and maintainability.
+- **Next.js (v16)**: Framework for React with support for server-side rendering and static generation.
+- **TypeScript**: Ensures type safety and maintainability.
 - **React (v19)**: Library for building user interfaces.
-- **Framer Motion (via Motion)**: For smooth animations and transitions.
-- **Radix UI**: Accessible and customizable UI primitives.
-- **Lucide Icons & Iconify**: Modern, flexible icon libraries.
-- **React Fast Marquee**: For animated text/scroll effects.
-- **React Markdown**: For rendering markdown content.
-- **React Intersection Observer**: For scroll-based interactions.
-- **Tailwind CSS v4 + Tailwind Merge**: Utility-first styling with streamlined class merging.
-- **ESLint + Prettier**: For consistent code style and quality.
+- **Framer Motion**: For smooth animations and transitions.
+- **ShadCN**: Customizable UI components for accessibility and flexibility.
+- **Bun**: A modern JavaScript bundler for fast build times.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **Next.js Proxy**: To detect user language preference and serve appropriate translations.
+- **ESLint + Prettier**: For consistent code formatting and quality.
 
 ## Version History
 
@@ -84,33 +89,49 @@ This repository contains a sleek and professional portfolio website built using 
   - Animations powered by **Framer Motion**.
   - Contact form temporarily removed (to be reintroduced in a future release).
 
+- **Version 4.0.0** (2026-04-19):
+  - Added **Single-page layout** with the following sections:
+    1. Hero Section
+    2. About Section
+    3. Work Experience Section
+    4. Education Section
+    5. Languages Section
+    6. Technical Skills Section
+
+  - Introduced a **Theming System** that supports 3 main color schemes.
+  - Implemented **language detection** using Next.js proxy for serving content based on user language preference.
+  - Integrated **multi-lingual support** for English, Persian, and German based on Next.js’s document system.
+  - Optimized UI components using **ShadCN** for improved accessibility and customizability.
+  - Added **Bun** for faster build times and performance optimization.
+  - Enhanced responsive design for a consistent experience across devices.
+  - Streamlined content updates and customizations for work experiences, education, and skills.
+
 ## Challenges
 
 ### Technical Challenges
 
-- Implementing a **scroll-spy system** for tracking sections in project detail pages.
-- Connecting to **GitHub APIs via GraphQL** and handling authentication/data fetching.
-- Migrating away from Swiper while keeping lightweight and smooth UI interactions.
+- **Multi-language Support**: Ensuring seamless integration of translations and language detection.
+- **Theming System**: Implementing a flexible and dynamic theme switching system across the app.
+- **Performance Optimization**: Migrating to Bun for faster build times and enhanced performance.
 
 ### Design & Performance
 
-- Creating a **fresh theme** that balances animations with minimalism.
-- Ensuring smooth animations and transitions with **Framer Motion** while maintaining performance.
-- Designing new **project detail pages** with consistent styling and responsive layout.
+- **Minimalist Design**: Striking a balance between smooth animations and performance optimization.
+- **Responsive Layouts**: Designing for multiple devices while maintaining a clean, professional aesthetic.
 
 ## What I Learned
 
-1. **Framer Motion**: Leveraged its animation system for smooth, production-ready transitions.
-2. **GraphQL Integration**: Learned to fetch GitHub project/user data via GraphQL efficiently.
-3. **Scroll Spy Techniques**: Implemented intersection observer hooks for advanced scroll tracking.
-4. **Design Overhaul**: Experience in redesigning an entire theme while preserving accessibility.
-5. **Package Ecosystem Update**: Migrated to new libraries and removed unnecessary dependencies for performance gains.
+1. **Multi-language Support**: Implementing language detection and seamless translation handling with Next.js.
+2. **Theming System**: Developing a dynamic theme system that supports multiple color schemes.
+3. **Performance**: Gained experience in optimizing performance by using modern tools like Bun.
+4. **Advanced Animations**: Leveraged **Framer Motion** for smooth, interactive transitions.
+5. **Tailwind + ShadCN**: Utilizing Tailwind CSS and **ShadCN** components to create a visually appealing and accessible UI.
 
 ## Getting Started
 
 To get started with this project:
 
-1. Clone this repository:
+1. Clone the repository:
 
    ```bash
    git clone https://github.com/alikouhfar/portfolio.git
@@ -143,3 +164,5 @@ Contributions are welcome! Please fork the repo, create a branch, make changes, 
 ## License
 
 This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
+
+---

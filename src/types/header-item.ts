@@ -1,1 +1,0 @@
-export type HeaderItem = { href: string, label: string}
