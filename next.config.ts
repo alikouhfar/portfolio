@@ -1,8 +1,12 @@
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  images: {
-    remotePatterns: [new URL('https://picsum.photos/**')],
+  webpack(config, { dev, isServer }) {
+    if (!dev && !isServer) {
+      config.devtool = 'source-map'
+    }
+
+    return config
   },
 }
 
