@@ -1,0 +1,63 @@
+{
+    "header": {
+        "about": "About",
+        "experience": "Experience",
+        "education": "Education",
+        "project": "Work",
+        "expertise": "Expertise",
+        "languages": "Languages"
+    },
+    "hero": {
+        "status": "Available for new opportunities",
+        "location": "Based in Karaj, Iran",
+        "title1": "Ali",
+        "title2": "Kouhfar",
+        "subtitle": "A Frontend Developer dedicated to building ",
+        "subtitleHighlight": "robust digital structures",
+        "subtitleEnd": " with code and creativity.",
+        "cta": "View Projects",
+        "cv": "Download CV"
+    },
+    "about": {
+        "title": "01 / About",
+        "heading": "Digital <span class='text-theme'>Architect</span>",
+        "p1": "With a background in Architectural Engineering, I bring a unique perspective to frontend development—viewing every interface as a structural challenge where form must follow function. My transition from physical to digital architecture was driven by a fascination with the speed and scalability of web technologies.",
+        "p2": "I focus on writing maintainable code and building interfaces that feel intuitive. I'm constantly learning new technologies to stay at the forefront of the ever-evolving web landscape.",
+        "exp": "Years of Experience",
+        "cleanCode": "Clean Code",
+        "cleanCodeDesc": "Scalable architecture",
+        "userCentric": "User Centric",
+        "userCentricDesc": "Focused on experience"
+    },
+    "experience": {
+        "title": "02 / Professional Path",
+        "heading": "Experience",
+        "current": "Current Role",
+        "role": "Developer"
+    },
+    "education": {
+        "title": "03 / Academic Background",
+        "heading": "Education"
+    },
+    "projects": {
+        "title": "04 / Selected Works",
+        "heading": "Projects",
+        "desc": "A collection of digital products focused on performance, accessibility, and high-end aesthetics."
+    },
+    "skills": {
+        "title": "05 / Expertise",
+        "heading": "Expertise"
+    },
+    "languages": {
+        "title": "06 / Languages",
+        "heading": "Spoken Languages"
+    },
+    "footer": {
+        "social": "Social",
+        "contact": "Contact",
+        "address": "Karaj, Iran",
+        "tos": "Terms of Service",
+        "privacyPolicy": "Privacy Policy",
+        "rights": "Ali Kouhfar. All Rights Reserved."
+    }
+}

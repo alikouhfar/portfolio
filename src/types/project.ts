@@ -1,54 +1,14 @@
-import { ProjectItemThemesType } from './project-item-themes'
-import { ITechnology } from './technology'
-
-export interface IFeature {
+export type Project = {
   id: string
+  link: string
   title: string
-  icon?: string
-  description: string
+  image: string
+  category: string
+  tech: Array<string>
 }
 
-export interface IResult {
-  id: string
+export type ProjectDictionary = {
+  desc: string
   title: string
-}
-
-export interface IGallery {
-  id: string
-  src: string
-}
-
-export interface IProjectImages {
-  hero?: string
-  featuresImages?: string[]
-  gallery?: string[]
-}
-
-export interface IChallengeSolution {
-  id: string
-  solution: string
-  challenge: string
-}
-
-export interface IProject {
-  id: string
-  title: string
-  shortTitle: string
-  subtitle: string
-  description: string
-  overview?: string
-  imageUrl: string
-  images?: IProjectImages
-  theme: ProjectItemThemesType
-  features: Array<IFeature>
-  technologies: Array<ITechnology>
-  role: string
-  status: 'ongoing' | 'completed'
-  startYear: number
-  finishYear?: number
-  repositoryUrl?: string
-  demoUrl?: string
-  challengesAndSolutions?: Array<IChallengeSolution>
-  results?: Array<IResult>
-  gallery?: Array<IGallery>
+  heading: string
 }
